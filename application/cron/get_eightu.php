@@ -19,7 +19,7 @@ $this->load->model('model_city');
 //include 'data/city/nuomi.php';
 //foreach($city as $key=>$ci){
 	
-	$apiUrl = "http://www.800pai.com/api/hao123.php";
+	$apiUrl = "http://bj.eightu.com/api/tuanbaidu.xml";
 	$areainfo=simplexml_load_file($apiUrl,'SimpleXMLElement', LIBXML_NOCDATA);
 
 //print_r($areainfo);
@@ -37,7 +37,7 @@ $this->load->model('model_city');
 				$data['loc']= ''.$url->loc ;
 				
 				$data['waploc']= ''.$url->wapLoc ;
-				$data['website']= '800拍团购' ;
+				$data['website']= '可可团购' ;
 				$data['siteurl']= ''.$url->data->display->siteurl ;
 				$data['city']= ''.$url->data->display->city ;
 				$data['category']=1;
@@ -68,9 +68,9 @@ $this->load->model('model_city');
 				$data['tips']= ''.$url->data->display->tips;
 				
 				
-				$data['seller']= ''.$url->data->display->Seller ;
+				$data['seller']= ''.$url->data->display->seller ;
 				
-				$data['phone']= ''.$url->data->display->Phone ;
+				$data['phone']= ''.$url->data->display->phone ;
 				$data['address']= ''.$url->data->display->address ;
 				
 				
