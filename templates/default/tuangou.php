@@ -222,20 +222,20 @@ $(document).ready(function(){
       <div class="sort">
         <div class="sort-content">
         <a class="sort-default <?php if($orderfiled=='4'){echo "current";}?>" data-order="0" href="<?php echo site_url("{$list_url['order']}-order-4") ?>">默认</a>
-        <a class="<?php if($orderfiled=='2'){echo "sort-des2";}else{echo "sort-des";}?>" rel="nofollow" href="<?php  echo site_url("{$list_url['order']}-order-2"); ?>" title="点击按购买人数降序排序" mon="#content=购买人数" data-order="4">销量</a>
+        <a class="<?php if($orderfiled=='2'){echo "sort-des2";}else{echo "sort-des";}?> <?php if($orderfiled=='2'){echo "current";}?>" rel="nofollow" href="<?php  echo site_url("{$list_url['order']}-order-2"); ?>" title="点击按购买人数降序排序" mon="#content=购买人数" data-order="4">销量</a>
         <a class="<?php 
 		if($orderfiled=='3'){ 
-		echo "price3"; 
+		echo "price3 current"; 
 		} 
      elseif($orderfiled=='5'){
-		echo "price2";
+		echo "price2 current";
 	 }
 	else 
 	{
-		echo "price";
+		echo "price current";
 			}
 			?>" rel="nofollow" href="<?php if($orderfiled=='5'){ echo site_url("{$list_url['order']}-order-3");}else{echo site_url("{$list_url['order']}-order-5");} ?>" title="点击按价格升序排序" mon="#content=价格" data-order="1">价格</a>
-        <a class="<?php if($orderfiled=='1'){echo "sort-des2";}else{echo "sort-des";}?>" rel="nofollow" href="<?php echo site_url("{$list_url['order']}-order-1") ?>" title="点击按折扣升序排序" mon="#content=折扣" data-order="3">折扣</a> </div>
+        <a class="<?php if($orderfiled=='1'){echo "sort-des2";}else{echo "sort-des";}?> <?php if($orderfiled=='1'){echo "current";}?>" rel="nofollow" href="<?php echo site_url("{$list_url['order']}-order-1") ?>" title="点击按折扣升序排序" mon="#content=折扣" data-order="3">折扣</a> </div>
         <span class="vertical-separator"></span></div>
       <div class="page-bar hide" id="J-pagebar"><a class="page-prev" id="J-pageprev" href="javascript:void(0)" mon="#content=prev">上一页</a>
         <p class="page-num"><span class="page-cur">1</span>/<span class="page-sum">430</span></p>
