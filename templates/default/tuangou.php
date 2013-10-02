@@ -54,11 +54,13 @@ $(document).ready(function(){
  $('#TipArea').click(function(){
 	 if(i==0){
 	 $('.tuan-box-content').removeClass('hide-area');
+	 $(this).html('-收起');
 	 i=1;
 	 }
 	 else{
 		 $('.tuan-box-content').addClass('hide-area');
 		 i=0;
+		 $(this).html('+展开');
 	 }
 	 });
   
@@ -167,7 +169,7 @@ $(document).ready(function(){
                 <a <?php if($area==$key){echo "class='tuan-current'";}?> href="<?php echo site_url("{$list_url['area']}-area-$key") ?>" class="mr20 mark"> <?php echo $val ?> <!--<i class="num">5</i>--> </a>
                 <?php }}?>
               </div>
-              <div class="icon-area fr mt10"> <span class="tip-info" id="TipArea"> 展开 </span> <a mon="#content=更多区域" id="IconArea" class=" default-button"></a> </div>
+              <div class="icon-area fr mt10"> <span class="tip-info" id="TipArea"> +展开 </span> <a mon="#content=更多区域" id="IconArea" class=" default-button"></a> </div>
             </div>
             <!--商圈开始-->
             <?php if($range_list){?>
@@ -232,7 +234,7 @@ $(document).ready(function(){
 	 }
 	else 
 	{
-		echo "price current";
+		echo "price";
 			}
 			?>" rel="nofollow" href="<?php if($orderfiled=='5'){ echo site_url("{$list_url['order']}-order-3");}else{echo site_url("{$list_url['order']}-order-5");} ?>" title="点击按价格升序排序" mon="#content=价格" data-order="1">价格</a>
         <a class="<?php if($orderfiled=='1'){echo "sort-des2";}else{echo "sort-des";}?> <?php if($orderfiled=='1'){echo "current";}?>" rel="nofollow" href="<?php echo site_url("{$list_url['order']}-order-1") ?>" title="点击按折扣升序排序" mon="#content=折扣" data-order="3">折扣</a> </div>

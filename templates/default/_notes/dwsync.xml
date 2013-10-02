@@ -53,8 +53,9 @@
 <file name="newsinfo2.php" server="w91.126t.net" local="130213701600000000" remote="130213701600000000" />
 <file name="ajaxlogin.php" server="w91.126t.net" local="130210939200000000" remote="130210939200000000" />
 <file name="cardlogin.php" server="w91.126t.net" local="130217536200000000" remote="130217536200000000" />
-<file name="tuangou.php" server="w91.126t.net" local="130252139762001855" remote="130252139400000000" />
+<file name="tuangou.php" server="w91.126t.net" local="130252142631531382" remote="130252143000000000" />
 <file name="mapsearch.php" server="w91.126t.net" local="130248668376728589" remote="130248668400000000" />
 <file name="tuangouinfo.php" server="w91.126t.net" local="130252041188892192" remote="130252041600000000" />
 <file name="maphotelinfo.php" server="w91.126t.net" local="130248632045332703" remote="130248631800000000" />
+<file name="tuangou.php" server="w91.126t.net/public_html/" local="130252145592060286" remote="130252145400000000" />
 </dwsync>
