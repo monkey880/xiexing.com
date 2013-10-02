@@ -4,7 +4,7 @@
 /**
  * 
  * @ID tool.php
- * 携行酒店分销联盟常用函数
+ * 260团购API采集
  * @date 2013-1-23 
  * @author zhaojianjun zjj008@gmail.com
  * @copyright zhuna Inc , all rights reserved
