@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body { margin:0; font-size:12px; font-family:Verdana; line-height:1.5; color:#666;}
+
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,form,p,dfn { padding:0; margin:0;}
+
+h1 { font-size:18px; font-weight:bold; font-family:"微软雅黑"; color:#363636;}
+
+h2 { font-size:14px; font-family:"宋体"; }
+
+h3 { font-size:14px; font-weight:bold;}
+
+h4 { font-size:12px;}
+
+h5 { font-size:12px; font-weight:normal;}
+
+ul { list-style:none;}
+div,td{ font-weight:normal}
+img { border:0px;}
+
+.blue{color:#2d5da0; font-size:14px;}
+
+a { color:#195cb5; text-decoration:none;font-size:12px;}
+
+a:hover { color:#f60;}
+
+dfn {font-style: normal;font-family: arial;}
+
+.clearfloat {clear:both;height:0;font-size: 1px;line-height: 0px;}
+
+.f_right { float:right;}
+
+.jiage{color:#f60; font-weight:bold; font-family:Arial, Helvetica, sans-serif; float:right;}
+
+
+
+
+
+
+
+.f_f00 { color:#f00;}
+
+.f_666 { color:#f8a10b;}
+
+.f_999 { color:#999;}
+
+.f_hui { color:#696969;}
+
+font.yuan_f00 { color:#f60; font:18px arial;}
+
+.f_b_f00 { color:#f60; font-weight:bold;}
+
+.f1_b1_f00 { color:#f60;}
+
+.f_b1_f00 { color:#f60; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+
+.f_b2_f00 { color:#969696; font-family:Arial, Helvetica, sans-serif;}
+
+.f_b1_fh0{color:#C00;}
+
+.gray{color:#a7a7a7; font-weight:normal;}
+
+.f_b_f00 span{ color:#333;font-weight: normal;}
+
+.btn02 { background:#fff url(http://tp1.znimg.com/v5/images/btn_bg2.gif) 0 0; height:22px; width:55px; color:#297405; border:1px solid #90be4a; font-size:12px; font-weight:bold; line-height:180%; cursor:pointer; }
+
+.btn04 { background:url(http://tp1.znimg.com/v5/images/btn_bg2.gif) 0 -24px; width:70px; height:22px; color:#9a4501; border:1px solid #dbb119; font-size:12px; line-height:160%; cursor:pointer; }
+
+.btn07 { background:url(http://tp1.znimg.com/v5/images/submit_bg.gif) 0px -8px; border:1px solid #cfab25; height:32px; font-weight:bold; padding-top:2px; cursor:pointer; font-size:14px; color:#660000; }
+
+.btn08 { background:url(http://tp1.znimg.com/v5/images/submit_bg.gif) 0px -64px; border:1px solid #8b9c56; height:32px; font-weight:bold; padding-top:2px; cursor:pointer; font-size:14px; color:#360; }
+
+.btn09 { background:url(http://tp1.znimg.com/v5/images/014304_btn_bg.gif) 0 0 no-repeat; width:107px; height:37px; border:none; font-size:14px; font-weight:bold; color:#d84700; cursor:pointer; }
+
+
+
+ 

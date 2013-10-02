@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{ font-family:Arial, "微软雅黑","宋体"}
+body { margin:0; font-size:12px; font-family:Verdana; line-height:1.5; color:#333;/* background:url(http://tp1.znimg.com/v5/images/boby_bg.jpg) center top no-repeat !important;*/}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,form,p,dfn { padding:0; margin:0;}
+h1 { font-size:20px; font-weight:normal; font-family:'microsoft yahei','黑体';}
+h2 { font-size:14px;}
+h3 { font-size:14px; font-weight:normal;}
+h4 { font-size:12px;}
+h5 { font-size:12px; font-weight:normal;}
+ul { list-style:none;}
+img { border:0px;}
+a { color:#195cb5; text-decoration:none;}
+a:hover { color:#f00;}
+dfn {font-style: normal;font-family: arial;}
+.clearfloat {clear:both;height:0;font-size: 1px;line-height: 0px;}
+.f_right { float:right;}
+.f_f00 { color:#f00;}
+.f_666 { color:#666;}
+.f_999 { color:#999;}
+.f_b_f00 { color:#f60; font-weight:bold;}
+.f_b_f00 span{ color:#333;font-weight: normal;}
+.btn02 { background:#fff url(http://tp1.znimg.com/v5/images/btn_bg2.gif) 0 0; height:22px; width:55px; color:#297405; border:1px solid #90be4a; font-size:12px; font-weight:bold; line-height:180%; cursor:pointer; }
+.btn04 { background:url(http://tp1.znimg.com/v5/images/btn_bg2.gif) 0 -24px; width:70px; height:22px; color:#9a4501; border:1px solid #dbb119; font-size:12px; line-height:160%; cursor:pointer; }
+.btn07 { background:url(http://tp1.znimg.com/v5/images/submit_bg.gif) 0px -8px; border:1px solid #cfab25; height:32px; font-weight:bold; padding-top:2px; cursor:pointer; font-size:14px; color:#660000; }
+.btn08 { background:url(http://tp1.znimg.com/v5/images/submit_bg.gif) 0px -64px; border:1px solid #8b9c56; height:32px; font-weight:bold; padding-top:2px; cursor:pointer; font-size:14px; color:#360; }
+.btn09 { background:url(http://tp1.znimg.com/v5/images/014304_btn_bg.gif) 0 0 no-repeat; width:107px; height:37px; border:none; font-size:14px; font-weight:bold; color:#d84700; cursor:pointer; }
+
+ .redborder{ border:1px solid #b00}
+ 
+  
+  
+ .select_list li dl {
+	position: absolute;
+	width: 400px;
+	left: 100px;
+	top:0;
+}
+.select_list li dl  a {
+	line-height: 30px;
+	display: block;
+	float: left;
+	height: 30px;
+	width: 120px;
+}
+.select_list li dl dd {
+	background-color: #059EEC;
+	display: block;
+	padding: 10px;
+}

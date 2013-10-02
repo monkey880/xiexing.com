@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body { margin:0; font-size:12px; font-family:Verdana; line-height:1.5; color:#333;}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,form,p,dfn { padding:0; margin:0;}
+h1 { font-size:20px; font-weight:normal; font-family:'microsoft yahei','黑体';}
+h2 { font-size:14px;}
+h3 { font-size:14px; font-weight:normal;}
+h4 { font-size:12px;}
+h5 { font-size:12px; font-weight:normal;}
+ul { list-style:none;}
+img { border:0px;}
+a { color:#195cb5; text-decoration:none;}
+a:hover { color:#f00;}
+dfn {font-style: normal;font-family: arial;}
+.clearfloat {clear:both;height:0;font-size: 1px;line-height: 0px;}
+.f_right { float:right;}
+.f_left{float:left;}
+
+
+
+.f_f00 { color:#f00;}
+.f_666 { color:#666;}
+.f_999 { color:#999;}
+.f_b_f00 { color:#ffb15f; font-weight:bold;}
+.f_b_f00 span{ color:#333;font-weight: normal;}
+.f_f60{ color:#e64d10; background:#fafafa;}

@@ -1,0 +1,23 @@
+@import "tablebox.css";
+
+body { font-size:12px; line-height:2; font-family:Verdana;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0; font-weight:normal;}
+a { color:#05a; text-decoration:none;}
+a:hover { color:#f00; text-decoration:underline;}
+#layout { width:768px; margin:30px auto; border:1px solid #ccc; background:url(images/top_bg.gif) 2px 2px no-repeat;}
+#layout h5 { height:26px; padding:30px 15px 0 0; font-size:12px; text-align:right; color:#666;}
+.box { padding:0 30px 30px 30px;}
+.box h2 { font-size:20px; font-family:"microsoft yahei","黑体"; margin:20px 0 10px 0;}
+.box h4 { font-size:12px; background:url(images/icon111.gif) 0 5px no-repeat; padding-left:22px; margin-bottom:20px; color:#C63;}
+.t_list { color:#666;}
+.t_list tr td { padding:5px;}
+.btn05 { width:87px; height:32px; border:1px solid #87a3c1; background:url(images/btn01.gif); color:#555; font-size:16px; line-height:180%; cursor:pointer; font-weight:bold;}
+.btn06 { width:87px; height:32px; border:1px solid #a2904d; background:url(images/btn01.gif)　0　-64px; color:#630; font-size:16px; line-height:180%; cursor:pointer; font-weight:bold;}
+.input_txt { width:201px; height:18px; padding:5px 0 0 3px; border-top:1px solid #898989; border-left:1px solid #898989; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+#inst_ok { background:url(images/notify_icon_ok.gif) 170px 65px no-repeat; padding:60px 0 60px 220px;}
+#inst_ok h1 { font-size:22px; font-family:"microsoft yahei","黑体"; }
+#inst_err{ padding:10px;}
+#inst_err h1{padding:10px;font-family:"microsoft yahei","黑体"; line-height:130%; padding-top:50px;}
+#inst_err b{ color:#F00}
+.errmsgs{background-color:#FCF;height:65px;text-align:center;line-height:30px;border:1px solid #F00;position:absolute;top:0;}
+.pr-title{ font-size:14px; color:#67A753}

@@ -1,0 +1,1352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://www.xexing.com/public/www/blue/style.css" type="text/css" rel="stylesheet" />
+
+<link href="http://www.xexing.com/public/www/blue/base.css" type="text/css" rel="stylesheet" />
+<link href="http://www.xexing.com/public/css/tuan1.css" type="text/css" rel="stylesheet" />
+<link href="http://www.xexing.com/public/css/tuan2.css" type="text/css" rel="stylesheet" />
+<script src="http://www.xexing.com/public/js/jquery-1.7.2.js" type="text/javascript"></script>
+<title>资讯频道_携行网</title>
+<meta name="keywords" content="资讯频道" />
+<meta name="description" content="携行网为您提供最权威的资讯频道" />
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.wt-good-item-n').hover(
+  
+  function () {
+    $(this).addClass("wt-good-item-n-hover");
+  }
+  ,
+  function () {
+    $(this).removeClass("wt-good-item-n-hover");
+  }
+  );
+  
+  $('#city-border-mid').click(
+  
+  function () {
+    $('#wt-city-list-new').show();
+  }
+  
+  );
+  $('#wt-city-list-new').hover(
+  
+  function () {
+    
+  },
+  function () {
+    $(this).hide();
+  }
+  
+  );
+  
+  $(".letter").each(function(){
+   $(this).hover(
+   function(){
+	   $(".all-city-con").each(function(){$(this).hide()});
+	   $('#city-con'+$(this).html()).show();
+   }
+   )
+ });
+ var i=0;
+ $('#TipArea').click(function(){
+	 if(i==0){
+	 $('.tuan-box-content').removeClass('hide-area');
+	 i=1;
+	 }
+	 else{
+		 $('.tuan-box-content').addClass('hide-area');
+		 i=0;
+	 }
+	 });
+  
+});
+</script>
+<style type="text/css">
+</style>
+<link href="public/css/tuaninfo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<noscript>
+<p class="div-980">您的浏览器不支持javascript，请开启javascript支持或者更换浏览器。</p>
+</noscript>
+<div class="header-wrap">
+  <div class="userbar" mon="action=click&amp;type=userBar">
+  </div>
+  <div id="head-search-box-area" class="header div-980 clearfix ">
+    <div class="header-top">
+      <div class="div-980 clearfix">
+        <div class="wt-logo logo float-left"><a href="http://www.xexing.com/tuangou/" mon="#action=click&amp;type=logo&amp;content=logo"><img src="http://www.xexing.com/public/www/default/images/logo-2.png" alt="携行酒店团购" title="携行酒店团购" height="80"></a></div>
+        <div class="wt-city float-left">
+          <div class="city-border">
+            <div id="city-border-left" class="city-border-left hide"></div>
+            <div id="city-border-mid"><a id="wt-city-title" rel="nofollow" class="city-current" title="当前团购城市">上海</a><span id="wt-city-other" class="downtip"></span></div>
+            <div id="city-border-right" class="city-border-right hide"></div>
+          </div>
+          <div  class="city-div-new hide" id="wt-city-list-new" style="left: 0px; top: 38px; ">
+            <div class="title">热门城市</div>
+            <span class="city-close"></span>
+            <div class="city-con clearfix">
+                            <span class="city-span"><a  href="/tuangou/BeiJing" rel="BeiJing" class="city-a">北京</a></span>
+                            <span class="city-span"><a  href="/tuangou/ShangHai" rel="ShangHai" class="city-a">上海</a></span>
+                            <span class="city-span"><a  href="/tuangou/HangZhou" rel="HangZhou" class="city-a">杭州</a></span>
+                            <span class="city-span"><a  href="/tuangou/GuangZhou" rel="GuangZhou" class="city-a">广州</a></span>
+                            <span class="city-span"><a  href="/tuangou/ChengDu" rel="ChengDu" class="city-a">成都</a></span>
+                            <span class="city-span"><a  href="/tuangou/XiaMen" rel="XiaMen" class="city-a">厦门</a></span>
+                            <span class="city-span"><a  href="/tuangou/XiAn" rel="XiAn" class="city-a">西安</a></span>
+                            <span class="city-span"><a  href="/tuangou/ShenZhen" rel="ShenZhen" class="city-a">深圳</a></span>
+                            <span class="city-span"><a  href="/tuangou/NanJing" rel="NanJing" class="city-a">南京</a></span>
+                            <span class="city-span"><a  href="/tuangou/ChongQing" rel="ChongQing" class="city-a">重庆</a></span>
+                            <span class="city-span"><a  href="/tuangou/WuHan" rel="WuHan" class="city-a">武汉</a></span>
+                            <span class="city-span"><a  href="/tuangou/SanYa" rel="SanYa" class="city-a">三亚</a></span>
+                            <div class="clear"></div>
+            </div>
+            <div class="title"><span class="float-left">全部城市</span></div>
+            <div id="all-letter" class="all-letter"> <a href="javascript:void(0)" letter="A" class="letter">A</a> <a href="javascript:void(0)" letter="B" class="letter">B</a> <a href="javascript:void(0)" letter="C" class="letter">C</a> <a href="javascript:void(0)" letter="D" class="letter">D</a> <a href="javascript:void(0)" letter="E" class="letter">E</a> <a href="javascript:void(0)" letter="F" class="letter">F</a> <a href="javascript:void(0)" letter="G" class="letter">G</a> <a href="javascript:void(0)" letter="H" class="letter">H</a> <a href="javascript:void(0)" letter="J" class="letter">J</a> <a href="javascript:void(0)" letter="K" class="letter">K</a> <a href="javascript:void(0)" letter="L" class="letter">L</a> <a href="javascript:void(0)" letter="M" class="letter">M</a> <a href="javascript:void(0)" letter="N" class="letter">N</a> <a href="javascript:void(0)" letter="P" class="letter">P</a> <a href="javascript:void(0)" letter="Q" class="letter">Q</a> <a href="javascript:void(0)" letter="R" class="letter">R</a> <a href="javascript:void(0)" letter="S" class="letter">S</a> <a href="javascript:void(0)" letter="T" class="letter">T</a> <a href="javascript:void(0)" letter="W" class="letter">W</a> <a href="javascript:void(0)" letter="X" class="letter">X</a> <a href="javascript:void(0)" letter="Y" class="letter">Y</a> <a href="javascript:void(0)" letter="Z" class="letter">Z</a> </div>
+            <div id="all-city" class="city-con clearfix">
+                            <div id="city-conA" class="all-city-con ">
+                                <span class="city-span"><a  href="/tuangou/Aomen" rel="Aomen" class="city-a">澳门</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnJi" rel="AnJi" class="city-a">安吉（湖州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnShun" rel="AnShun" class="city-a">安顺（黄果树）</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnYang" rel="AnYang" class="city-a">安阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnQing" rel="AnQing" class="city-a">安庆</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnShan" rel="AnShan" class="city-a">鞍山</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnKang" rel="AnKang" class="city-a">安康</a></span>
+                                <span class="city-span"><a  href="/tuangou/AKeSu" rel="AKeSu" class="city-a">阿克苏</a></span>
+                                <span class="city-span"><a  href="/tuangou/AErShan" rel="AErShan" class="city-a">阿尔山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ALaShan" rel="ALaShan" class="city-a">阿拉善</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnXi" rel="AnXi" class="city-a">安溪（泉州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Aletaishi" rel="Aletaishi" class="city-a">阿勒泰</a></span>
+                                <span class="city-span"><a  href="/tuangou/AnQiu" rel="AnQiu" class="city-a">安丘</a></span>
+                                <span class="city-span"><a  href="/tuangou/Anlongxian" rel="Anlongxian" class="city-a">安龙县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Aba" rel="Aba" class="city-a">阿坝州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Antuxian" rel="Antuxian" class="city-a">安图</a></span>
+                                <span class="city-span"><a  href="/tuangou/Anguoshi" rel="Anguoshi" class="city-a">安国</a></span>
+                                <span class="city-span"><a  href="/tuangou/Anhuaxian" rel="Anhuaxian" class="city-a">安化</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ansaixian" rel="Ansaixian" class="city-a">安塞</a></span>
+                              </div>
+                            <div id="city-conB" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/BeiJing" rel="BeiJing" class="city-a">北京</a></span>
+                                <span class="city-span"><a  href="/tuangou/BeiHai" rel="BeiHai" class="city-a">北海</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaoTou" rel="BaoTou" class="city-a">包头</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaoDing" rel="BaoDing" class="city-a">保定</a></span>
+                                <span class="city-span"><a  href="/tuangou/BangBu" rel="BangBu" class="city-a">蚌埠</a></span>
+                                <span class="city-span"><a  href="/tuangou/BeiDaiHe" rel="BeiDaiHe" class="city-a">北戴河</a></span>
+                                <span class="city-span"><a  href="/tuangou/BinZhou" rel="BinZhou" class="city-a">滨州</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaoJi" rel="BaoJi" class="city-a">宝鸡</a></span>
+                                <span class="city-span"><a  href="/tuangou/Baishanshi" rel="Baishanshi" class="city-a">白山</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaYanNaoEr" rel="BaYanNaoEr" class="city-a">巴彦淖尔</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaiSe" rel="BaiSe" class="city-a">百色</a></span>
+                                <span class="city-span"><a  href="/tuangou/BoZhou" rel="BoZhou" class="city-a">亳州</a></span>
+                                <span class="city-span"><a  href="/tuangou/BiJie" rel="BiJie" class="city-a">毕节</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaoTing" rel="BaoTing" class="city-a">保亭</a></span>
+                                <span class="city-span"><a  href="/tuangou/BenXi" rel="BenXi" class="city-a">本溪</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaiYin" rel="BaiYin" class="city-a">白银</a></span>
+                                <span class="city-span"><a  href="/tuangou/BoAo" rel="BoAo" class="city-a">博鳌</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaZhou" rel="BaZhou" class="city-a">霸州</a></span>
+                                <span class="city-span"><a  href="/tuangou/BeiChuanXian" rel="BeiChuanXian" class="city-a">北川县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Baoshanshi" rel="Baoshanshi" class="city-a">保山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Baoyingxian" rel="Baoyingxian" class="city-a">宝应（扬州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/BoTou" rel="BoTou" class="city-a">泊头</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaZhong" rel="BaZhong" class="city-a">巴中</a></span>
+                                <span class="city-span"><a  href="/tuangou/BinHaiXian" rel="BinHaiXian" class="city-a">滨海县（盐城）</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaiYangDian" rel="BaiYangDian" class="city-a">白洋淀</a></span>
+                                <span class="city-span"><a  href="/tuangou/Baichengshi" rel="Baichengshi" class="city-a">白城</a></span>
+                                <span class="city-span"><a  href="/tuangou/BoErTaLa" rel="BoErTaLa" class="city-a">博尔塔拉</a></span>
+                                <span class="city-span"><a  href="/tuangou/BoXing" rel="BoXing" class="city-a">博兴</a></span>
+                                <span class="city-span"><a  href="/tuangou/Binxian" rel="Binxian" class="city-a">彬县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Boleshi" rel="Boleshi" class="city-a">博乐</a></span>
+                                <span class="city-span"><a  href="/tuangou/Baigou" rel="Baigou" class="city-a">白沟</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaMa" rel="BaMa" class="city-a">巴马</a></span>
+                                <span class="city-span"><a  href="/tuangou/Beiliushi" rel="Beiliushi" class="city-a">北流</a></span>
+                                <span class="city-span"><a  href="/tuangou/Buerjinxians" rel="Buerjinxians" class="city-a">布尔津县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Buerjinxian" rel="Buerjinxian" class="city-a">布尔津</a></span>
+                                <span class="city-span"><a  href="/tuangou/BaShang" rel="BaShang" class="city-a">坝上</a></span>
+                              </div>
+                            <div id="city-conC" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/ChengDu" rel="ChengDu" class="city-a">成都</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChongQing" rel="ChongQing" class="city-a">重庆</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangSha" rel="ChangSha" class="city-a">长沙</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangChun" rel="ChangChun" class="city-a">长春</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangZhou" rel="ChangZhou" class="city-a">常州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangBaiShan" rel="ChangBaiShan" class="city-a">长白山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChengDe" rel="ChengDe" class="city-a">承德</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangShu" rel="ChangShu" class="city-a">常熟</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChenZhou" rel="ChenZhou" class="city-a">郴州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChaoZhou" rel="ChaoZhou" class="city-a">潮州</a></span>
+                                <span class="city-span"><a  href="/tuangou/CangZhou" rel="CangZhou" class="city-a">沧州</a></span>
+                                <span class="city-span"><a  href="/tuangou/CiXi" rel="CiXi" class="city-a">慈溪</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangDe" rel="ChangDe" class="city-a">常德</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChaoHu" rel="ChaoHu" class="city-a">巢湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChuZhou" rel="ChuZhou" class="city-a">滁州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChiFeng" rel="ChiFeng" class="city-a">赤峰</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangZhi" rel="ChangZhi" class="city-a">长治</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChiZhou" rel="ChiZhou" class="city-a">池州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChuXiong" rel="ChuXiong" class="city-a">楚雄</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changshou" rel="Changshou" class="city-a">长寿（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/CangNan" rel="CangNan" class="city-a">苍南</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChaoYang" rel="ChaoYang" class="city-a">朝阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangXing" rel="ChangXing" class="city-a">长兴</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chishuishi" rel="Chishuishi" class="city-a">赤水（遵义）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changbaishanchixi" rel="Changbaishanchixi" class="city-a">长白山池西</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changbaishanchibei" rel="Changbaishanchibei" class="city-a">长白山池北</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChiBi" rel="ChiBi" class="city-a">赤壁（咸宁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chunshi" rel="Chunshi" class="city-a">珲春</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangJi" rel="ChangJi" class="city-a">昌吉</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangLe" rel="ChangLe" class="city-a">长乐</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changlexian" rel="Changlexian" class="city-a">昌乐</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChongLiXian" rel="ChongLiXian" class="city-a">崇礼县</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangShan" rel="ChangShan" class="city-a">常山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangTing" rel="ChangTing" class="city-a">长汀（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangLiHuangJinHaiAn" rel="ChangLiHuangJinHaiAn" class="city-a">昌黎黄金海岸</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangDu" rel="ChangDu" class="city-a">昌都</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chongyixian" rel="Chongyixian" class="city-a">崇义</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChiPing" rel="ChiPing" class="city-a">茌平</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chengxian" rel="Chengxian" class="city-a">郯城</a></span>
+                                <span class="city-span"><a  href="/tuangou/ChangDaoXian" rel="ChangDaoXian" class="city-a">长岛县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changxingdao" rel="Changxingdao" class="city-a">长兴岛</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changbaishanchinan" rel="Changbaishanchinan" class="city-a">长白山池南</a></span>
+                                <span class="city-span"><a  href="/tuangou/CongHua" rel="CongHua" class="city-a">从化</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chenghaishi" rel="Chenghaishi" class="city-a">澄海</a></span>
+                                <span class="city-span"><a  href="/tuangou/Changshunxian" rel="Changshunxian" class="city-a">长顺县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chongzhoushi" rel="Chongzhoushi" class="city-a">崇州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chengjiangxian" rel="Chengjiangxian" class="city-a">澄江</a></span>
+                                <span class="city-span"><a  href="/tuangou/Chexi" rel="Chexi" class="city-a">车溪</a></span>
+                              </div>
+                            <div id="city-conD" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/DaLian" rel="DaLian" class="city-a">大连</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongGuan" rel="DongGuan" class="city-a">东莞</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaLi" rel="DaLi" class="city-a">大理</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaTong" rel="DaTong" class="city-a">大同</a></span>
+                                <span class="city-span"><a  href="/tuangou/DuJiangYan" rel="DuJiangYan" class="city-a">都江堰</a></span>
+                                <span class="city-span"><a  href="/tuangou/DunHuang" rel="DunHuang" class="city-a">敦煌</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeZhou" rel="DeZhou" class="city-a">德州</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaQing" rel="DaQing" class="city-a">大庆</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongYing" rel="DongYing" class="city-a">东营</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeYang" rel="DeYang" class="city-a">德阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/DengFeng" rel="DengFeng" class="city-a">登封（郑州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DanDong" rel="DanDong" class="city-a">丹东</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeQing" rel="DeQing" class="city-a">德清</a></span>
+                                <span class="city-span"><a  href="/tuangou/DanYang" rel="DanYang" class="city-a">丹阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongYang" rel="DongYang" class="city-a">东阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/DuYunShi" rel="DuYunShi" class="city-a">都匀市（黔南州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dongxingshi" rel="Dongxingshi" class="city-a">东兴（防城港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaZhou" rel="DaZhou" class="city-a">达州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Deqinxian" rel="Deqinxian" class="city-a">德钦</a></span>
+                                <span class="city-span"><a  href="/tuangou/Donghaixian" rel="Donghaixian" class="city-a">东海（连云港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaXin" rel="DaXin" class="city-a">大新（凭祥）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaShiQiao" rel="DaShiQiao" class="city-a">大石桥</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dazuxian" rel="Dazuxian" class="city-a">大足（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongShan" rel="DongShan" class="city-a">东山（漳州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaFeng" rel="DaFeng" class="city-a">大丰（盐城）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongTai" rel="DongTai" class="city-a">东台</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dingzhoushi" rel="Dingzhoushi" class="city-a">定州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Donggangshi" rel="Donggangshi" class="city-a">东港</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dunhuashi" rel="Dunhuashi" class="city-a">敦化</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaoCheng" rel="DaoCheng" class="city-a">稻城（甘孜州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dengzhoushi" rel="Dengzhoushi" class="city-a">邓州</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuDingXian" rel="LuDingXian" class="city-a">泸定县（甘孜州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dehuaxian" rel="Dehuaxian" class="city-a">德化（泉州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongFang" rel="DongFang" class="city-a">东方</a></span>
+                                <span class="city-span"><a  href="/tuangou/DaYe" rel="DaYe" class="city-a">大冶（黄石）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Danjiangkoushi" rel="Danjiangkoushi" class="city-a">丹江口（十堰）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeLingHa" rel="DeLingHa" class="city-a">德令哈</a></span>
+                                <span class="city-span"><a  href="/tuangou/Danbaxian" rel="Danbaxian" class="city-a">丹巴县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dianjiangxian" rel="Dianjiangxian" class="city-a">垫江（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DingAn" rel="DingAn" class="city-a">定安</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeXing" rel="DeXing" class="city-a">德兴（上饶）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dongpingxian" rel="Dongpingxian" class="city-a">东平</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dushanxian" rel="Dushanxian" class="city-a">独山县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dongaxian" rel="Dongaxian" class="city-a">东阿县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dehongzhou" rel="Dehongzhou" class="city-a">德宏洲</a></span>
+                                <span class="city-span"><a  href="/tuangou/Diebuxian" rel="Diebuxian" class="city-a">迭部县</a></span>
+                                <span class="city-span"><a  href="/tuangou/DeBaoXian" rel="DeBaoXian" class="city-a">德保县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dehuishi" rel="Dehuishi" class="city-a">德惠</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dayuxian" rel="Dayuxian" class="city-a">大余</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dingnanxian" rel="Dingnanxian" class="city-a">定南（赣州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/DongMing" rel="DongMing" class="city-a">东明</a></span>
+                                <span class="city-span"><a  href="/tuangou/Dishini" rel="Dishini" class="city-a">迪士尼</a></span>
+                              </div>
+                            <div id="city-conE" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/EMeiShan" rel="EMeiShan" class="city-a">峨眉山</a></span>
+                                <span class="city-span"><a  href="/tuangou/EnShi" rel="EnShi" class="city-a">恩施</a></span>
+                                <span class="city-span"><a  href="/tuangou/EErDuoSi" rel="EErDuoSi" class="city-a">鄂尔多斯</a></span>
+                                <span class="city-span"><a  href="/tuangou/EZhou" rel="EZhou" class="city-a">鄂州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Eergunashi" rel="Eergunashi" class="city-a">额尔古纳（呼伦贝尔）</a></span>
+                                <span class="city-span"><a  href="/tuangou/EnPing" rel="EnPing" class="city-a">恩平</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ejinaqi" rel="Ejinaqi" class="city-a">额济纳旗</a></span>
+                                <span class="city-span"><a  href="/tuangou/ErLongShan" rel="ErLongShan" class="city-a">二龙山风景区</a></span>
+                              </div>
+                            <div id="city-conF" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/FoShan" rel="FoShan" class="city-a">佛山</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuZhous" rel="FuZhous" class="city-a">福州</a></span>
+                                <span class="city-span"><a  href="/tuangou/FengHuang" rel="FengHuang" class="city-a">凤凰（湘西）</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuYang" rel="FuYang" class="city-a">富阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/FengHua" rel="FengHua" class="city-a">奉化</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuShun" rel="FuShun" class="city-a">抚顺</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuYangs" rel="FuYangs" class="city-a">阜阳（安徽）</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuQing" rel="FuQing" class="city-a">福清</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuZhou" rel="FuZhou" class="city-a">抚州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jiande" rel="Jiande" class="city-a">建德</a></span>
+                                <span class="city-span"><a  href="/tuangou/FangChengGang" rel="FangChengGang" class="city-a">防城港</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuDing" rel="FuDing" class="city-a">福鼎</a></span>
+                                <span class="city-span"><a  href="/tuangou/FengDu" rel="FengDu" class="city-a">丰都（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fengxian" rel="Fengxian" class="city-a">丰县（徐州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fengchengs" rel="Fengchengs" class="city-a">凤城</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuXin" rel="FuXin" class="city-a">阜新</a></span>
+                                <span class="city-span"><a  href="/tuangou/FeiCheng" rel="FeiCheng" class="city-a">肥城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fenyangshi" rel="Fenyangshi" class="city-a">汾阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fuquanshi" rel="Fuquanshi" class="city-a">福泉市（黔南州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fupingxian" rel="Fupingxian" class="city-a">阜平县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fengcheng" rel="Fengcheng" class="city-a">丰城（宜春）</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuFengXian" rel="FuFengXian" class="city-a">扶风县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fupingxian" rel="Fupingxian" class="city-a">富平</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fanchangxian" rel="Fanchangxian" class="city-a">繁昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/FengShanXian" rel="FengShanXian" class="city-a">凤山县</a></span>
+                                <span class="city-span"><a  href="/tuangou/FengNing" rel="FengNing" class="city-a">丰宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/FuYu" rel="FuYu" class="city-a">扶余</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fakuxian" rel="Fakuxian" class="city-a">法库</a></span>
+                                <span class="city-span"><a  href="/tuangou/Fengxianbowuguan" rel="Fengxianbowuguan" class="city-a">奉贤博物馆</a></span>
+                              </div>
+                            <div id="city-conG" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/GuangZhou" rel="GuangZhou" class="city-a">广州</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuiYang" rel="GuiYang" class="city-a">贵阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuiLin" rel="GuiLin" class="city-a">桂林</a></span>
+                                <span class="city-span"><a  href="/tuangou/GanZhou" rel="GanZhou" class="city-a">赣州</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuangYuan" rel="GuangYuan" class="city-a">广元</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuangAn" rel="GuangAn" class="city-a">广安</a></span>
+                                <span class="city-span"><a  href="/tuangou/GeErMu" rel="GeErMu" class="city-a">格尔木</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuiGang" rel="GuiGang" class="city-a">贵港</a></span>
+                                <span class="city-span"><a  href="/tuangou/GaoMi" rel="GaoMi" class="city-a">高密</a></span>
+                                <span class="city-span"><a  href="/tuangou/GaoYou" rel="GaoYou" class="city-a">高邮（扬州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuangRao" rel="GuangRao" class="city-a">广饶</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ganyu" rel="Ganyu" class="city-a">赣榆（连云港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuangDe" rel="GuangDe" class="city-a">广德</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guannanxian" rel="Guannanxian" class="city-a">灌南（连云港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/GaoCheng" rel="GaoCheng" class="city-a">藁城</a></span>
+                                <span class="city-span"><a  href="/tuangou/GaoPing" rel="GaoPing" class="city-a">高平</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gannanxian" rel="Gannanxian" class="city-a">甘南</a></span>
+                                <span class="city-span"><a  href="/tuangou/Genheshi" rel="Genheshi" class="city-a">根河（呼伦贝尔）</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuYuan" rel="GuYuan" class="city-a">固原</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guanyunxian" rel="Guanyunxian" class="city-a">灌云（连云港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/GaoBeiDian" rel="GaoBeiDian" class="city-a">高碑店</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaizhoushi" rel="Gaizhoushi" class="city-a">盖州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ganzi" rel="Ganzi" class="city-a">甘孜州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaoxiong" rel="Gaoxiong" class="city-a">高雄</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guanyunxian" rel="Guanyunxian" class="city-a">灌云</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaochunxian" rel="Gaochunxian" class="city-a">高淳县（南京）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaoyoushi" rel="Gaoyoushi" class="city-a">高邮（扬州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaozhoushi" rel="Gaozhoushi" class="city-a">高州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guipingshi" rel="Guipingshi" class="city-a">桂平（贵港）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gaoyangxian" rel="Gaoyangxian" class="city-a">高阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gongyishi" rel="Gongyishi" class="city-a">巩义</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guangshuishi" rel="Guangshuishi" class="city-a">广水（随州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gonghexian" rel="Gonghexian" class="city-a">共和县</a></span>
+                                <span class="city-span"><a  href="/tuangou/GuiDe" rel="GuiDe" class="city-a">贵德</a></span>
+                                <span class="city-span"><a  href="/tuangou/Gushui" rel="Gushui" class="city-a">沽水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Guazhou" rel="Guazhou" class="city-a">瓜州县</a></span>
+                              </div>
+                            <div id="city-conH" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/HangZhou" rel="HangZhou" class="city-a">杭州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaErBin" rel="HaErBin" class="city-a">哈尔滨</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeFei" rel="HeFei" class="city-a">合肥</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuangShan" rel="HuangShan" class="city-a">黄山</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuHeHaoTe" rel="HuHeHaoTe" class="city-a">呼和浩特</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiKou" rel="HaiKou" class="city-a">海口</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuiZhou" rel="HuiZhou" class="city-a">惠州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaiAn" rel="HuaiAn" class="city-a">淮安</a></span>
+                                <span class="city-span"><a  href="/tuangou/HengYang" rel="HengYang" class="city-a">衡阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/HongCun" rel="HongCun" class="city-a">宏村（黄山）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HanDan" rel="HanDan" class="city-a">邯郸</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuLunBeiEr" rel="HuLunBeiEr" class="city-a">呼伦贝尔（海拉尔）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HengDian" rel="HengDian" class="city-a">横店</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeYuan" rel="HeYuan" class="city-a">河源</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeZe" rel="HeZe" class="city-a">菏泽</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiNing" rel="HaiNing" class="city-a">海宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiLuoGou" rel="HaiLuoGou" class="city-a">海螺沟（甘孜州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaShan" rel="HuaShan" class="city-a">华山</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuLuDao" rel="HuLuDao" class="city-a">葫芦岛</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuZhou" rel="HuZhou" class="city-a">湖州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HanZhong" rel="HanZhong" class="city-a">汉中</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaiNan" rel="HuaiNan" class="city-a">淮南</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuangShi" rel="HuangShi" class="city-a">黄石</a></span>
+                                <span class="city-span"><a  href="/tuangou/HengShui" rel="HengShui" class="city-a">衡水</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeiHe" rel="HeiHe" class="city-a">黑河</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaiHua" rel="HuaiHua" class="city-a">怀化</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeZhou" rel="HeZhou" class="city-a">贺州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaiBei" rel="HuaiBei" class="city-a">淮北</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiYang" rel="HaiYang" class="city-a">海阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiMen" rel="HaiMen" class="city-a">海门（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiYan" rel="HaiYan" class="city-a">海盐</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeChi" rel="HeChi" class="city-a">河池</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeGang" rel="HeGang" class="city-a">鹤岗</a></span>
+                                <span class="city-span"><a  href="/tuangou/HongHeZhou" rel="HongHeZhou" class="city-a">红河州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuiAn" rel="HuiAn" class="city-a">惠安（泉州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuangGang" rel="HuangGang" class="city-a">黄冈</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeBi" rel="HeBi" class="city-a">鹤壁</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeTian" rel="HeTian" class="city-a">和田</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hongzexian" rel="Hongzexian" class="city-a">洪泽县（淮安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaiCheng" rel="HaiCheng" class="city-a">海城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hanchuanshi" rel="Hanchuanshi" class="city-a">汉川（孝感）</a></span>
+                                <span class="city-span"><a  href="/tuangou/HanCheng" rel="HanCheng" class="city-a">韩城</a></span>
+                                <span class="city-span"><a  href="/tuangou/HaMi" rel="HaMi" class="city-a">哈密</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuangHua" rel="HuangHua" class="city-a">黄骅</a></span>
+                                <span class="city-span"><a  href="/tuangou/HongHu" rel="HongHu" class="city-a">洪湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hechuanshi" rel="Hechuanshi" class="city-a">合川（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Haibei" rel="Haibei" class="city-a">海北州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huangnanzangzuzizhizhou" rel="Huangnanzangzuzizhizhou" class="city-a">黄南藏族自治州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huaiyuanxian" rel="Huaiyuanxian" class="city-a">怀远</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huoshanxian" rel="Huoshanxian" class="city-a">霍山（六安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Helingeerxian" rel="Helingeerxian" class="city-a">和林格尔</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuTuBiXian" rel="HuTuBiXian" class="city-a">呼图壁县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huaiyang" rel="Huaiyang" class="city-a">淮阳县（周口）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Haidong" rel="Haidong" class="city-a">海东州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hainans" rel="Hainans" class="city-a">海南州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Haixi" rel="Haixi" class="city-a">海西州</a></span>
+                                <span class="city-span"><a  href="/tuangou/HeShan" rel="HeShan" class="city-a">鹤山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huazhoushi" rel="Huazhoushi" class="city-a">化州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hejianshi" rel="Hejianshi" class="city-a">河间</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuaiLai" rel="HuaiLai" class="city-a">怀来</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hailinshi" rel="Hailinshi" class="city-a">海林</a></span>
+                                <span class="city-span"><a  href="/tuangou/Hangjinhouqi" rel="Hangjinhouqi" class="city-a">杭锦后旗</a></span>
+                                <span class="city-span"><a  href="/tuangou/Haixian" rel="Haixian" class="city-a">海晏</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuangZhong" rel="HuangZhong" class="city-a">湟中</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huiminxian" rel="Huiminxian" class="city-a">惠民</a></span>
+                                <span class="city-span"><a  href="/tuangou/HunYuan" rel="HunYuan" class="city-a">浑源</a></span>
+                                <span class="city-span"><a  href="/tuangou/HuoZhou" rel="HuoZhou" class="city-a">霍州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huairenxian" rel="Huairenxian" class="city-a">怀仁</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huxian" rel="Huxian" class="city-a">户县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Huangyan" rel="Huangyan" class="city-a">黄岩</a></span>
+                              </div>
+                            <div id="city-conJ" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/JiNan" rel="JiNan" class="city-a">济南</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiuHuaShan" rel="JiuHuaShan" class="city-a">九华山</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaXing" rel="JiaXing" class="city-a">嘉兴</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingZhou" rel="JingZhou" class="city-a">荆州</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiuJiang" rel="JiuJiang" class="city-a">九江</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingDeZhen" rel="JingDeZhen" class="city-a">景德镇</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinJiang" rel="JinJiang" class="city-a">晋江</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinHua" rel="JinHua" class="city-a">金华</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiNing" rel="JiNing" class="city-a">济宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiLin" rel="JiLin" class="city-a">吉林</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaoZuo" rel="JiaoZuo" class="city-a">焦作</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinZhou" rel="JinZhou" class="city-a">锦州</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangYin" rel="JiangYin" class="city-a">江阴</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangMen" rel="JiangMen" class="city-a">江门</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingGangShan" rel="JingGangShan" class="city-a">井冈山（吉安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiuZhaiGou" rel="JiuZhaiGou" class="city-a">九寨沟</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaMuSi" rel="JiaMuSi" class="city-a">佳木斯</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinCheng" rel="JinCheng" class="city-a">晋城</a></span>
+                                <span class="city-span"><a  href="/tuangou/JieYang" rel="JieYang" class="city-a">揭阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaYuGuan" rel="JiaYuGuan" class="city-a">嘉峪关</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiAn" rel="JiAn" class="city-a">吉安</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingMen" rel="JingMen" class="city-a">荆门</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaShan" rel="JiaShan" class="city-a">嘉善</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaoNan" rel="JiaoNan" class="city-a">胶南</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiuQuan" rel="JiuQuan" class="city-a">酒泉</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangShan" rel="JiangShan" class="city-a">江山</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangYan" rel="JiangYan" class="city-a">姜堰（泰州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingJiang" rel="JingJiang" class="city-a">靖江（泰州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangDu" rel="JiangDu" class="city-a">江都（扬州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinZhong" rel="JinZhong" class="city-a">晋中</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiaoZhou" rel="JiaoZhou" class="city-a">胶州</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiYuan" rel="JiYuan" class="city-a">济源</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiMo" rel="JiMo" class="city-a">即墨</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangYou" rel="JiangYou" class="city-a">江油</a></span>
+                                <span class="city-span"><a  href="/tuangou/JuRong" rel="JuRong" class="city-a">句容</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinTan" rel="JinTan" class="city-a">金坛（常州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiShou" rel="JiShou" class="city-a">吉首（湘西）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JieXiu" rel="JieXiu" class="city-a">介休</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinYun" rel="JinYun" class="city-a">缙云</a></span>
+                                <span class="city-span"><a  href="/tuangou/JianYang" rel="JianYang" class="city-a">简阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jinchangshi" rel="Jinchangshi" class="city-a">金昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiXi" rel="JiXi" class="city-a">鸡西</a></span>
+                                <span class="city-span"><a  href="/tuangou/JinHu" rel="JinHu" class="city-a">金湖（淮安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jiayuxian" rel="Jiayuxian" class="city-a">嘉鱼（咸宁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingBianXian" rel="JingBianXian" class="city-a">靖边县</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangJin" rel="JiangJin" class="city-a">江津（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jinzhoushi" rel="Jinzhoushi" class="city-a">晋州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jinxiangxian" rel="Jinxiangxian" class="city-a">金乡</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiangLe" rel="JiangLe" class="city-a">将乐（三明）</a></span>
+                                <span class="city-span"><a  href="/tuangou/JingNing" rel="JingNing" class="city-a">景宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jiutaishi" rel="Jiutaishi" class="city-a">九台</a></span>
+                                <span class="city-span"><a  href="/tuangou/JiYangXian" rel="JiYangXian" class="city-a">济阳县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jianshuixian" rel="Jianshuixian" class="city-a">建水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jiangxian" rel="Jiangxian" class="city-a">綦江（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jimunaixian" rel="Jimunaixian" class="city-a">吉木乃县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Jagedaqi" rel="Jagedaqi" class="city-a">加格达奇</a></span>
+                              </div>
+                            <div id="city-conK" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/KunMing" rel="KunMing" class="city-a">昆明</a></span>
+                                <span class="city-span"><a  href="/tuangou/KunShan" rel="KunShan" class="city-a">昆山</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaiFeng" rel="KaiFeng" class="city-a">开封</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaiLi" rel="KaiLi" class="city-a">凯里（黔东南）</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaiPing" rel="KaiPing" class="city-a">开平</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaShi" rel="KaShi" class="city-a">喀什</a></span>
+                                <span class="city-span"><a  href="/tuangou/KuErLe" rel="KuErLe" class="city-a">库尔勒</a></span>
+                                <span class="city-span"><a  href="/tuangou/KangDing" rel="KangDing" class="city-a">康定（甘孜州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/KeLaMaYi" rel="KeLaMaYi" class="city-a">克拉玛依</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaiHua" rel="KaiHua" class="city-a">开化</a></span>
+                                <span class="city-span"><a  href="/tuangou/KuiTun" rel="KuiTun" class="city-a">奎屯</a></span>
+                                <span class="city-span"><a  href="/tuangou/KenLi" rel="KenLi" class="city-a">垦利</a></span>
+                                <span class="city-span"><a  href="/tuangou/Kaixian" rel="Kaixian" class="city-a">开县（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/KuanCheng" rel="KuanCheng" class="city-a">宽城</a></span>
+                                <span class="city-span"><a  href="/tuangou/KaNaSi" rel="KaNaSi" class="city-a">喀纳斯</a></span>
+                                <span class="city-span"><a  href="/tuangou/KeQiao" rel="KeQiao" class="city-a">柯桥（绍兴）</a></span>
+                              </div>
+                            <div id="city-conL" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/Lijiang" rel="Lijiang" class="city-a">丽江（含束河）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LanZhou" rel="LanZhou" class="city-a">兰州</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuoYang" rel="LuoYang" class="city-a">洛阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaSa" rel="LaSa" class="city-a">拉萨</a></span>
+                                <span class="city-span"><a  href="/tuangou/LianYunGang" rel="LianYunGang" class="city-a">连云港</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinYi" rel="LinYi" class="city-a">临沂</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiuZhou" rel="LiuZhou" class="city-a">柳州</a></span>
+                                <span class="city-span"><a  href="/tuangou/LangFang" rel="LangFang" class="city-a">廊坊</a></span>
+                                <span class="city-span"><a  href="/tuangou/LeShan" rel="LeShan" class="city-a">乐山</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinAn" rel="LinAn" class="city-a">临安</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiaoCheng" rel="LiaoCheng" class="city-a">聊城</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuShans" rel="LuShans" class="city-a">庐山（九江）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinFen" rel="LinFen" class="city-a">临汾</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiShui" rel="LiShui" class="city-a">丽水</a></span>
+                                <span class="city-span"><a  href="/tuangou/LongKou" rel="LongKou" class="city-a">龙口</a></span>
+                                <span class="city-span"><a  href="/tuangou/LongYan" rel="LongYan" class="city-a">龙岩</a></span>
+                                <span class="city-span"><a  href="/tuangou/LouDi" rel="LouDi" class="city-a">娄底</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiWu" rel="LaiWu" class="city-a">莱芜</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinHai" rel="LinHai" class="city-a">临海</a></span>
+                                <span class="city-span"><a  href="/tuangou/LeQing" rel="LeQing" class="city-a">乐清</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiBo" rel="LiBo" class="city-a">荔波（黔南州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuZhou" rel="LuZhou" class="city-a">泸州</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinZhi" rel="LinZhi" class="city-a">林芝</a></span>
+                                <span class="city-span"><a  href="/tuangou/Longshenggezuzizhixian" rel="Longshenggezuzizhixian" class="city-a">龙胜（桂林）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lichuanshi" rel="Lichuanshi" class="city-a">利川（恩施）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuoHe" rel="LuoHe" class="city-a">漯河</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiuAn" rel="LiuAn" class="city-a">六安</a></span>
+                                <span class="city-span"><a  href="/tuangou/LangZhong" rel="LangZhong" class="city-a">阆中</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiuPanShui" rel="LiuPanShui" class="city-a">六盘水</a></span>
+                                <span class="city-span"><a  href="/tuangou/LvLiang" rel="LvLiang" class="city-a">吕梁</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuGuHu" rel="LuGuHu" class="city-a">泸沽湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiaoYang" rel="LiaoYang" class="city-a">辽阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiuYang" rel="LiuYang" class="city-a">浏阳（长沙）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiZhou" rel="LaiZhou" class="city-a">莱州</a></span>
+                                <span class="city-span"><a  href="/tuangou/LongHuShan" rel="LongHuShan" class="city-a">龙虎山（鹰潭）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinZhou" rel="LinZhou" class="city-a">林州（安阳）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiYang" rel="LaiYang" class="city-a">莱阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/LongYou" rel="LongYou" class="city-a">龙游</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiBin" rel="LaiBin" class="city-a">来宾</a></span>
+                                <span class="city-span"><a  href="/tuangou/LingShui" rel="LingShui" class="city-a">陵水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Longquanshi" rel="Longquanshi" class="city-a">龙泉</a></span>
+                                <span class="city-span"><a  href="/tuangou/LongHai" rel="LongHai" class="city-a">龙海（漳州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LeiYang" rel="LeiYang" class="city-a">耒阳（衡阳）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LianJiang" rel="LianJiang" class="city-a">连江（福州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LingWu" rel="LingWu" class="city-a">灵武</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lingshixian" rel="Lingshixian" class="city-a">灵石</a></span>
+                                <span class="city-span"><a  href="/tuangou/Longnan" rel="Longnan" class="city-a">陇南市</a></span>
+                                <span class="city-span"><a  href="/tuangou/LanXi" rel="LanXi" class="city-a">兰溪</a></span>
+                                <span class="city-span"><a  href="/tuangou/LianCheng" rel="LianCheng" class="city-a">连城（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuQuanShi" rel="LuQuanShi" class="city-a">鹿泉市</a></span>
+                                <span class="city-span"><a  href="/tuangou/LuanChuan" rel="LuanChuan" class="city-a">栾川（洛阳）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lingbaoshi" rel="Lingbaoshi" class="city-a">灵宝（三门峡）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Linqingshi" rel="Linqingshi" class="city-a">临清</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiXi" rel="LaiXi" class="city-a">莱西</a></span>
+                                <span class="city-span"><a  href="/tuangou/LeDong" rel="LeDong" class="city-a">乐东</a></span>
+                                <span class="city-span"><a  href="/tuangou/LiaoYuan" rel="LiaoYuan" class="city-a">辽源</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lijiangshi" rel="Lijiangshi" class="city-a">丽江</a></span>
+                                <span class="city-span"><a  href="/tuangou/LinCang" rel="LinCang" class="city-a">临沧</a></span>
+                                <span class="city-span"><a  href="/tuangou/LianShui" rel="LianShui" class="city-a">涟水（淮安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiShui" rel="LaiShui" class="city-a">涞水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lushan" rel="Lushan" class="city-a">鲁山（平顶山）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Luotianxian" rel="Luotianxian" class="city-a">罗田（黄冈）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lijinxian" rel="Lijinxian" class="city-a">利津县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Liangshanzhou" rel="Liangshanzhou" class="city-a">凉山州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lianjiangshi" rel="Lianjiangshi" class="city-a">廉江</a></span>
+                                <span class="city-span"><a  href="/tuangou/LaiYuan" rel="LaiYuan" class="city-a">涞源</a></span>
+                                <span class="city-span"><a  href="/tuangou/LeTing" rel="LeTing" class="city-a">乐亭</a></span>
+                                <span class="city-span"><a  href="/tuangou/LengShui" rel="LengShui" class="city-a">冷水（娄底）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Liling" rel="Liling" class="city-a">醴陵市政府</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lishishi" rel="Lishishi" class="city-a">离石</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lvshun" rel="Lvshun" class="city-a">旅顺</a></span>
+                                <span class="city-span"><a  href="/tuangou/Lintong" rel="Lintong" class="city-a">临潼</a></span>
+                              </div>
+                            <div id="city-conM" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/MianYang" rel="MianYang" class="city-a">绵阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/MaAnShan" rel="MaAnShan" class="city-a">马鞍山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ManZhouLi" rel="ManZhouLi" class="city-a">满洲里</a></span>
+                                <span class="city-span"><a  href="/tuangou/MeiZhou" rel="MeiZhou" class="city-a">梅州</a></span>
+                                <span class="city-span"><a  href="/tuangou/MuDanJiang" rel="MuDanJiang" class="city-a">牡丹江</a></span>
+                                <span class="city-span"><a  href="/tuangou/MaoMing" rel="MaoMing" class="city-a">茂名</a></span>
+                                <span class="city-span"><a  href="/tuangou/MeiShan" rel="MeiShan" class="city-a">眉山</a></span>
+                                <span class="city-span"><a  href="/tuangou/MoHe" rel="MoHe" class="city-a">漠河</a></span>
+                                <span class="city-span"><a  href="/tuangou/Machengshi" rel="Machengshi" class="city-a">麻城（黄冈）</a></span>
+                                <span class="city-span"><a  href="/tuangou/MiShan" rel="MiShan" class="city-a">密山</a></span>
+                                <span class="city-span"><a  href="/tuangou/MaErKang" rel="MaErKang" class="city-a">马尔康（阿坝州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/MangShi" rel="MangShi" class="city-a">芒市（德宏州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Majiangxian" rel="Majiangxian" class="city-a">麻江县</a></span>
+                                <span class="city-span"><a  href="/tuangou/MiZhiXian" rel="MiZhiXian" class="city-a">米脂县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Mudu" rel="Mudu" class="city-a">木渎</a></span>
+                                <span class="city-span"><a  href="/tuangou/MianShan" rel="MianShan" class="city-a">绵山</a></span>
+                              </div>
+                            <div id="city-conN" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/NanJing" rel="NanJing" class="city-a">南京</a></span>
+                                <span class="city-span"><a  href="/tuangou/NingBo" rel="NingBo" class="city-a">宁波</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanNing" rel="NanNing" class="city-a">南宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanChang" rel="NanChang" class="city-a">南昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanTong" rel="NanTong" class="city-a">南通</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanYang" rel="NanYang" class="city-a">南阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/NingHai" rel="NingHai" class="city-a">宁海</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanChong" rel="NanChong" class="city-a">南充</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanTongHaiAn" rel="NanTongHaiAn" class="city-a">海安（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanXun" rel="NanXun" class="city-a">南浔（湖州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Nanjingxian" rel="Nanjingxian" class="city-a">南靖（漳州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/NingDe" rel="NingDe" class="city-a">宁德</a></span>
+                                <span class="city-span"><a  href="/tuangou/NeiJiang" rel="NeiJiang" class="city-a">内江</a></span>
+                                <span class="city-span"><a  href="/tuangou/NingGuo" rel="NingGuo" class="city-a">宁国</a></span>
+                                <span class="city-span"><a  href="/tuangou/Nananshi" rel="Nananshi" class="city-a">南安（泉州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanKangShi" rel="NanKangShi" class="city-a">南康（赣州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Nanchuanshi" rel="Nanchuanshi" class="city-a">南川（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ningxian" rel="Ningxian" class="city-a">睢宁（徐州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/NanDaiHe" rel="NanDaiHe" class="city-a">南戴河</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ningyangxian" rel="Ningyangxian" class="city-a">宁阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Naqu" rel="Naqu" class="city-a">那曲</a></span>
+                                <span class="city-span"><a  href="/tuangou/NuJiang" rel="NuJiang" class="city-a">怒江</a></span>
+                                <span class="city-span"><a  href="/tuangou/Nanxian" rel="Nanxian" class="city-a">莒南</a></span>
+                                <span class="city-span"><a  href="/tuangou/Nanchengxian" rel="Nanchengxian" class="city-a">南城县（抚州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/NingCheng" rel="NingCheng" class="city-a">宁城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ningshanxian" rel="Ningshanxian" class="city-a">宁陕县</a></span>
+                              </div>
+                            <div id="city-conP" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/PingYao" rel="PingYao" class="city-a">平遥</a></span>
+                                <span class="city-span"><a  href="/tuangou/PengLai" rel="PengLai" class="city-a">蓬莱</a></span>
+                                <span class="city-span"><a  href="/tuangou/PuYang" rel="PuYang" class="city-a">濮阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/PuTian" rel="PuTian" class="city-a">莆田</a></span>
+                                <span class="city-span"><a  href="/tuangou/PanJin" rel="PanJin" class="city-a">盘锦</a></span>
+                                <span class="city-span"><a  href="/tuangou/PanZhiHua" rel="PanZhiHua" class="city-a">攀枝花</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingHu" rel="PingHu" class="city-a">平湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingDingShan" rel="PingDingShan" class="city-a">平顶山</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingXiang" rel="PingXiang" class="city-a">萍乡</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingLiang" rel="PingLiang" class="city-a">平凉</a></span>
+                                <span class="city-span"><a  href="/tuangou/Puerhanizuyizuzizhixian" rel="Puerhanizuyizuzizhixian" class="city-a">普洱</a></span>
+                                <span class="city-span"><a  href="/tuangou/Pingtanxian" rel="Pingtanxian" class="city-a">平潭（福州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Putuoshan" rel="Putuoshan" class="city-a">普陀山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Puling" rel="Puling" class="city-a">涪陵（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingYang" rel="PingYang" class="city-a">平阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/PanAn" rel="PanAn" class="city-a">磐安</a></span>
+                                <span class="city-span"><a  href="/tuangou/PuJiang" rel="PuJiang" class="city-a">浦江</a></span>
+                                <span class="city-span"><a  href="/tuangou/PiXian" rel="PiXian" class="city-a">邳州（徐州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingDu" rel="PingDu" class="city-a">平度</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingShanXian" rel="PingShanXian" class="city-a">平山县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Pingnanxian" rel="Pingnanxian" class="city-a">屏南</a></span>
+                                <span class="city-span"><a  href="/tuangou/Pengshuimiaozutujiazuzizhixian" rel="Pengshuimiaozutujiazuzizhixian" class="city-a">彭水（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingYuanXian" rel="PingYuanXian" class="city-a">平原县</a></span>
+                                <span class="city-span"><a  href="/tuangou/PingYi" rel="PingYi" class="city-a">平邑</a></span>
+                                <span class="city-span"><a  href="/tuangou/Puningshi" rel="Puningshi" class="city-a">普宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/Panshishi" rel="Panshishi" class="city-a">磐石</a></span>
+                                <span class="city-span"><a  href="/tuangou/Pulandianshi" rel="Pulandianshi" class="city-a">普兰店</a></span>
+                                <span class="city-span"><a  href="/tuangou/Pinganxian" rel="Pinganxian" class="city-a">平安县</a></span>
+                                <span class="city-span"><a  href="/tuangou/PengZhou" rel="PengZhou" class="city-a">彭州</a></span>
+                              </div>
+                            <div id="city-conQ" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/QingDao" rel="QingDao" class="city-a">青岛</a></span>
+                                <span class="city-span"><a  href="/tuangou/QinHuangDao" rel="QinHuangDao" class="city-a">秦皇岛</a></span>
+                                <span class="city-span"><a  href="/tuangou/QuanZhou" rel="QuanZhou" class="city-a">泉州</a></span>
+                                <span class="city-span"><a  href="/tuangou/QianDaoHu" rel="QianDaoHu" class="city-a">千岛湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/QingYuan" rel="QingYuan" class="city-a">清远</a></span>
+                                <span class="city-span"><a  href="/tuangou/QuFu" rel="QuFu" class="city-a">曲阜</a></span>
+                                <span class="city-span"><a  href="/tuangou/QuZhou" rel="QuZhou" class="city-a">衢州</a></span>
+                                <span class="city-span"><a  href="/tuangou/QiQiHaEr" rel="QiQiHaEr" class="city-a">齐齐哈尔</a></span>
+                                <span class="city-span"><a  href="/tuangou/QinZhou" rel="QinZhou" class="city-a">钦州</a></span>
+                                <span class="city-span"><a  href="/tuangou/QiongHai" rel="QiongHai" class="city-a">琼海</a></span>
+                                <span class="city-span"><a  href="/tuangou/QiDong" rel="QiDong" class="city-a">启东（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/QuJing" rel="QuJing" class="city-a">曲靖</a></span>
+                                <span class="city-span"><a  href="/tuangou/QianAn" rel="QianAn" class="city-a">迁安</a></span>
+                                <span class="city-span"><a  href="/tuangou/QingZhou" rel="QingZhou" class="city-a">青州</a></span>
+                                <span class="city-span"><a  href="/tuangou/QiXia" rel="QiXia" class="city-a">栖霞</a></span>
+                                <span class="city-span"><a  href="/tuangou/QianJiangs" rel="QianJiangs" class="city-a">潜江</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qingtianxian" rel="Qingtianxian" class="city-a">青田</a></span>
+                                <span class="city-span"><a  href="/tuangou/QingHaiHu" rel="QingHaiHu" class="city-a">青海湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qianjiang" rel="Qianjiang" class="city-a">黔江（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qihexian" rel="Qihexian" class="city-a">齐河县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qingyunxian" rel="Qingyunxian" class="city-a">庆云</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qingyangshi" rel="Qingyangshi" class="city-a">庆阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qitaihe" rel="Qitaihe" class="city-a">七台河</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qilianxian" rel="Qilianxian" class="city-a">祁连县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qianshanxian" rel="Qianshanxian" class="city-a">潜山（安庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Qixianling" rel="Qixianling" class="city-a">七仙岭</a></span>
+                              </div>
+                            <div id="city-conR" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/RiZhao" rel="RiZhao" class="city-a">日照</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuGao" rel="RuGao" class="city-a">如皋（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuiAn" rel="RuiAn" class="city-a">瑞安</a></span>
+                                <span class="city-span"><a  href="/tuangou/RongCheng" rel="RongCheng" class="city-a">荣成</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuiLi" rel="RuiLi" class="city-a">瑞丽</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuDong" rel="RuDong" class="city-a">如东（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuShan" rel="RuShan" class="city-a">乳山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Rongchangxian" rel="Rongchangxian" class="city-a">荣昌（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ruijinshi" rel="Ruijinshi" class="city-a">瑞金</a></span>
+                                <span class="city-span"><a  href="/tuangou/RenHuai" rel="RenHuai" class="city-a">仁怀（遵义）</a></span>
+                                <span class="city-span"><a  href="/tuangou/RenQiu" rel="RenQiu" class="city-a">任丘</a></span>
+                                <span class="city-span"><a  href="/tuangou/RiKaZe" rel="RiKaZe" class="city-a">日喀则</a></span>
+                                <span class="city-span"><a  href="/tuangou/RuZhou" rel="RuZhou" class="city-a">汝州（平顶山）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ruoergaixian" rel="Ruoergaixian" class="city-a">若尔盖</a></span>
+                              </div>
+                            <div id="city-conS" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/ShangHai" rel="ShangHai" class="city-a">上海</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShenZhen" rel="ShenZhen" class="city-a">深圳</a></span>
+                                <span class="city-span"><a  href="/tuangou/SanYa" rel="SanYa" class="city-a">三亚</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuZhou" rel="SuZhou" class="city-a">苏州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShenYang" rel="ShenYang" class="city-a">沈阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShiJiaZhuang" rel="ShiJiaZhuang" class="city-a">石家庄</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaoXing" rel="ShaoXing" class="city-a">绍兴</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShanTou" rel="ShanTou" class="city-a">汕头</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaoGuan" rel="ShaoGuan" class="city-a">韶关</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShiYan" rel="ShiYan" class="city-a">十堰</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShangRaoShi" rel="ShangRaoShi" class="city-a">上饶市</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShanWei" rel="ShanWei" class="city-a">汕尾</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShiShis" rel="ShiShis" class="city-a">石狮</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShangQiu" rel="ShangQiu" class="city-a">商丘</a></span>
+                                <span class="city-span"><a  href="/tuangou/SanQingShan" rel="SanQingShan" class="city-a">三清山（上饶）</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuQian" rel="SuQian" class="city-a">宿迁</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShangYu" rel="ShangYu" class="city-a">上虞</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShenNongJia" rel="ShenNongJia" class="city-a">神农架</a></span>
+                                <span class="city-span"><a  href="/tuangou/SongYuan" rel="SongYuan" class="city-a">松原</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaoShan" rel="ShaoShan" class="city-a">韶山（湘潭）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShouGuang" rel="ShouGuang" class="city-a">寿光</a></span>
+                                <span class="city-span"><a  href="/tuangou/Sipingshi" rel="Sipingshi" class="city-a">四平</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShiZuiShan" rel="ShiZuiShan" class="city-a">石嘴山</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuiChang" rel="SuiChang" class="city-a">遂昌（丽水）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaoYang" rel="ShaoYang" class="city-a">邵阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuiNing" rel="SuiNing" class="city-a">遂宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuiZhou" rel="SuiZhou" class="city-a">随州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shunanzhuhai" rel="Shunanzhuhai" class="city-a">蜀南竹海</a></span>
+                                <span class="city-span"><a  href="/tuangou/SanMenXia" rel="SanMenXia" class="city-a">三门峡</a></span>
+                                <span class="city-span"><a  href="/tuangou/SiHong" rel="SiHong" class="city-a">泗洪（宿迁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuZhous" rel="SuZhous" class="city-a">宿州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShuoZhou" rel="ShuoZhou" class="city-a">朔州</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuiFenHe" rel="SuiFenHe" class="city-a">绥芬河</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuiHua" rel="SuiHua" class="city-a">绥化</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShengZhou" rel="ShengZhou" class="city-a">嵊州</a></span>
+                                <span class="city-span"><a  href="/tuangou/SanHeShi" rel="SanHeShi" class="city-a">三河市</a></span>
+                                <span class="city-span"><a  href="/tuangou/SanMing" rel="SanMing" class="city-a">三明</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShangLuo" rel="ShangLuo" class="city-a">商洛</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaXian" rel="ShaXian" class="city-a">沙县（三明）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShangHang" rel="ShangHang" class="city-a">上杭（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shenmuxian" rel="Shenmuxian" class="city-a">神木</a></span>
+                                <span class="city-span"><a  href="/tuangou/Sanmenxian" rel="Sanmenxian" class="city-a">三门</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShaoWu" rel="ShaoWu" class="city-a">邵武（南平）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Suizhongxian" rel="Suizhongxian" class="city-a">绥中</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShanHaiGuan" rel="ShanHaiGuan" class="city-a">山海关</a></span>
+                                <span class="city-span"><a  href="/tuangou/SiYang" rel="SiYang" class="city-a">泗阳（宿迁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shishi" rel="Shishi" class="city-a">偃师（洛阳）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShuangYaShan" rel="ShuangYaShan" class="city-a">双鸭山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShanNan" rel="ShanNan" class="city-a">山南</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shuchengxian" rel="Shuchengxian" class="city-a">舒城（六安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/SongYang" rel="SongYang" class="city-a">松阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/SuNing" rel="SuNing" class="city-a">肃宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/Suibinxian" rel="Suibinxian" class="city-a">绥滨</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shizhutujiazuzizhixian" rel="Shizhutujiazuzizhixian" class="city-a">石柱</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shiwei" rel="Shiwei" class="city-a">室韦（呼伦贝尔）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shanxians" rel="Shanxians" class="city-a">砀山（宿州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShuiXian" rel="ShuiXian" class="city-a">溧水县（南京）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shangzhishi" rel="Shangzhishi" class="city-a">尚志</a></span>
+                                <span class="city-span"><a  href="/tuangou/SiShui" rel="SiShui" class="city-a">泗水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Songpanxian" rel="Songpanxian" class="city-a">松潘（黄龙，川主寺）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shuangliuxian" rel="Shuangliuxian" class="city-a">双流</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shishiss" rel="Shishiss" class="city-a">什邡（德阳）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShiHeZi" rel="ShiHeZi" class="city-a">石河子</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShanShanXian" rel="ShanShanXian" class="city-a">鄯善县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Shanxian" rel="Shanxian" class="city-a">鄯善</a></span>
+                                <span class="city-span"><a  href="/tuangou/ShunDe" rel="ShunDe" class="city-a">顺德</a></span>
+                                <span class="city-span"><a  href="/tuangou/Sandongwubowuguan" rel="Sandongwubowuguan" class="city-a">三栋屋博物馆</a></span>
+                              </div>
+                            <div id="city-conT" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/TianJin" rel="TianJin" class="city-a">天津</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiYuan" rel="TaiYuan" class="city-a">太原</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiAn" rel="TaiAn" class="city-a">泰安</a></span>
+                                <span class="city-span"><a  href="/tuangou/TengChong" rel="TengChong" class="city-a">腾冲</a></span>
+                                <span class="city-span"><a  href="/tuangou/TangShan" rel="TangShan" class="city-a">唐山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Taizhous" rel="Taizhous" class="city-a">泰州</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiZhou" rel="TaiZhou" class="city-a">台州</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongLi" rel="TongLi" class="city-a">同里（吴江）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiCang" rel="TaiCang" class="city-a">太仓</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiShan" rel="TaiShan" class="city-a">台山</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongXiang" rel="TongXiang" class="city-a">桐乡</a></span>
+                                <span class="city-span"><a  href="/tuangou/TianShui" rel="TianShui" class="city-a">天水</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongLu" rel="TongLu" class="city-a">桐庐</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongLing" rel="TongLing" class="city-a">铜陵</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongRen" rel="TongRen" class="city-a">铜仁</a></span>
+                                <span class="city-span"><a  href="/tuangou/TieLing" rel="TieLing" class="city-a">铁岭</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongZhou" rel="TongZhou" class="city-a">通州（南通）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongHua" rel="TongHua" class="city-a">通化</a></span>
+                                <span class="city-span"><a  href="/tuangou/TianTai" rel="TianTai" class="city-a">天台</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongLiao" rel="TongLiao" class="city-a">通辽</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiXing" rel="TaiXing" class="city-a">泰兴（泰州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiNing" rel="TaiNing" class="city-a">泰宁（三明）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TengZhou" rel="TengZhou" class="city-a">滕州</a></span>
+                                <span class="city-span"><a  href="/tuangou/TuLuFan" rel="TuLuFan" class="city-a">吐鲁番</a></span>
+                                <span class="city-span"><a  href="/tuangou/TangHai" rel="TangHai" class="city-a">唐海</a></span>
+                                <span class="city-span"><a  href="/tuangou/TianZhuShan" rel="TianZhuShan" class="city-a">天柱山</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongCheng" rel="TongCheng" class="city-a">桐城</a></span>
+                                <span class="city-span"><a  href="/tuangou/TianChang" rel="TianChang" class="city-a">天长（滁州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TaiShun" rel="TaiShun" class="city-a">泰顺</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tongshanxian" rel="Tongshanxian" class="city-a">通山（咸宁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TangXian" rel="TangXian" class="city-a">唐县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tongliangxian" rel="Tongliangxian" class="city-a">铜梁（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/TongChuan" rel="TongChuan" class="city-a">铜川</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tashikuergantajikezizhixian" rel="Tashikuergantajikezizhixian" class="city-a">塔什库尔干</a></span>
+                                <span class="city-span"><a  href="/tuangou/Taiwan" rel="Taiwan" class="city-a">台湾</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tianmenshi" rel="Tianmenshi" class="city-a">天门</a></span>
+                                <span class="city-span"><a  href="/tuangou/Taibei" rel="Taibei" class="city-a">台北</a></span>
+                                <span class="city-span"><a  href="/tuangou/Taizhong" rel="Taizhong" class="city-a">台中</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tongshanxian" rel="Tongshanxian" class="city-a">铜山（徐州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tumenshi" rel="Tumenshi" class="city-a">图们</a></span>
+                                <span class="city-span"><a  href="/tuangou/Tongshi" rel="Tongshi" class="city-a">通什</a></span>
+                              </div>
+                            <div id="city-conW" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/WuHan" rel="WuHan" class="city-a">武汉</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuXi" rel="WuXi" class="city-a">无锡</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuLuMuQi" rel="WuLuMuQi" class="city-a">乌鲁木齐</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuZhen" rel="WuZhen" class="city-a">乌镇（桐乡）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenZhou" rel="WenZhou" class="city-a">温州</a></span>
+                                <span class="city-span"><a  href="/tuangou/WeiHai" rel="WeiHai" class="city-a">威海</a></span>
+                                <span class="city-span"><a  href="/tuangou/WeiFang" rel="WeiFang" class="city-a">潍坊</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuYuan" rel="WuYuan" class="city-a">婺源</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuHu" rel="WuHu" class="city-a">芜湖</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuLong" rel="WuLong" class="city-a">武隆（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuYiShan" rel="WuYiShan" class="city-a">武夷山</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuJiang" rel="WuJiang" class="city-a">吴江（苏州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuTaiShan" rel="WuTaiShan" class="city-a">五台山</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuDangShan" rel="WuDangShan" class="city-a">武当山（十堰）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuYi" rel="WuYi" class="city-a">武义</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuZhou" rel="WuZhou" class="city-a">梧州</a></span>
+                                <span class="city-span"><a  href="/tuangou/WanZhou" rel="WanZhou" class="city-a">万州（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenLing" rel="WenLing" class="city-a">温岭</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenChang" rel="WenChang" class="city-a">文昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuHai" rel="WuHai" class="city-a">乌海</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuZhong" rel="WuZhong" class="city-a">吴忠</a></span>
+                                <span class="city-span"><a  href="/tuangou/Weinanshi" rel="Weinanshi" class="city-a">渭南</a></span>
+                                <span class="city-span"><a  href="/tuangou/WanNing" rel="WanNing" class="city-a">万宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuZhiShan" rel="WuZhiShan" class="city-a">五指山</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenDeng" rel="WenDeng" class="city-a">文登</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuLanChaBu" rel="WuLanChaBu" class="city-a">乌兰察布</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuWei" rel="WuWei" class="city-a">武威</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenShan" rel="WenShan" class="city-a">文山</a></span>
+                                <span class="city-span"><a  href="/tuangou/WeiXian" rel="WeiXian" class="city-a">蔚县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Weishanxian" rel="Weishanxian" class="city-a">微山</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuLian" rel="WuLian" class="city-a">五莲</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wushanxian" rel="Wushanxian" class="city-a">巫山（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Woyangxian" rel="Woyangxian" class="city-a">涡阳（亳州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuAnShi" rel="WuAnShi" class="city-a">武安市</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wuxueshi" rel="Wuxueshi" class="city-a">武穴（黄冈）</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuPing" rel="WuPing" class="city-a">武平（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wudalianchishi" rel="Wudalianchishi" class="city-a">五大连池</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wuxian" rel="Wuxian" class="city-a">无棣</a></span>
+                                <span class="city-span"><a  href="/tuangou/WenXi" rel="WenXi" class="city-a">闻喜</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wansheng" rel="Wansheng" class="city-a">万盛（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wulanhaoteshi" rel="Wulanhaoteshi" class="city-a">乌兰浩特</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wuduxian" rel="Wuduxian" class="city-a">武都县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wuyangxian" rel="Wuyangxian" class="city-a">舞阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wafangdianshi" rel="Wafangdianshi" class="city-a">瓦房店</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wulatezhongqi" rel="Wulatezhongqi" class="city-a">乌拉特中旗</a></span>
+                                <span class="city-span"><a  href="/tuangou/WuQiXian" rel="WuQiXian" class="city-a">吴起县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Wolong" rel="Wolong" class="city-a">卧龙</a></span>
+                                <span class="city-span"><a  href="/tuangou/Weiduoliyagongyuan" rel="Weiduoliyagongyuan" class="city-a">维多利亚公园</a></span>
+                              </div>
+                            <div id="city-conX" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/XiaMen" rel="XiaMen" class="city-a">厦门</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiAn" rel="XiAn" class="city-a">西安</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiTang" rel="XiTang" class="city-a">西塘（嘉善）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangGang" rel="XiangGang" class="city-a">香港</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiNing" rel="XiNing" class="city-a">西宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/XuZhou" rel="XuZhou" class="city-a">徐州</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiShuangBanNa" rel="XiShuangBanNa" class="city-a">西双版纳</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiChang" rel="XiChang" class="city-a">西昌（凉山州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XianNing" rel="XianNing" class="city-a">咸宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangGeLiLa" rel="XiangGeLiLa" class="city-a">香格里拉（迪庆州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangYang" rel="XiangYang" class="city-a">襄阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangTan" rel="XiangTan" class="city-a">湘潭</a></span>
+                                <span class="city-span"><a  href="/tuangou/XianYang" rel="XianYang" class="city-a">咸阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinXiang" rel="XinXiang" class="city-a">新乡</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangShan" rel="XiangShan" class="city-a">象山</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinYang" rel="XinYang" class="city-a">信阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/XuChang" rel="XuChang" class="city-a">许昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/XingTai" rel="XingTai" class="city-a">邢台</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiLinHaoTe" rel="XiLinHaoTe" class="city-a">锡林浩特</a></span>
+                                <span class="city-span"><a  href="/tuangou/XingYi" rel="XingYi" class="city-a">兴义（黔西南州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xuyi" rel="Xuyi" class="city-a">盱眙（淮安）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XuanCheng" rel="XuanCheng" class="city-a">宣城</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinYu" rel="XinYu" class="city-a">新余</a></span>
+                                <span class="city-span"><a  href="/tuangou/XingCheng" rel="XingCheng" class="city-a">兴城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinglongxians" rel="Xinglongxians" class="city-a">兴隆</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinChang" rel="XinChang" class="city-a">新昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/XianJu" rel="XianJu" class="city-a">仙居（台州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XianTao" rel="XianTao" class="city-a">仙桃</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiaoGan" rel="XiaoGan" class="city-a">孝感</a></span>
+                                <span class="city-span"><a  href="/tuangou/XingHua" rel="XingHua" class="city-a">兴化（泰州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinYi" rel="XinYi" class="city-a">新沂（徐州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XueXiang" rel="XueXiang" class="city-a">雪乡</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xiapuxian" rel="Xiapuxian" class="city-a">霞浦（宁德）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinganxian" rel="Xinganxian" class="city-a">兴安（桂林）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinZhou" rel="XinZhou" class="city-a">忻州</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiLingXueShan" rel="XiLingXueShan" class="city-a">西岭雪山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinjishi" rel="Xinjishi" class="city-a">辛集</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xiaoyishi" rel="Xiaoyishi" class="city-a">孝义</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xiushantujiazumiaozuzizhixian" rel="Xiushantujiazumiaozuzizhixian" class="city-a">秀山（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiDi" rel="XiDi" class="city-a">西递（黄山）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinMi" rel="XinMi" class="city-a">新密（郑州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XinZheng" rel="XinZheng" class="city-a">新郑（郑州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/XingYang" rel="XingYang" class="city-a">荥阳（郑州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xintaishi" rel="Xintaishi" class="city-a">新泰</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xishuixian" rel="Xishuixian" class="city-a">习水县（遵义）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xian" rel="Xian" class="city-a">莘县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xingpingshi" rel="Xingpingshi" class="city-a">兴平</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiangShuiXian" rel="XiangShuiXian" class="city-a">响水县（盐城）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xushuixian" rel="Xushuixian" class="city-a">徐水</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xianghexian" rel="Xianghexian" class="city-a">香河县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xixian" rel="Xixian" class="city-a">泸西</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinpu" rel="Xinpu" class="city-a">新浦</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xiangfanshi" rel="Xiangfanshi" class="city-a">襄樊</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xiahexian" rel="Xiahexian" class="city-a">夏河</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinyishi" rel="Xinyishi" class="city-a">信宜</a></span>
+                                <span class="city-span"><a  href="/tuangou/Xinglongxian" rel="Xinglongxian" class="city-a">兴隆</a></span>
+                                <span class="city-span"><a  href="/tuangou/XuanHua" rel="XuanHua" class="city-a">宣化</a></span>
+                                <span class="city-span"><a  href="/tuangou/XiaJin" rel="XiaJin" class="city-a">夏津</a></span>
+                              </div>
+                            <div id="city-conY" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/YangShuo" rel="YangShuo" class="city-a">阳朔（桂林）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YinChuan" rel="YinChuan" class="city-a">银川</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangZhou" rel="YangZhou" class="city-a">扬州</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanTai" rel="YanTai" class="city-a">烟台</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiWu" rel="YiWu" class="city-a">义乌</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiChang" rel="YiChang" class="city-a">宜昌</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangTianMuHu" rel="YangTianMuHu" class="city-a">溧阳天目湖（常州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangJiang" rel="YangJiang" class="city-a">阳江</a></span>
+                                <span class="city-span"><a  href="/tuangou/YingKou" rel="YingKou" class="city-a">营口</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanCheng" rel="YanCheng" class="city-a">盐城</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiXing" rel="YiXing" class="city-a">宜兴</a></span>
+                                <span class="city-span"><a  href="/tuangou/YueYang" rel="YueYang" class="city-a">岳阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanAn" rel="YanAn" class="city-a">延安</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiBin" rel="YiBin" class="city-a">宜宾</a></span>
+                                <span class="city-span"><a  href="/tuangou/YaAn" rel="YaAn" class="city-a">雅安</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanJi" rel="YanJi" class="city-a">延吉</a></span>
+                                <span class="city-span"><a  href="/tuangou/YunCheng" rel="YunCheng" class="city-a">运城</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiChuns" rel="YiChuns" class="city-a">宜春</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuYao" rel="YuYao" class="city-a">余姚</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanDangShan" rel="YanDangShan" class="city-a">雁荡山</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuLin" rel="YuLin" class="city-a">玉林</a></span>
+                                <span class="city-span"><a  href="/tuangou/YingTan" rel="YingTan" class="city-a">鹰潭</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongKang" rel="YongKang" class="city-a">永康</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiYang" rel="YiYang" class="city-a">益阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuLins" rel="YuLins" class="city-a">榆林</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongChuan" rel="YongChuan" class="city-a">永川（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuShanXian" rel="YuShanXian" class="city-a">玉山县（上饶）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiShui" rel="YiShui" class="city-a">沂水</a></span>
+                                <span class="city-span"><a  href="/tuangou/YaBuLi" rel="YaBuLi" class="city-a">亚布力</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangQuan" rel="YangQuan" class="city-a">阳泉</a></span>
+                                <span class="city-span"><a  href="/tuangou/YunFu" rel="YunFu" class="city-a">云浮</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiZheng" rel="YiZheng" class="city-a">仪征（扬州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yongdingxian" rel="Yongdingxian" class="city-a">永定（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanZhou" rel="YanZhou" class="city-a">兖州</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuXi" rel="YuXi" class="city-a">玉溪</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yuhuanxian" rel="Yuhuanxian" class="city-a">玉环</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiNing" rel="YiNing" class="city-a">伊宁</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongZhou" rel="YongZhou" class="city-a">永州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yangxian" rel="Yangxian" class="city-a">沭阳（宿迁）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongJia" rel="YongJia" class="city-a">永嘉</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongAn" rel="YongAn" class="city-a">永安（三明）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuZhou" rel="YuZhou" class="city-a">禹州（许昌）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiChun" rel="YiChun" class="city-a">伊春</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yunhexian" rel="Yunhexian" class="city-a">云和</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiNan" rel="YiNan" class="city-a">沂南</a></span>
+                                <span class="city-span"><a  href="/tuangou/YiYuanXian" rel="YiYuanXian" class="city-a">沂源县</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangCheng" rel="YangCheng" class="city-a">阳城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yunyangxian" rel="Yunyangxian" class="city-a">云阳（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongCheng" rel="YongCheng" class="city-a">永城（商丘）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yingchengshi" rel="Yingchengshi" class="city-a">应城（孝感）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongXiuXian" rel="YongXiuXian" class="city-a">永修县（九江）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yakeshishi" rel="Yakeshishi" class="city-a">牙克石</a></span>
+                                <span class="city-span"><a  href="/tuangou/YunChengs" rel="YunChengs" class="city-a">郓城</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yongchunxian" rel="Yongchunxian" class="city-a">永春（泉州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanShan" rel="YanShan" class="city-a">盐山</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuQuanShan" rel="YuQuanShan" class="city-a">玉泉山</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yushushi" rel="Yushushi" class="city-a">榆树</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yuanpingshi" rel="Yuanpingshi" class="city-a">原平</a></span>
+                                <span class="city-span"><a  href="/tuangou/YongJi" rel="YongJi" class="city-a">永济</a></span>
+                                <span class="city-span"><a  href="/tuangou/YangLing" rel="YangLing" class="city-a">杨凌</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yizhoushi" rel="Yizhoushi" class="city-a">宜州（河池）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yanbian" rel="Yanbian" class="city-a">延边</a></span>
+                                <span class="city-span"><a  href="/tuangou/YuShu" rel="YuShu" class="city-a">玉树</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yili" rel="Yili" class="city-a">伊犁</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yuganxian" rel="Yuganxian" class="city-a">余干县（上饶）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YouYu" rel="YouYu" class="city-a">右玉</a></span>
+                                <span class="city-span"><a  href="/tuangou/Youyangtujiazumiaozuzizhixian" rel="Youyangtujiazumiaozuzizhixian" class="city-a">酉阳（重庆）</a></span>
+                                <span class="city-span"><a  href="/tuangou/YeSanPo" rel="YeSanPo" class="city-a">野三坡</a></span>
+                                <span class="city-span"><a  href="/tuangou/Yuhang" rel="Yuhang" class="city-a">余杭</a></span>
+                                <span class="city-span"><a  href="/tuangou/YanLiang" rel="YanLiang" class="city-a">阎良</a></span>
+                              </div>
+                            <div id="city-conZ" class="all-city-con hide">
+                                <span class="city-span"><a  href="/tuangou/ZhengZhou" rel="ZhengZhou" class="city-a">郑州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhouShan" rel="ZhouShan" class="city-a">舟山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuHai" rel="ZhuHai" class="city-a">珠海</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangJiaJie" rel="ZhangJiaJie" class="city-a">张家界</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhongShan" rel="ZhongShan" class="city-a">中山</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZiBo" rel="ZiBo" class="city-a">淄博</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhouZhuang" rel="ZhouZhuang" class="city-a">周庄（昆山）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhaoQing" rel="ZhaoQing" class="city-a">肇庆</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhenYuan" rel="ZhenYuan" class="city-a">镇远（黔东南州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZunYi" rel="ZunYi" class="city-a">遵义</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhenJiang" rel="ZhenJiang" class="city-a">镇江</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhanJiang" rel="ZhanJiang" class="city-a">湛江</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangJiaKou" rel="ZhangJiaKou" class="city-a">张家口</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuZhou" rel="ZhuZhou" class="city-a">株洲</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZaoZhuang" rel="ZaoZhuang" class="city-a">枣庄</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangJiaGang" rel="ZhangJiaGang" class="city-a">张家港</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuJi" rel="ZhuJi" class="city-a">诸暨（绍兴）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhongWei" rel="ZhongWei" class="city-a">中卫</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZiGong" rel="ZiGong" class="city-a">自贡</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangQiu" rel="ZhangQiu" class="city-a">章丘</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhouKou" rel="ZhouKou" class="city-a">周口</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangZhou" rel="ZhangZhou" class="city-a">漳州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuCheng" rel="ZhuCheng" class="city-a">诸城</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuMaDian" rel="ZhuMaDian" class="city-a">驻马店</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhengDing" rel="ZhengDing" class="city-a">正定县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zouchengshi" rel="Zouchengshi" class="city-a">邹城</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZouPingXian" rel="ZouPingXian" class="city-a">邹平县</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhangYe" rel="ZhangYe" class="city-a">张掖</a></span>
+                                <span class="city-span"><a  href="/tuangou/DanZhou" rel="DanZhou" class="city-a">儋州</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhaotongshi" rel="Zhaotongshi" class="city-a">昭通</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhoushi" rel="Zhoushi" class="city-a">涿州</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhongXiang" rel="ZhongXiang" class="city-a">钟祥（荆门）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhenJiangYangZhong" rel="ZhenJiangYangZhong" class="city-a">镇江扬中</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhangpuxian" rel="Zhangpuxian" class="city-a">漳浦（漳州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhaoYuan" rel="ZhaoYuan" class="city-a">招远</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZiYang" rel="ZiYang" class="city-a">资阳</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZunHua" rel="ZunHua" class="city-a">遵化</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhalantunshi" rel="Zhalantunshi" class="city-a">扎兰屯市</a></span>
+                                <span class="city-span"><a  href="/tuangou/Ziyuanxian" rel="Ziyuanxian" class="city-a">资源（桂林）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZuoQuan" rel="ZuoQuan" class="city-a">左权</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhangpingshi" rel="Zhangpingshi" class="city-a">漳平（龙岩）</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZhuoLuXian" rel="ZhuoLuXian" class="city-a">涿鹿县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhongmouxian" rel="Zhongmouxian" class="city-a">中牟（郑州）</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhuangheshi" rel="Zhuangheshi" class="city-a">庄河</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhaluteqi" rel="Zhaluteqi" class="city-a">扎鲁特旗</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhongningxian" rel="Zhongningxian" class="city-a">中宁县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zuoshuixian" rel="Zuoshuixian" class="city-a">柞水</a></span>
+                                <span class="city-span"><a  href="/tuangou/ZuoShuiXian" rel="ZuoShuiXian" class="city-a">柞水县</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhalongziranbaohuqu" rel="Zhalongziranbaohuqu" class="city-a">扎龙自然保护区</a></span>
+                                <span class="city-span"><a  href="/tuangou/Zhaji" rel="Zhaji" class="city-a">查济（泾县）</a></span>
+                              </div>
+                          </div>
+          </div>
+        </div>
+        <div class="wt-search search float-left">
+          <form id="ssform" class="search-form" data-position="local" method="get" action="/tuangou/ShangHai/search" onkeydown="if(event.keyCode==13&amp;&amp;document.getElementById('ssinput').value==''){return false;}">
+            <span class="s_ipt_wr">
+            <input id="ssinput" class="input-search float-left prompt-default" style="*padding-top:0;*line-height:22px;" name="wd" value="" maxlength="256" autocomplete="off" type="text">
+            </span><span class="s_btn_wr">
+            <input id="ssbutton" class="button-search submit" onmousedown="this.className='input submit s_btn_h'" onmouseout="this.className='input submit'" value="搜一下" type="submit">
+            </span>
+          </form>
+        </div>
+       
+       
+      </div>
+    </div>
+  </div>
+</div>
+ 
+   
+    
+    
+<div class="nav-area">
+  <div class="nav-container" id="nav">
+    <div class="shadow"></div>
+    <div alog-group="tuan-nav-navbar" alog-alias="tuan-nav-navbar" mon="type=mainnav&amp;action=click" class="navbar clearfix">
+    <div class="nav">
+  <div class="nav_main">
+    <div class="navcon">
+      <ul>
+        <li ><a href="http://www.xexing.com/">酒店预订</a></li>
+        <li ><a href="http://www.xexing.com/lable/">城市地标</a></li>
+        <!--<li class="current"><span class="popman"><span class="bg bg_l"></span><span class="bg bg_r"></span><span class="pop_txt">新</span></span><a href="http://www.xexing.com/tuangou/">团购</a></li>-->
+        <li ><a href="http://www.xexing.com/ehc/">会馆/展馆</a></li>
+        <li ><a href="http://www.xexing.com/expo/">展会频道</a></li>
+        <li ><span class="popman"><span class="bg bg_l"></span><span class="bg bg_r"></span><span class="pop_txt">新</span></span><a href="http://www.xexing.com/freeroom/shizhu/">试住中心</a></li>
+        <li ><span class="popman"><span class="bg bg_l"></span><span class="bg bg_r"></span><span class="pop_txt">热</span></span><a href="http://www.xexing.com/gift/">免费礼品</a></li>
+      </ul>
+            <div method="dvAccount" class="account">
+        <div method="myaccount" class="box"> <span method="myaccount" class="name"><a  class="myacclink" href="/?/member"  > 会员中心</a></span> 
+          <!--弹出-->
+          <div style="z-index: 4500" class="pt links none" id="myaccbox">
+            <ul>
+              <li><a href="/?/member/myorder" >酒店订单</a></li>
+              <li><a href="/?/member/freeroomorder/1" >试住订单</a></li>
+              <li><a href="/?/member/freeroomorder/2" >我的订七送一</a></li>
+              <li><a href="/?/member/freeroomorder/3" >我的订六送一</a></li>
+              <li><a href="/?/member/myfanxian" >我的返现</a></li>
+              <li><a href="/?/member/mygift" >我的礼品</a></li>
+              <li><a href="/?/member/myexp" >我的积分</a></li>
+              <li><a href="/member/modifypassword">个人设置</a></li>
+                          </ul>
+          </div>
+          <!--弹出 end--> 
+        </div>
+                <div style="display:block" method="reg" class="box"> <span class="name normal"><a rel="nofollow" title="快速预订并享受积分回赠" href="/user/regedit">免费注册</a></span></div>
+        <div  method="mylogin" class="box" style="z-index:6000" > <span method="mylogin" class="log"><a class="login_a"  href="/user">登录</a></span>
+          <div style="display: none;" class="loginbox" id="loginbox">
+            <form action="/user/login" method="post">
+              <div class="logon" method="dvlogin">
+                <ol>
+                  <li class="clx">
+                    <label>手机：</label>
+                    <input type="text" class="login_text" value="" id="zn_nav_user_name" autocomplete="off" name="username">
+                  </li>
+                  <li class="clx">
+                    <label>密码：</label>
+                    <input type="password" id="zn_nav_password" value="" name="password" class="login_text">
+                  </li>
+                  <li style="display:none;" class="clx zn_verify_box nav_verify_box">
+                    <label></label>
+                    <input type="input" id="zn_nav_verify" value="" name="verify" class="login_text head_yz_input">
+                    <img align="absmiddle" class="head_yz_tip" id="zn_nav_verify_img" src="http://tp1.znimg.com/v5/images/blank.gif"><a class="regist_yzm_ts1 head_yz_but" href="#" title="看不清楚点击更换"></a>
+                    <div class="clear_1"></div>
+                  </li>
+                  <li class="clx" style=" height:80px"><a href="/user/cardlogin" class="forget">会员卡登录</a><a href="/user/lostpassword" class="forget">忘记密码</a><a href="/user/regedit" class="">注册账号</a>
+                    <input name="" type="submit" class="login_put" value="提交" method="login">
+                    <input type="checkbox" style="display: none;" class="checkbox zn_nav_expires" id="expires" name="expires">
+                  </li>
+                  <!-- <li class="clx1">使用合作网站账号登录</li>
+                <li style="margin-bottom:5px;" class="l_share"><a class="sina_share" onclick="zn_member.login.oAuthTemp('WEIBOSN',this,'self');" href="javascript:;" title="新浪微博登录">新浪微博登录</a><a class=" qq_share " onclick="zn_member.login.oAuthTemp('QQ',this,'self');" href="javascript:;" title="QQ登录">QQ登录</a><a class="rr_share" onclick="zn_member.login.oAuthTemp('RENREN',this,'self');" href="javascript:;" title="人人网登录">人人网登录</a><a class=" kj_share" onclick="zn_member.login.oAuthTemp('WEIBOTX',this,'self');" href="javascript:;" title="腾讯微博登录">腾讯微博登录</a><a class="login_ico_alipay" onclick="zn_member.login.oAuthTemp('ALIPAY',this,'self');" href="javascript:;" title="支付宝登录">支付宝登录</a>
+                  <div class="clear_1"></div>
+                </li>-->
+                  <div class="clear_1"></div>
+                </ol>
+                <div class="clear_1"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+                <!--弹出--> 
+        <!--登录前 end--> 
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    </div>
+    
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$('.login_a').parent('span').parent('div').hover(function(){
+				$(this).children('span').addClass('on2');
+				$('#loginbox').show();
+			},function(){
+				$(this).children('span').removeClass('on2');
+				$('#loginbox').hide();
+			});
+$('.myacclink').parent('span').parent('div').hover(function(){
+				$(this).children('span').addClass('on');
+				$('#myaccbox').show();
+			},function(){
+				$(this).children('span').removeClass('on');
+				$('#myaccbox').hide();
+			});
+			
+</script>     
+  
+<div class="div-980" id="main" mon="action=click">
+  <div class="list_nav">
+	<ul>
+            <li><a href="http://www.hao224.com/">好团网</a></li>
+            <li><a href="/shanghai/">上海团购大全</a></li>
+            <li><a href="/shanghai/lvyoujiudian/">上海酒店旅游团购</a></li>
+                        <li><a class="current" href="/shanghai/haohuajiudian/">上海豪华酒店团购</a></li>
+            	</ul>
+</div>
+  <div class="goods-hd-wrap w981 h44 mt20 goods-hd-wrap-new" mon="section=banner&amp;type=sortbar">
+<div class="area">
+	<div class="col_ml">
+    	<div class="shangpin">
+        	<div class="s_title">
+            	<h1>晟曜行服务式公寓(联洋花园店)</h1><p><a id="share_title" rel="nofollow" target="_blank" href="/deal/10342994">【22店通用】上海晟曜行服务式公寓豪华双套间住宿1晚</a></p>            </div>
+            <div class="dealinfo">
+            	<div class="info_l">
+                <a id="share_title" rel="nofollow" target="_blank" href="/deal/10342994">                <img width="450" height="300" src="http://img.hao224.com/2013/09/08/dianping_shanghai_053054_9856.jpg"></a></div>
+                <div class="info_r">
+                	<div class="buy">
+                    	<a id="share_title" rel="nofollow" target="_blank" href="/deal/10342994">￥299 去看看</a>
+                        <p><span>原价:¥900</span>/<span>折扣:3.3</span>/<span>节省:¥601</span></p>
+                    </div>
+                    <table width="253" cellspacing="1" cellpadding="0" border="0" class="pro_store">
+                        <tbody>
+                        <tr>
+                            <td class="td_title">来源</td>
+                            <td><a target="_blank" href="/dianping_shanghai/">点评团上海团购</a></td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">电话</td>
+                            <td>4001500855</td>
+                        </tr>
+                        <tr>
+                            <td class="td_title">承诺</td>
+                            <td style="line-height:21px;">随时退<br>                                                        过期退</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="share_collect">
+              			<div class="share">
+                                     
+                        	<a title="QQ空间" class="s_qzone" onclick="javascript:repost(1,10342994)" href="javascript:void(0);"></a>
+                			<a title="QQ好友" class="s_qq" onclick="javascript:repost(3,10342994)" href="javascript:void(0);"></a>
+                			<a title="微博" class="s_weibo" onclick="javascript:repost(2,10342994)" href="javascript:void(0);"></a>
+                		</div>
+				                                <a id="shoucang_pro" class="collect" href="javascript:show_box('shoucang_pro','pid=10342994')">收藏</a>
+              		</div>
+                </div>
+                <span class="clear"></span>
+            </div>
+        </div>
+        
+                <span class="blank15"></span>
+        <div class="col_shop_tab"><a class="hover" href="javascript:void(0);">商家位置</a></div>
+        <div class="col_shop">
+            <div class="col_shop_map">
+                <h2>商家位置</h2>
+                <div style="width:300px;height:220px; float:left" id="small_map" class="shop_map"></div>
+                <div class="shop_info">
+                    <dl>
+                        <dt><h2>晟曜行服务式公寓(联洋花园店)</h2></dt>
+                        <dd>地址：上海浦东新区世纪公园丁香路901弄联洋花园13号101室现场服务中心</dd>
+                        <dd>电话：4001500855</dd>
+                    </dl>
+                </div>
+                <span class="clear"></span>
+            </div>
+            <div class="shop_zhoubian">
+                <h2 id="mod">附近地标</h2>
+                <ul>
+                    <li><span class="dt">周边交通</span><span>(1公里范围内有
+                            <a onclick="load_zhoubian('公车站');" class="corange" href="#item" name="item" rel="leantest">3个公交站</a>，
+                            <a onclick="load_zhoubian('地铁站');" class="corange" href="#item" name="item" rel="leantest">2个地铁站</a>)</span>
+                    </li>
+                    <li class="nom"><span class="dt">周边生活</span><span>(1公里范围内有
+                            <a onclick="load_zhoubian('商场');" class="corange" href="#item" name="item" rel="leantest">16家商场</a>，
+                            <a onclick="load_zhoubian('餐馆');" class="corange" href="#item" name="item" rel="leantest">1家餐馆</a>，
+                            <a onclick="load_zhoubian('ATM');" class="corange" href="#item" name="item" rel="leantest">15个ATM</a>，
+                            <a onclick="load_zhoubian('超市');" class="corange" href="#item" name="item" rel="leantest">2家超市</a>，
+                            <a onclick="load_zhoubian('加油站');" class="corange" href="#item" name="item" rel="leantest">1个加油站</a>，
+                            <a onclick="load_zhoubian('火车票代售点');" class="corange" href="#item" name="item" rel="leantest">1个火车票代售点</a>，
+                            <a onclick="load_zhoubian('银行');" class="corange" href="#item" name="item" rel="leantest">17家银行</a>，
+                            <a onclick="load_zhoubian('小区');" class="corange" href="#item" name="item" rel="leantest">11个小区</a>)</span>
+                    </li>
+                </ul>
+            </div>
+            <span class="clear"></span>
+        </div>
+                
+        <span class="blank15"></span>
+        <div class="col_title nobg">
+			<h3>周边酒店团购</h3>
+		</div>
+        <div class="product">
+        	<div class="box w240"><a href="/pro_10334433.html"><img width="240" height="150" alt="窝窝团-上海团购" original="http://img.hao224.com/2013/09/06/55tuan_shanghai_140619_123_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/55tuan_shanghai/">窝窝团</a> <a class="hit_title" href="/pro_10334433.html">【静安寺】仅238元，享门市价888元『爱の缘主题连锁酒店』商务景观房入住1晚！优越的地理位置！让您在繁华的都市中，享受片刻的宁静！</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>238</span><span class="yuan">/ ¥888</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10334433">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_changshoulu/">长寿路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10334433" class="cgreen" href="javascript:shoucang(10334433);">收藏</a></p></div><div class="b_pop w232"><p>商家：爱の缘主题酒店（长寿路店）</p><p>地址：上海市普陀区长寿路1086号23楼</p></div></div><div class="box w240"><a href="/pro_10329924.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/05/meituan_shanghai_172946_307_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10329924.html">仅售408元！价值704元的江天宾馆住宿套餐（标准间/大床房2选1），美团券可叠加使用，免费提供WiFi。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>408</span><span class="yuan">/ ¥704</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10329924">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_pudongxin/">浦东新区</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10329924" class="cgreen" href="javascript:shoucang(10329924);">收藏</a></p></div><div class="b_pop w232"><p>商家：江天宾馆</p><p>地址：浦东新区浦东南路3456号（近南码头路）</p></div></div><div class="box norm w240"><a href="/pro_10319288.html"><img width="240" height="150" alt="拉手网-上海团购" original="http://img.hao224.com/2013/09/04/lashou_shanghai_012409_6_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/lashou_shanghai/">拉手网</a> <a class="hit_title" href="/pro_10319288.html">仅售338元，酒店门市价488元的曼哈顿商务酒店迷你房入住1晚，节假日通用，免费wifi，低调奢华，精致服务，让您温馨入住！</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>338</span><span class="yuan">/ ¥488</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10319288">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10319288" class="cgreen" href="javascript:shoucang(10319288);">收藏</a></p></div><div class="b_pop w232"><p>商家：暂无</p><p>地址：暂无</p></div></div><div class="box w240"><a href="/pro_10327130.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/05/dianping_shanghai_070122_111_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10327130.html">【徐家汇】福地大酒店4-5人套餐</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>258</span><span class="yuan">/ ¥676</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10327130">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_xujiahui/">徐家汇</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10327130" class="cgreen" href="javascript:shoucang(10327130);">收藏</a></p></div><div class="b_pop w232"><p>商家：福地大酒店</p><p>地址：上海徐汇区徐家汇宛平南路465号</p></div></div><div class="box w240"><a href="/pro_10336531.html"><img width="240" height="150" alt="糯米-上海团购" original="http://img.hao224.com/2013/09/06/nuomi_shanghai_194616_2163_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/nuomi_shanghai/">糯米</a> <a class="hit_title" href="/pro_10336531.html">上海西郊花园酒店（行政套房）</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>499</span><span class="yuan">/ ¥1080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10336531">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10336531" class="cgreen" href="javascript:shoucang(10336531);">收藏</a></p></div><div class="b_pop w232"><p>商家：上海西郊花园酒店</p><p>地址：淮阴路488号</p></div></div><div class="box norm w240"><a href="/pro_10316017.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054406_1308_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316017.html">【北新泾】格林联盟虹桥机场西郊百联店（观景大床房）</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>289</span><span class="yuan">/ ¥549</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316017">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_beixinjing/">北新泾</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316017" class="cgreen" href="javascript:shoucang(10316017);">收藏</a></p></div><div class="b_pop w232"><p>商家：格林豪泰(西郊北联店)</p><p>地址：上海长宁区北新泾剑河路727号</p></div></div><div class="box w240"><a href="/pro_10327187.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/05/dianping_shanghai_070140_1312_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10327187.html">【静安寺】上海地平线世纪时空酒店公寓</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>338</span><span class="yuan">/ ¥420</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10327187">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_jingansi/">静安寺</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10327187" class="cgreen" href="javascript:shoucang(10327187);">收藏</a></p></div><div class="b_pop w232"><p>商家：御品世纪时空</p><p>地址：上海静安区静安寺乌鲁木齐北路199号</p></div></div><div class="box w240"><a href="/pro_10314209.html"><img width="240" height="150" alt="拉手网-上海团购" original="http://img.hao224.com/2013/09/03/lashou_shanghai_010411_7_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/lashou_shanghai/">拉手网</a> <a class="hit_title" href="/pro_10314209.html">仅售258元，市场价580元的上海福地大酒店4-5人餐，环境优雅，与朋友小聚的好去处，滋滋美味让人流连忘返</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>258</span><span class="yuan">/ ¥580</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10314209">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10314209" class="cgreen" href="javascript:shoucang(10314209);">收藏</a></p></div><div class="b_pop w232"><p>商家：暂无</p><p>地址：暂无</p></div></div><div class="box norm w240"><a href="/pro_10316007.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054404_1298_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316007.html">【古北】上海领尚国际酒店公寓</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>568</span><span class="yuan">/ ¥2080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316007">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_gubei/">古北</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316007" class="cgreen" href="javascript:shoucang(10316007);">收藏</a></p></div><div class="b_pop w232"><p>商家：领尚国际酒店公寓</p><p>地址：上海长宁区古北宋园路58号</p></div></div><div class="box w240"><a href="/pro_10316011.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054405_1302_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316011.html">【南京东路】上海中福大酒店</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>398</span><span class="yuan">/ ¥1080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316011">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_nanjingdonglush/">南京东路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316011" class="cgreen" href="javascript:shoucang(10316011);">收藏</a></p></div><div class="b_pop w232"><p>商家：中福大酒店</p><p>地址：上海黄浦区南京东路九江路619号</p></div></div><div class="box w240"><a href="/pro_10343589.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/08/meituan_shanghai_180033_84_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10343589.html">仅售299元！价值396元的缘豪大酒店商务大床房住宿2晚，免费WiFi。距外滩就仅分钟车程，舒适超大的空间，整洁细致管理，安静舒适的环境，让每个住客都能感受到外滩后花园那份静逸，也是家庭和商务出行至优选择。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>299</span><span class="yuan">/ ¥396</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10343589">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_sichuanbeilu/">四川北路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10343589" class="cgreen" href="javascript:shoucang(10343589);">收藏</a></p></div><div class="b_pop w232"><p>商家：缘豪大酒店</p><p>地址：虹口区塘沽路488号（四川北路口）</p></div></div><div class="box norm w240"><a href="/pro_10329766.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/05/meituan_shanghai_172818_147_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10329766.html">仅售246元！价值319元的如家快捷酒店（世纪大道商城路店）住宿1晚（商务标准双人间/商务大床房2选1），美团券可连续使用，商家免费提供WiFi，赠送矿泉水2瓶。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>246</span><span class="yuan">/ ¥319</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10329766">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_pudongxin/">浦东新区</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10329766" class="cgreen" href="javascript:shoucang(10329766);">收藏</a></p></div><div class="b_pop w232"><p>商家：如家快捷酒店（世纪大道商城路店）</p><p>地址：浦东新区崂山路338号（近世纪大道）</p></div></div>        </div>
+             <span class="blank15"></span>
+        <div class="col_title nobg">
+			<h3>周边酒店预订</h3>
+		</div>
+        <div class="product">
+        	<div class="box w240"><a href="/pro_10334433.html"><img width="240" height="150" alt="窝窝团-上海团购" original="http://img.hao224.com/2013/09/06/55tuan_shanghai_140619_123_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/55tuan_shanghai/">窝窝团</a> <a class="hit_title" href="/pro_10334433.html">【静安寺】仅238元，享门市价888元『爱の缘主题连锁酒店』商务景观房入住1晚！优越的地理位置！让您在繁华的都市中，享受片刻的宁静！</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>238</span><span class="yuan">/ ¥888</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10334433">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_changshoulu/">长寿路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10334433" class="cgreen" href="javascript:shoucang(10334433);">收藏</a></p></div><div class="b_pop w232"><p>商家：爱の缘主题酒店（长寿路店）</p><p>地址：上海市普陀区长寿路1086号23楼</p></div></div><div class="box w240"><a href="/pro_10329924.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/05/meituan_shanghai_172946_307_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10329924.html">仅售408元！价值704元的江天宾馆住宿套餐（标准间/大床房2选1），美团券可叠加使用，免费提供WiFi。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>408</span><span class="yuan">/ ¥704</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10329924">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_pudongxin/">浦东新区</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10329924" class="cgreen" href="javascript:shoucang(10329924);">收藏</a></p></div><div class="b_pop w232"><p>商家：江天宾馆</p><p>地址：浦东新区浦东南路3456号（近南码头路）</p></div></div><div class="box norm w240"><a href="/pro_10319288.html"><img width="240" height="150" alt="拉手网-上海团购" original="http://img.hao224.com/2013/09/04/lashou_shanghai_012409_6_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/lashou_shanghai/">拉手网</a> <a class="hit_title" href="/pro_10319288.html">仅售338元，酒店门市价488元的曼哈顿商务酒店迷你房入住1晚，节假日通用，免费wifi，低调奢华，精致服务，让您温馨入住！</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>338</span><span class="yuan">/ ¥488</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10319288">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10319288" class="cgreen" href="javascript:shoucang(10319288);">收藏</a></p></div><div class="b_pop w232"><p>商家：暂无</p><p>地址：暂无</p></div></div><div class="box w240"><a href="/pro_10327130.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/05/dianping_shanghai_070122_111_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10327130.html">【徐家汇】福地大酒店4-5人套餐</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>258</span><span class="yuan">/ ¥676</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10327130">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_xujiahui/">徐家汇</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10327130" class="cgreen" href="javascript:shoucang(10327130);">收藏</a></p></div><div class="b_pop w232"><p>商家：福地大酒店</p><p>地址：上海徐汇区徐家汇宛平南路465号</p></div></div><div class="box w240"><a href="/pro_10336531.html"><img width="240" height="150" alt="糯米-上海团购" original="http://img.hao224.com/2013/09/06/nuomi_shanghai_194616_2163_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/nuomi_shanghai/">糯米</a> <a class="hit_title" href="/pro_10336531.html">上海西郊花园酒店（行政套房）</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>499</span><span class="yuan">/ ¥1080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10336531">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10336531" class="cgreen" href="javascript:shoucang(10336531);">收藏</a></p></div><div class="b_pop w232"><p>商家：上海西郊花园酒店</p><p>地址：淮阴路488号</p></div></div><div class="box norm w240"><a href="/pro_10316017.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054406_1308_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316017.html">【北新泾】格林联盟虹桥机场西郊百联店（观景大床房）</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>289</span><span class="yuan">/ ¥549</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316017">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_beixinjing/">北新泾</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316017" class="cgreen" href="javascript:shoucang(10316017);">收藏</a></p></div><div class="b_pop w232"><p>商家：格林豪泰(西郊北联店)</p><p>地址：上海长宁区北新泾剑河路727号</p></div></div><div class="box w240"><a href="/pro_10327187.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/05/dianping_shanghai_070140_1312_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10327187.html">【静安寺】上海地平线世纪时空酒店公寓</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>338</span><span class="yuan">/ ¥420</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10327187">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_jingansi/">静安寺</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10327187" class="cgreen" href="javascript:shoucang(10327187);">收藏</a></p></div><div class="b_pop w232"><p>商家：御品世纪时空</p><p>地址：上海静安区静安寺乌鲁木齐北路199号</p></div></div><div class="box w240"><a href="/pro_10314209.html"><img width="240" height="150" alt="拉手网-上海团购" original="http://img.hao224.com/2013/09/03/lashou_shanghai_010411_7_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/lashou_shanghai/">拉手网</a> <a class="hit_title" href="/pro_10314209.html">仅售258元，市场价580元的上海福地大酒店4-5人餐，环境优雅，与朋友小聚的好去处，滋滋美味让人流连忘返</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>258</span><span class="yuan">/ ¥580</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10314209">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/">上海</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10314209" class="cgreen" href="javascript:shoucang(10314209);">收藏</a></p></div><div class="b_pop w232"><p>商家：暂无</p><p>地址：暂无</p></div></div><div class="box norm w240"><a href="/pro_10316007.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054404_1298_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316007.html">【古北】上海领尚国际酒店公寓</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>568</span><span class="yuan">/ ¥2080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316007">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_gubei/">古北</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316007" class="cgreen" href="javascript:shoucang(10316007);">收藏</a></p></div><div class="b_pop w232"><p>商家：领尚国际酒店公寓</p><p>地址：上海长宁区古北宋园路58号</p></div></div><div class="box w240"><a href="/pro_10316011.html"><img width="240" height="150" alt="点评团-上海团购" original="http://img.hao224.com/2013/09/03/dianping_shanghai_054405_1302_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/dianping_shanghai/">点评团</a> <a class="hit_title" href="/pro_10316011.html">【南京东路】上海中福大酒店</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>398</span><span class="yuan">/ ¥1080</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10316011">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_nanjingdonglush/">南京东路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10316011" class="cgreen" href="javascript:shoucang(10316011);">收藏</a></p></div><div class="b_pop w232"><p>商家：中福大酒店</p><p>地址：上海黄浦区南京东路九江路619号</p></div></div><div class="box w240"><a href="/pro_10343589.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/08/meituan_shanghai_180033_84_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10343589.html">仅售299元！价值396元的缘豪大酒店商务大床房住宿2晚，免费WiFi。距外滩就仅分钟车程，舒适超大的空间，整洁细致管理，安静舒适的环境，让每个住客都能感受到外滩后花园那份静逸，也是家庭和商务出行至优选择。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>299</span><span class="yuan">/ ¥396</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10343589">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_sichuanbeilu/">四川北路</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10343589" class="cgreen" href="javascript:shoucang(10343589);">收藏</a></p></div><div class="b_pop w232"><p>商家：缘豪大酒店</p><p>地址：虹口区塘沽路488号（四川北路口）</p></div></div><div class="box norm w240"><a href="/pro_10329766.html"><img width="240" height="150" alt="美团-上海团购" original="http://img.hao224.com/2013/09/05/meituan_shanghai_172818_147_m.jpg" src="/images/hao224_loading.gif"></a><h3><a class="cgreen" target="_blank" href="/meituan_shanghai/">美团</a> <a class="hit_title" href="/pro_10329766.html">仅售246元！价值319元的如家快捷酒店（世纪大道商城路店）住宿1晚（商务标准双人间/商务大床房2选1），美团券可连续使用，商家免费提供WiFi，赠送矿泉水2瓶。</a></h3><div class="b_jiage_sub"><p class="jiage"><span class="xian"><i>¥</i>246</span><span class="yuan">/ ¥319</span></p><p class="sub"><a rel="nofollow" target="_blank" href="/deal/10329766">去看看</a></p></div><div class="b_db_tool"><p class="db"><a class="cgreen" target="_blank" href="/shanghai/dq_pudongxin/">浦东新区</a><em>|</em><a class="cgreen" target="_blank" href="/shanghai/haohuajiudian/">豪华酒店</a></p><p class="tool"><a id="10329766" class="cgreen" href="javascript:shoucang(10329766);">收藏</a></p></div><div class="b_pop w232"><p>商家：如家快捷酒店（世纪大道商城路店）</p><p>地址：浦东新区崂山路338号（近世纪大道）</p></div></div>        </div>
+        <span class="blank15"></span>
+        <div class="col_title_more"><a target="_blank" href="/shanghai/lvyoujiudian/">上海酒店旅游团购 <span class="corange">查看全部</span></a></div>
+    </div>
+    
+	<div class="col_r">
+        <a title="您获得好团网50积分奖励，积分可兑换礼品" id="lingqu" href="javascript:show_box('lingqu','type=1')"><img width="200" height="70" src="/images2012/lingqujifen.gif"></a>
+<span class="blank10"></span>
+<a target="_blank" href="http://www.lingtiao.com?ad"><img src="/images2012/lingtiao_index.jpg"></a>
+<span class="blank15"></span>
+<div id="baidu_ad_200x200"><div id="baidu_clb_slot_621779"><div style="display:none">-</div><iframe width="200" scrolling="no" height="200" frameborder="0" align="center,center" allowtransparency="true" marginheight="0" marginwidth="0" src="http://cpro.baidu.com/cpro/ui/uijs.php?rs=301&amp;tu=621779&amp;tn=text_default_200_200&amp;n=hao224com_cpr&amp;adn=2&amp;rsi1=200&amp;rsi0=200&amp;rad=&amp;rss0=%23FFFFFF&amp;rss1=%23FFFFFF&amp;conOP=0&amp;rss2=%230000FF&amp;rss3=%23444444&amp;rss4=%23008000&amp;rss5=&amp;rss6=%23e10900&amp;rsi5=4&amp;ts=1&amp;at=6&amp;ch=0&amp;cad=1&amp;aurl=&amp;rss7=&amp;cpa=1&amp;fv=11&amp;cn=0&amp;if=16&amp;word=http%3A%2F%2Fwww.hao224.com%2Fpro_10342994.html&amp;refer=&amp;ready=1&amp;jk=a8dfdf26ed335e36&amp;jn=3&amp;lmt=1378748395&amp;csp=1600,900&amp;csn=1600,860&amp;ccd=24&amp;chi=2&amp;cja=false&amp;cpl=33&amp;cmi=42&amp;cce=true&amp;csl=zh-CN&amp;did=3&amp;rt=6&amp;dt=1378748396&amp;pn=21:1|baiduTlinkInlay:baiduCustSTagLinkUnit|103:103&amp;ev=33554432&amp;c01=0&amp;prt=1378748395825&amp;i3=f&amp;anatp=0&amp;stid=0&amp;lunum=6&amp;scale=&amp;skin=" id="cproIframe3"></iframe></div></div>
+<span class="blank15"></span>
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='/js/ad.js?w=200&amp;h=200&amp;id=10926887'%3E%3C/script%3E"));
+</script><script src="/js/ad.js?w=200&amp;h=200&amp;id=10926887"></script><script type="text/javascript" src="http://a.alimama.cn/inf.js"></script><ins id="tanxssp-outer-conmm_25224857_2369598_10926887" style="display:inline-block;padding:0;margin:0;width:200px;height:200px;*zoom:1;*display:inline"><div style="display:inline-block;position:relative;width:200px;height:200px;*display:inline;*zoom:1" id="tanxssp_con_mm_25224857_2369598_10926887"><iframe width="200" scrolling="no" height="200" frameborder="0" marginheight="0" allowtransparency="true" marginwidth="0" border="0" style="" id="tanxssp-outer-iframemm_25224857_2369598_10926887"></iframe><a id="tanx_frameanchor_mm_25224857_2369598_10926887" style="display:none !important;"></a><a style="width:26px;height:17px;right:0px;bottom:0px;display:block;position:absolute;cursor:pointer;z-index:250;" href="http://c.alimama.com" target="_blank" title="我也要申请橱窗推广" id="iconmm_25224857_2369598_10926887">   <span style="float:none;width:26px;display:block;height:17px;background-repeat:no-repeat;background-image: url('http://gtms02.alicdn.com/tps/i2/T1xfOxFnVfXXaAQWDc-26-17.png');*background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img02.taobaocdn.com/tps/i2/T1oY3VXmNbXXXb8qDc-26-18.png');" id="icon_smallmm_25224857_2369598_10926887"></span>   <span style="float:none;width:110px;height:17px;display: none;background-repeat:no-repeat;background-image: url('http://img03.taobaocdn.com/tps/i3/T1dt7VXiRaXXbd25o5-110-18.png');*background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img03.taobaocdn.com/tps/i3/T1dt7VXiRaXXbd25o5-110-18.png');" id="icon_bigmm_25224857_2369598_10926887"></span></a></div></ins><iframe scrolling="no" frameborder="0" marginheight="0" marginwidth="0" id="tanx-a-mm_25224857_2369598_10926887" style="display:none"></iframe>
+<span class="blank15"></span>
+    
+        <div class="prolist labels">
+		<h2><a target="_blank" href="/shanghai//lvyoujiudian/">上海酒店旅游团购</a></h2>
+          	<ul>
+                    <li>
+		<a target="_blank" href="/shanghai/43494/">自由时酒店</a><a target="_blank" href="/shanghai/71292/">京峡谷</a><a target="_blank" href="/shanghai/71691/">鸟巢门票</a><a target="_blank" href="/shanghai/71974/">亚历山大</a><a target="_blank" href="/shanghai/72105/">门票乔家</a><a target="_blank" href="/shanghai/72329/">园博苑门票</a><a target="_blank" href="/shanghai/72454/">长隆门票</a><a target="_blank" href="/shanghai/72455/">万里</a><a target="_blank" href="/shanghai/73473/">薰衣草主题</a><a target="_blank" href="/shanghai/73663/">旅游门票</a><a target="_blank" href="/shanghai/101955/">莫泰酒店</a><a target="_blank" href="/shanghai/102208/">鑫乐庭</a><a target="_blank" href="/shanghai/102304/">锦宜酒店</a><a target="_blank" href="/shanghai/103087/">金名城</a><a target="_blank" href="/shanghai/103465/">万爱主题酒店</a><a target="_blank" href="/shanghai/103570/">情趣宾馆</a><a target="_blank" href="/shanghai/103708/">龙朝酒店</a><a target="_blank" href="/shanghai/104199/">裕景酒店</a><a target="_blank" href="/shanghai/104690/">新园宾馆</a><a target="_blank" href="/shanghai/105444/">假日王朝大酒店</a><a target="_blank" href="/shanghai/126977/">安徽旅游</a><a target="_blank" href="/shanghai/127939/">野生一日游</a><a target="_blank" href="/shanghai/128029/">影视门票</a><a target="_blank" href="/shanghai/129777/">亚洲国旅</a><a target="_blank" href="/shanghai/131844/">大都旅行社</a><a target="_blank" href="/shanghai/132973/">旅游的地方附近</a><a target="_blank" href="/shanghai/134488/">浦三甲港门票</a><a target="_blank" href="/shanghai/135666/">松海景大酒店</a><a target="_blank" href="/shanghai/138328/">金广快捷酒店店</a><a target="_blank" href="/shanghai/142941/">广二日游</a><a target="_blank" href="/shanghai/143366/">天久地缘大酒店</a><a target="_blank" href="/shanghai/154607/">南门宾馆</a><a target="_blank" href="/shanghai/157844/">爱之公寓</a><a target="_blank" href="/shanghai/157857/">怡景中心城</a><a target="_blank" href="/shanghai/158029/">鸣虹酒店</a><a target="_blank" href="/shanghai/158109/">仁山仁海</a><a target="_blank" href="/shanghai/158245/">鑫家连锁酒店</a><a target="_blank" href="/shanghai/158254/">速8酒店珠市口店</a><a target="_blank" href="/shanghai/160246/">拉手网 酒店</a><a target="_blank" href="/shanghai/160302/">凯捷酒店</a><a target="_blank" href="/shanghai/160354/">福缘百合</a><a target="_blank" href="/shanghai/160356/">矿大</a><a target="_blank" href="/shanghai/160369/">关岛</a><a target="_blank" href="/shanghai/160377/">军山酒店</a><a target="_blank" href="/shanghai/160405/">爱客</a><a target="_blank" href="/shanghai/160413/">天华山</a><a target="_blank" href="/shanghai/160414/">多莫</a><a target="_blank" href="/shanghai/160435/">陆游</a><a target="_blank" href="/shanghai/160447/">元喜酒店</a><a target="_blank" href="/shanghai/160461/">到的船票</a><a target="_blank" href="/labels/shanghai/lvyoujiudian/">更多&gt;&gt;</a>                    </li><li>
+		</li></ul>
+            <span class="blank10"></span>
+	</div>
+        <span class="blank15"></span>
+<div class="prolist rsite">
+        <h2>团购网站推荐</h2>
+        <ul>
+            <li>
+                            <a target="_blank" href="/pztuan_shanghai/"><img width="80" height="41" src="/images2012/logo/pztuan.gif"></a>
+                            <a target="_blank" class="nobr" href="/didatuan_shanghai/"><img width="80" height="41" src="/images2012/logo/didatuan.gif"></a>
+                            <a target="_blank" href="/58_shanghai/"><img width="80" height="41" src="/images2012/logo/58.gif"></a>
+                            <a target="_blank" class="nobr" href="/gaopeng_shanghai/"><img width="80" height="41" src="/images2012/logo/gaopeng.gif"></a>
+                            <a target="_blank" href="/meituan_shanghai/"><img width="80" height="41" src="/images2012/logo/meituan.gif"></a>
+                            <a target="_blank" class="nobr" href="/bbhun_shanghai/"><img width="80" height="41" src="/images2012/logo/bbhun.gif"></a>
+                            <a target="_blank" href="/dianping_shanghai/"><img width="80" height="41" src="/images2012/logo/dianping.gif"></a>
+                            <a target="_blank" class="nobr" href="/lashou_shanghai/"><img width="80" height="41" src="/images2012/logo/lashou.gif"></a>
+                            <a target="_blank" href="/nuomi_shanghai/"><img width="80" height="41" src="/images2012/logo/nuomi.gif"></a>
+                            <a target="_blank" class="nobr" href="/d8wed_shanghai/"><img width="80" height="41" src="/images2012/logo/d8wed.gif"></a>
+                            <a target="_blank" href="/55tuan_shanghai/"><img width="80" height="41" src="/images2012/logo/55tuan.gif"></a>
+                            <a target="_blank" class="nobr" href="/qianpin_shanghai/"><img width="80" height="41" src="/images2012/logo/qianpin.gif"></a>
+                            <span class="clear"></span>
+            </li>
+        </ul>
+        </div>
+<span class="blank15"></span>
+<div id="baidu_ad_160x600"><div id="baidu_clb_slot_743426"><div style="display:none">-</div><iframe width="160" scrolling="no" height="600" frameborder="0" align="center,center" allowtransparency="true" marginheight="0" marginwidth="0" src="http://cpro.baidu.com/cpro/ui/uijs.php?rs=301&amp;tu=743426&amp;tn=text_default_160_600&amp;n=hao224com_cpr&amp;adn=4&amp;rsi1=600&amp;rsi0=160&amp;rad=&amp;rss0=%23FFFFFF&amp;rss1=%23FFFFFF&amp;conOP=0&amp;rss2=%230000FF&amp;rss3=%23444444&amp;rss4=%23008000&amp;rss5=&amp;rss6=%23e10900&amp;rsi5=4&amp;ts=1&amp;at=6&amp;ch=0&amp;cad=1&amp;aurl=&amp;rss7=&amp;cpa=1&amp;fv=11&amp;cn=0&amp;if=16&amp;word=http%3A%2F%2Fwww.hao224.com%2Fpro_10342994.html&amp;refer=&amp;ready=1&amp;jk=ab894e7dcdc18ee6&amp;jn=3&amp;lmt=1378748395&amp;csp=1600,900&amp;csn=1600,860&amp;ccd=24&amp;chi=2&amp;cja=false&amp;cpl=33&amp;cmi=42&amp;cce=true&amp;csl=zh-CN&amp;did=2&amp;rt=6&amp;dt=1378748396&amp;pn=21:1|baiduTlinkInlay:baiduCustSTagLinkUnit|103:103&amp;ev=67108864&amp;c01=0&amp;prt=1378748395825&amp;i3=f&amp;anatp=0&amp;stid=0&amp;lunum=6&amp;scale=&amp;skin=" id="cproIframe2"></iframe></div></div>    </div>
+</div>  </div>
+  <div id="collectSuc" style="display:none;position: absolute; z-index: 99999; padding: 0px; margin: 0px;height:0;">
+    <div class="popup_content alert"><span id="collectSuc_close">span>
+      <div class="popup_message">收藏成功</div>
+      <div class="popup_panel">
+        <p>查看&nbsp;&nbsp;<a target="_blank" href="#" mon="type=tg-popclick" class="gocollectman" id="goCollect">我的收藏&gt;&gt;</a></p>
+      </div>
+    </div>
+    <span class="shadow"></span></div>
+  <div class="tuan-goods div-984 goods-n" id="main-center" alog-alias="tuan-local-itemarea" alog-group="tuan-local-itemarea">
+    <div id="tuan_statistics_1_all" alog-alias="tuan-local-itemlist" alog-group="tuan-local-itemlist">
+      <div class="goods-wrap" id="content" mon="type=item&amp;pageindex=1&amp;order=0&amp;qa_test_type=2"></div>
+    </div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+<div><a style="bottom: 142px;" class="common-code-big-ctn" id="common-code-big-ctn" href="#" target="_blank" hidefocus="true"><i class="common-code-close" id="common-code-close-btn" title="关闭"></i>扫一扫手机继续看<i class="common-code-big-img"><img src="http://www.xexing.com/public/images/erweima.png" width="87" height="87" /></i></i></a></div>
+<div class="groupon-backtop-wrapper"><a style="left:50%; margin-left:500px; bottom:87px;" href="#" id="groupon-backtop" title="返回顶部"></a></div>
+
+<span class="blank15"></span>
+<div class="bottom">
+   <div class="bottom_nav">
+       <ul>
+         <li><a href="http://www.xexing.com/">网站首页</a>   | <a href="http://www.xexing.com/help/29/">关于携行网</a> | <a href="http://www.xexing.com/help/40/">六大优势</a> | <a href="http://www.xexing.com/help/34/">关于订7送一</a> |  <a href="http://www.xexing.com/questions/">帮助中心</a> | <a href="http://www.xexing.com/help/1/">联系我们</a> </li>
+       </ul>
+   </div>
+   <div class="ilinks">
+   <a href="#"><img src="http://www.xexing.com/public/www/blue/images/links_01.jpg" width="82" height="30" /></a>
+   <a href="#"><img src="http://www.xexing.com/public/www/blue/images/links_02.jpg" width="82" height="30" /></a>
+   <a href="#"><img src="http://www.xexing.com/public/www/blue/images/links_03.jpg" width="82" height="30" /></a>
+   <a href="#"><img src="http://www.xexing.com/public/www/blue/images/links_05.jpg" width="82" height="30" /></a>
+   <a href="#"><img src="http://www.xexing.com/public/www/blue/images/links_06.jpg" width="82" height="30" /></a>
+   </div>
+   <div id="copyright" style="margin:5px;text-align:center;">版权：携行网 Copyright 2009-2013 Corporation 
+<br>沪ICP备13006826号</div>
+</div>
+<div ><script src="http://s14.cnzz.com/stat.php?id=5559844&web_id=5559844&show=pic1" language="JavaScript"></script></div>
+</body>
+</html>

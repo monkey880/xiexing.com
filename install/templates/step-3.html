@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>程序安装-网站系统信息设置-<?php echo ZHUNA_SOFT_NAME.'-'.ZHUNA_SOFT_VERSION; ?></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="js/tools.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript" src="js/mac_dialog.js"></script>
+<script type="text/javascript">
+function check(){
+	if( $('agent_id').value == '' ){
+		   alert("请填写联盟ID！");   
+		   $('agent_id').focus();
+		   return(false);
+	}
+	if( $('agent_md').value == '' ){
+		   alert("请填写联盟加密字符串！");   
+		   $('agent_md').focus();
+		   return(false);
+	}	
+	if( $('agent_postmd').value == '' ){
+		   alert("请填写订单保存KEY！");   
+		   $('agent_postmd').focus();
+		   return(false);
+	}	
+	if( $('cfg_webname').value == '' ){
+		   alert("请填写设置网站名称！");   
+		   $('cfg_webname').focus();
+		   return(false);
+	}	
+	if( $('cfg_indexurl').value == '' ){
+		   alert("请填写网站域名！");   
+		   $('cfg_indexurl').focus();
+		   return(false);
+	}	
+	if( $('username').value == '' ){
+		   alert("请填写用户名！");   
+		   $('username').focus();
+		   return(false);
+	}	
+	if( $('password').value == '' ){
+		   alert("请填写密码！");   
+		   $('password').focus();
+		   return(false);
+	}						
+}
+</script>
+
+</head>
+
+<body>
+<div id="layout">
+<h5><?php echo ZHUNA_SOFT_ENAME.'&nbsp;&nbsp;'.'&nbsp;Release&nbsp;'.ZHUNA_SOFT_VERSION;?> </h5>
+
+<div class="box"><form name="myform" id="myform" method="post" action="?step=4" onSubmit="return check();">
+<h2>第三步：网站设置</h2>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="t_list">
+    <tr>
+      <td width="130" align="right">联盟ID：</td>
+      <td width="210">
+        <input name="agent_id" type="text" class="input_txt" id="agent_id" value="1232380"/>
+      </td>
+      <td>请登录<a href="http://union.zhuna.cn/user/apimain.asp" target="_blank">联盟后台获取</a></td>
+    </tr>
+    <tr>
+      <td align="right">联盟加密字符串：</td>
+      <td>
+        <input name="agent_md" type="text" class="input_txt" id="agent_md" value="9ea95c8bcfb34776"/>
+      </td>
+      <td>请登录<a href="http://union.zhuna.cn/user/apimain.asp" target="_blank">联盟后台获取</a></td>
+    </tr>
+    <tr>
+      <td align="right">订单保存KEY：</td>
+      <td>
+        <input name="agent_postmd" type="text" class="input_txt" id="agent_postmd" value="4fe3db7787fedfa8"/>
+      </td>
+      <td>请登录<a href="http://union.zhuna.cn/user/apimain.asp" target="_blank">联盟后台获取</a></td>
+    </tr>
+    <tr>
+      <td align="right">设置网站名称：</td>
+      <td>
+        <input name="cfg_webname" id="cfg_webname" type="text" class="input_txt" value="酒店预订网"/>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td align="right">网站域名：</td>
+      <td>
+        <input name="cfg_indexurl" id="cfg_indexurl" type="text" class="input_txt" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'];?>" />
+      </td>
+      <td>如果是二级目录请注意将域名填写完整，既域名后添加上您所安装的目录，如<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/two';?>；本地测试填写http://127.0.0.1/</td>
+    </tr>
+    <tr>
+      <td align="right">后台登陆地址：</td>
+      <td>
+        <input name="cfg_adminurl" id="cfg_adminurl" type="text" class="input_txt" value="admin" />
+      </td>
+      <td>默认为<?php echo 'http://'.$_SERVER['HTTP_HOST'];?>/admin/login可将admin改为其它的名称如：manager</td>
+    </tr>    
+</table>
+  
+<h2>第四步：设置登录信息</h2>
+<h4>系统给出了默认值，建议您修改为不容易被猜到的！</h4>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="t_list">
+  <tr>
+    <td width="130" align="right">用户名：</td>
+    <td width="210"><input name="username" id="username" type="text" class="input_txt" value="admin"/></td>
+    <td>网站管理登录用户名，建议修改</td>
+  </tr>
+  <tr>
+    <td align="right">密码：</td>
+    <td><input name="password" id="password" type="password" class="input_txt" value="" /></td>
+    <td>登录密码，建议修改</td>
+  </tr>
+  <tr>
+    <td colspan="3"><h4>系统会自动验证您的联盟id和联盟加密字符串，请再耐心等待！</h4></td>
+  </tr>
+    <tr>
+      <td colspan="3" align="center"><input type="button" class="btn05" onMouseOver="this.className='btn06'" onMouseOut="this.className='btn05'" onClick="window.location.href='?step=2';" value=" 上一步 " />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input name="submit" class="btn05" onMouseOver="this.className='btn06'" onMouseOut="this.className='btn05'" type="submit" value=" 下一步 " /></td>
+    </tr>
+  </table>
+  </form>
+  </div>
+  
+</div>
+
+</body>
+</html>

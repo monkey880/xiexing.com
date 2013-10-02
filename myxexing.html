@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="public/www/blue/style.css" type="text/css" rel="stylesheet" />
+
+<link href="public/www/blue/base.css" type="text/css" rel="stylesheet" />
+
+<title>酒店预订_酒店价格查询_酒店住宿信息-酒店预订网</title>
+
+<meta name="keywords" content="酒店预订,酒店价格查询,酒店住宿信息" />
+
+<meta name="description" content=">酒店预订网为您提供酒店预订,宾馆预定等服务" />
+
+<script src="public/js/jquery-1.7.2.js" type="text/javascript"></script>
+<script src="public/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+<script src="public/js/fancybox/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+
+<link href="public/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+$(function(){
+	$("a.iframe").fancybox({
+			'width':'50%',
+			'height':'60%',
+			'autoDimensions':'false'
+			
+		});
+});
+</script>
+
+
+</head>
+
+<body>
+
+<div class="father_nav">
+  <div class="site_nav">
+    
+    <ul class="login zn_nav_login" style="display: block;">
+      <ul class="login zn_nav_login">
+        <li>您好，欢迎光临携行网！</li>
+        
+        <li><a href="/user/login" class="login_a">请登录<img width="1" height="1" src="http://tp1.znimg.com/images/blank.gif"></a>
+          <div style="display: none;" class="loginbox" id="loginbox">
+            <form action="/user/login" method="post"><div class="logon" method="dvlogin">
+              <ol>
+                <li class="clx">
+                  <label>手机：</label>
+                  <input type="text" class="login_text" value="" id="zn_nav_user_name" autocomplete="off" name="username">
+                </li>
+                <li class="clx">
+                  <label>密码：</label>
+                  <input type="password" id="zn_nav_password" value="" name="password" class="login_text">
+                </li>
+                <li style="display:none;" class="clx zn_verify_box nav_verify_box">
+                  <label></label>
+                  <input type="input" id="zn_nav_verify" value="" name="verify" class="login_text head_yz_input">
+                  <img align="absmiddle" class="head_yz_tip" id="zn_nav_verify_img" src="http://tp1.znimg.com/v5/images/blank.gif"><a class="regist_yzm_ts1 head_yz_but" href="#" title="看不清楚点击更换"></a>
+                  <div class="clear_1"></div>
+                </li>
+                <li class="clx"><a href="http://www.zhuna.cn/member/retrievePassword" class="forget">忘记密码</a>
+                 <!-- <p class="checkbox"><span><dfn>30天免登录</dfn></span></p>-->
+                </li>
+                <li class="clx"><a href="http://www.zhuna.cn/member/reg" class="">注册账号</a>
+                  <input name="" type="submit" class="login_put" value="提交" method="login">
+                  <input type="checkbox" style="display: none;" class="checkbox zn_nav_expires" id="expires" name="expires">
+                </li>
+               <!-- <li class="clx1">使用合作网站账号登录</li>
+                <li style="margin-bottom:5px;" class="l_share"><a class="sina_share" onclick="zn_member.login.oAuthTemp('WEIBOSN',this,'self');" href="javascript:;" title="新浪微博登录">新浪微博登录</a><a class=" qq_share " onclick="zn_member.login.oAuthTemp('QQ',this,'self');" href="javascript:;" title="QQ登录">QQ登录</a><a class="rr_share" onclick="zn_member.login.oAuthTemp('RENREN',this,'self');" href="javascript:;" title="人人网登录">人人网登录</a><a class=" kj_share" onclick="zn_member.login.oAuthTemp('WEIBOTX',this,'self');" href="javascript:;" title="腾讯微博登录">腾讯微博登录</a><a class="login_ico_alipay" onclick="zn_member.login.oAuthTemp('ALIPAY',this,'self');" href="javascript:;" title="支付宝登录">支付宝登录</a>
+                  <div class="clear_1"></div>
+                </li>-->
+                <div class="clear_1"></div>
+              </ol>
+              <div class="clear_1"></div>
+            </div></form>
+          </div>
+        </li>
+        <li class="f_db">|</li>
+        <li><a href="http://www.zhuna.cn/member/reg">免费注册</a></li>
+        <li class="f_db">|</li>
+        <li><a href="#" class="vsins">微信</a>
+          <div style="display:none" class="quickmark"><img width="238" height="238" src="http://www.zhuna.cn/v5/css/new_zhuna/images/quickmark.jpg" alt="">
+            <dl>
+              <dt>您的随身酒店预订专家</dt>
+              <dd>扫一扫，加我微信好友哦！</dd>
+            </dl>
+            <span class="quickmark_jt2"></span></div>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</div>
+<div class="top">
+  <div class="logo">
+    <h1><img src="public/www/default/images/logo.jpg" width="174" height="92" /></h1>
+  </div>
+  <div class="banner"><img src="public/www/default/images/top_banner.gif" width="578" height="92" /></div>
+</div>
+<script type="text/javascript">
+$('.login_a').parent('li').hover(function(){
+				$(this).children('.login_a').addClass('cur');
+				$('#loginbox').show();
+			},function(){
+				$(this).children('.login_a').removeClass('cur');
+				$('#loginbox').hide();
+			});
+			
+//登录事件
+			
+</script>
+
+<script>var base_url = "/";</script>
+<div class="middle">
+
+	       <div class="nav">
+
+           <div class="nav_main">
+
+              <ul>
+
+                 <li ><a href="/">酒店预订</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+                  
+
+                 <li ><a href="/?lable">城市地标</a></li>
+                  <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?freeroom">住七送一</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?gift">免费礼品</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?ehc">会馆/展馆</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?expo">展会频道</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?news">资讯频道</a></li>
+
+                 <li class="nav_line"><img src="public/www/blue/images/nav_line.jpg" width="cityinfo" height="40" /></li>
+
+                 <li ><a href="/?member">会员中心</a></li>
+
+              </ul>
+
+            </div>
+
+       </div>
+	<div class="main">
+
+		<div id="maincontent" style=";">
+     
+        
+ <div class="user">
+    <div class="user_nav">
+    <ul>
+      <li><a href="/?/member/myorder" >酒店订单</a></li>
+      <li><a href="/?/member/freeroomorder" >免费房订单</a></li>
+      <li><a href="/?/member/mygift" >我的礼品</a></li>
+      <li><a href="/?/member/myexp" >我的积分</a></li>
+      <li><a href="/?/member/mycomment" id="user_curr">我的点评</a></li>
+      <li><a href="/?/member/myxexing">个人中心</a></li>
+      <li><a href="">修改密码</a></li>
+      <li><a href="/user/loginout">退出系统</a></li>
+    </ul>
+  </div>  <div class="user_main myxexing">
+    
+   
+    <div class="user_welcom">您好，尊敬会员，欢迎回来！<br />
+  登录名：13838396270 手机： 13838396270 邮箱：sdflsjf@qq.com 
+</div>
+<dl>
+<dt><h3>订单信息</h3></dt>
+<dd>您当前账户有：（<span class="f_f00">0</span>）条未出行订单，（<span class="f_f00">2</span>）条待评价订单</dd>
+</dl>
+<dl>
+<dt><h3>我的免费房</h3></dt>
+<dd>住七送一：可领取（<span class="f_f00">1</span>），再累计入住（<span class="f_f00">2</span>）日间可赠送一间！<br />
+  住六送一：可领取（<span class="f_f00">0</span>），再连续入住（<span class="f_f00">3</span>）日间可赠送一间！
+</dd>
+</dl>
+<dl>
+<dt><h3>我的积分</h3></dt>
+<dd>可用积分：<span class="f_f00">8</span>分 <a href="/gift">兑换好礼？</a><br />
+已冻结积分：<span class="f_f00">0</span>分<br />
+更多积分换礼，尽在携行免费礼品！</dd>
+</dl>
+  </div>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="inbz"><img src="public/www/blue/images/inbz.jpg" width="950" height="57" /></div>
+
+<div class="bottom">
+   <div class="bottom_nav">
+       <ul>
+         <li><a href="/">网站首页</a>  | <a href="/?/help">帮助中心</a>  | <a href="http://union.zhuna.cn/r.asp?sxid=3706736"> 网站联盟</a>  | <a href="/?member">订单查询</a> | <a href="/?/newsinfo/1">联系我们</a> </li>
+       </ul>
+   </div>
+   <div class="ilinks">
+   <a href="#"><img src="public/www/blue/images/links_01.jpg" width="128" height="47" /></a>
+   <a href="#"><img src="public/www/blue/images/links_02.jpg" width="128" height="47" /></a>
+   <a href="#"><img src="public/www/blue/images/links_03.jpg" width="128" height="47" /></a>
+   <a href="#"><img src="public/www/blue/images/links_04.jpg" width="128" height="47" /></a>
+   <a href="#"><img src="public/www/blue/images/links_05.jpg" width="128" height="47" /></a>
+   <a href="#"><img src="public/www/blue/images/links_06.jpg" width="128" height="47" /></a>
+   </div>
+   <div id="copyright" style="margin:5px;text-align:center;"> 版权：住哪网 联盟事业部  Copyright 2009-2013 Corporation, All Rights Reserved</div>
+</div>
+<div style="display:none;">51啦|百度|google统计代码</div>
+</body>
+
+</html>

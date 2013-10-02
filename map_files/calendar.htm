@@ -1,0 +1,456 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+body{margin:0; padding:0; text-align:center; font-size:12px; font-family:Verdana, Geneva, sans-serif;}ul,ol{list-style:none;}img,input,select{vertical-align:middle;}img{border:none;}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, input, button, textarea, p, blockquote, th, td, address{padding:0; margin:0; border:0;}
+h3, h4,table tr td,table tr th{font-size:12px; text-align:center;}
+a:link {color:#333; text-decoration:none;}
+a:visited {text-decoration:none; color:#333;}
+a:hover {text-decoration:underline; color: #ff6000;}
+a:active {text-decoration: none; color:#333;}
+
+.fleft, .fcenter, .f_left{display:block; float:left;}
+.fright, .f_right{display:block; float:right;}
+
+.date_list{ position:absolute; border:1px solid #519e1c;top:0;left:0;height:192px}
+.subdate_list{ width:180px; float:left; border-bottom:1px solid #519e1c;}
+.subdate_list .list_head{ background:#519e1c; color:#fff; font-size:12px; height:24px; width:180px;}
+.subdate_list .list_head .fleft{ font-size:12px;padding-left:12px; padding-top:5px;}
+.subdate_list .list_head .fcenter{ font-size:12px; line-height:24px; padding-left:50px;}
+.subdate_list .list_head .fright{ padding-right:12px; padding-top:5px;}
+.subdate_list .list_main{ width:180px;} 
+.subdate_list .list_main th{ height:22px; border-bottom:#ccc 1px solid; font-weight:normal; line-height:22px;}
+.subdate_list .list_main td{ height:20px; line-height:20px;}
+.subdate_list .list_main td a{ height:20px; line-height:20px;float:left;width:25px;}
+.subdate_list .list_main td a:hover { color:#fff; text-decoration:none;}
+.subdate_list .list_main td font{ height:20px; line-height:20px;float:left;width:25px;}
+.color01{color:#d30006;}
+.color02{color:#fff; background-color:#fdab01;}
+.color03{color:#fff; background-color:#519e1c;}
+.color04{color:#959595;}
+#znmonth { cursor:pointer;}
+#divCBottomTel { padding:5px; text-align:center; color:#080; font-family:Arial;}
+</style>
+
+<script type="text/javascript" language="javascript"> 
+<!--//
+var str='',i,j,yy,mm,openbound,callback;
+var fld1,fld2;
+var wp=window.parent;
+var cf=wp.document.getElementById("CalFrame");
+var fld,curday,sd,ed,today=new Date();
+var n_position,n_textdate,startdate,enddate,vailidday,oddeven,vailiddate,nextvailiddate,objecttype,mmm,ddd,thirdfocus;
+mmm="";
+today.setHours(0);today.setMinutes(0);today.setSeconds(0);today.setMilliseconds(0);
+//var lastyear=today.getYear(),lastmonth=today.getMonth();
+
+function parseDate(s)//解析日期
+{
+	var reg=new RegExp("[^0-9-]","")
+	if(s.search(reg)>=0)return today;
+	var ss=s.split("-");
+	if(ss.length!=3)return today;
+	if(isNaN(ss[0])||isNaN(ss[1])||isNaN(ss[2]))return today;
+	return new Date(parseFloat(ss[0]),parseFloat(ss[1])-1,parseFloat(ss[2]));
+}
+function resizeCalendar(){cf.width=363;cf.height=194;}//设定日历宽高
+function initCalendar()//初始化
+{
+	curday=today;
+	//if(!fld1.parentNode.getElementsByTagName("div").length){
+	//	f = document.createElement("DIV");
+	//	f.className="boxWrapper";
+	//	f.innerHTML=("<div class='boxContainer'><div class='sinfo' id='sinfo' title=''>周四</div><div class='sicon'></div><div style='clear: both;'></div></div>");
+	//	fld1.parentNode.insertBefore(f,fld1);
+	//}
+	//<div class="boxWrapper"><div class="boxContainer" id="mainXI2"><div class="sinfo" id="sinfoXI2" title="">周四</div><div class="sicon"></div><div style="clear: both;"></div></div></div>
+	if(fld1&&fld1.value.length>0){curday=parseDate(fld1.value);}
+	if(fld2&&fld2.value.length>0){curday=parseDate(fld2.value);}	
+	if (!startdate==""){sd=parseDate(startdate)}
+	if (!enddate==""){ed=parseDate(enddate)}
+	drawCalendar(curday.getFullYear(),curday.getMonth());
+}
+function drawCalendar(y,m)//画日历
+{
+	//if(m < startdate.split("-")[1]){document.getElementById("fleft").style.display="none";}else{document.getElementById("fleft").style.display="";}
+	//if(m > enddate.split("-")[1]-3){document.getElementById("fright").style.display="none";}else{document.getElementById("fright").style.display="";}
+	var yzzz = y;
+	var mzzz = m+1;
+	//old!!!
+	var x=new Date(y,m,1),mv=x.getDay(),d=x.getDate(),de;
+	yy=x.getFullYear();mm=x.getMonth();
+	document.getElementById("yyyymm").innerHTML=yy+"年"+(mm+1>9?mm+1:mm+1)+"月";
+	//清空日历
+	for(var i=1;i<=mv;i++)
+	{
+		de=document.getElementById("d"+i);
+		de.innerHTML="";
+		de.bgColor="";
+	}
+	//画日历
+	while(x.getMonth()==mm)
+	{
+		de=document.getElementById("d"+(d+mv));
+		if(x.getTime()==(curday.getTime())){
+			de.bgColor="#fdab01";
+	    }
+		else
+			de.bgColor="#FFFFFF";
+		if(x.getTime()==(today.getTime()))
+		{
+			if(ifDraw(x))
+			{
+				de.innerHTML="<a class='linkDayCss' href=javascript:setDate("+d+","+mm+","+yy+"); title='今天日期："+yy+"年"+(mm+1)+"月"+d+"日'><font color=red>"+d+"</font></a>";
+			}
+			else
+			{
+				de.innerHTML="<a style='color:#ff0000;' title='今天日期："+yy+"年"+(mm+1)+"月"+d+"日'>"+d+"</a>";
+			}
+			
+			
+		}
+		else if(x.getTime()<(today.getTime()))
+		{
+			if(ifDraw(x))
+			{
+				if(openbound){de.innerHTML="<a href=javascript:setDate("+d+","+mm+","+yy+"); class=bt>"+d+"</a>";}
+				else{de.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+d+"</font>";}
+			}
+			else
+			{
+				de.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+d+"</font>";
+			}			
+		}	
+		else
+		{
+			if(ifDraw(x))
+			{	
+				de.innerHTML="<a  href=javascript:setDate("+d+","+mm+","+yy+");>"+d+"</a>";
+			}
+			else
+			{
+				de.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+d+"</font>";					
+			}
+		}
+		x.setDate(++d,mm,yy);
+	}
+	while(d+mv<=42)
+	{
+		de=document.getElementById("d"+(d+mv));
+		de.innerHTML="";
+		de.bgColor="";
+		d++;
+	}
+	//old!!!
+	//new!!!
+	var xzzz=new Date(yzzz,mzzz,1),mvzzz=xzzz.getDay(),dzzz=xzzz.getDate(),dezzz;
+	yyzzz=xzzz.getFullYear();mmzzz=xzzz.getMonth();
+	document.getElementById("yyyymmzzz").innerHTML=yyzzz+"年"+(mmzzz+1>9?mmzzz+1:mmzzz+1)+"月";
+	//清空日历
+	for(var i=1;i<=mvzzz;i++)
+	{
+		dezzz=document.getElementById("dzzz"+i);
+		dezzz.innerHTML="";
+		dezzz.bgColor="";
+	}
+	//画日历
+	while(xzzz.getMonth()==mmzzz)
+	{
+		dezzz=document.getElementById("dzzz"+(dzzz+mvzzz));
+		if(xzzz.getTime()==curday.getTime()){
+		    dezzz.bgColor="#fdab01";		   
+		}
+		else
+			dezzz.bgColor="#FFFFFF";
+		if(xzzz.getTime()==today.getTime())
+		{
+			//window.alert(1);
+			if(ifDraw(xzzz))
+			{
+				dezzz.innerHTML="<a  href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+");><font color='#ffffff'>"+dzzz+"</font></a>";
+			}
+			else
+			{
+				dezzz.innerHTML="<font color=#ff0000>"+dzzz+"</font>";
+			}
+		}
+		else if(xzzz.getTime()<today.getTime())
+		{
+			//window.alert(2);
+			if(ifDraw(xzzz))
+			{
+				if(openbound){dezzz.innerHTML="<a  href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+"); class=bt>"+dzzz+"</a>";}
+				else{dezzz.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+dzzz+"</font>";}
+			}
+			else
+			{
+				dezzz.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+dzzz+"</font>";
+			}			
+		}	
+		else
+		{
+			if(ifDraw(xzzz))
+			{	
+				dezzz.innerHTML="<a href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+");>"+dzzz+"</a>";
+			}
+			else
+			{
+				dezzz.innerHTML="<font color=#888888 style=cursor:not-allowed;>"+dzzz+"</font>";
+			}
+		}
+		xzzz.setDate(++dzzz,mmzzz,yyzzz);
+	}
+	while(dzzz+mvzzz<=42)
+	{
+		dezzz=document.getElementById("dzzz"+(dzzz+mvzzz));
+		dezzz.innerHTML="";
+		dezzz.bgColor="";
+		dzzz++;
+	}
+	//new!!
+}
+function ifDraw(xd)
+{
+	if(!startdate==""&&!enddate=="")
+	{
+		
+		if(xd.getTime()>=sd.getTime()&&xd.getTime()<=ed.getTime())
+		{	
+			
+			if(returnOE(xd)&&returnVD(xd)&&returnVDE(xd))
+			{
+				return true
+			}
+			else
+			{
+				return false
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		if(returnOE(xd)&&returnVD(xd)&&returnVDE(xd))
+		{
+			return true
+		}
+		else
+		{
+			return false
+		}
+		
+	}
+}
+function returnOE(xd)
+{
+	if(!oddeven=="")
+		{
+		if(oddeven=="0")
+		{
+			if(xd.getDate()%2==0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			if(!(xd.getDate()%2==0))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	
+	}
+	else
+	{
+		return true;
+	}
+}
+function returnVD(xd)
+{
+	if(!vailidday=="")
+	{
+		if(vailidday.indexOf(xd.getDay().toString())>=0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return true;
+	}
+}
+function returnVDE(xd)
+{
+	if(!vailiddate=="")
+	{
+		if(vailiddate.indexOf(xd.getFullYear().toString()+"-"+(xd.getMonth()+1).toString()+"-"+xd.getDate().toString()+",")>=0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function setDate(d,mm,yy)//设置日期
+{
+	this.f = fld1;
+	wp.hideCalendar();
+	mmm=mm+1;
+	mmm=(mmm < 10) ? "0"+mmm:mmm;
+	d = (d < 10) ? "0"+d:d;
+	var dstr=yy+"-"+(mmm)+"-"+d;
+	this.t = dstr;
+	try{
+	if(callback&&callback.length>0){
+		eval("wp."+callback+"").call(this,dstr,wp.ZNDate.getDateTip(dstr))}else{fld1.value=dstr;}
+	}catch(e){//alert(e)
+	}
+	if(!n_position==""&&!n_textdate=="")
+	{
+		startdate = addDate(1,fld1.value.replace(/-/g,"\/"));
+		wp.showCalendarZN(n_position,false,n_textdate,'','',startdate,enddate,vailidday,oddeven,nextvailiddate,objecttype,thirdfocus,fld1.id,callback);			
+	}
+	else
+	{
+		if(!thirdfocus=="")
+		{
+			otd=wp.document.getElementById(thirdfocus);
+			otd.focus();
+			
+		}
+	}
+}
+function over(id){
+    document.getElementById(id).className='color03'
+}
+function out(id){
+    document.getElementById(id).className=''
+}
+function addDate(NumDay,dtDate){   
+    var date = new Date(dtDate);
+    lIntval = NumDay;
+    date.setDate(date.getDate() + lIntval);
+    return date.getFullYear() +'-' + (date.getMonth()+1) + '-' +date.getDate();
+}
+//-->
+</script>
+<meta content="MSHTML 6.00.2800.1476" name="generator">
+</head>
+
+<body onload="resizeCalendar();">
+<div class="date_list">
+<div class="date_list1">
+	<div class="subdate_list" style=" border-right:#519e1c 1px solid;">
+<!-- old table! -->
+
+      <div class="list_head">
+        <a href="javascript:drawCalendar(yy,mm-1);" class="fleft"><img src="calendar_data/left.gif" id="fleft"></a>
+		 <h4 class="fcenter" id="yyyymm"></h4>
+	   </div>
+      <table class="list_main" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <th class="color01">日</th>
+          <th>一</th>
+
+          <th>二</th>
+          <th>三</th>
+          <th>四</th>
+          <th>五</th>
+          <th class="color01">六</th>
+		  </tr>
+
+        <script type="text/javascript" language="javascript">
+<!--//
+for(i=0;i<6;i++)
+{	
+	str+="<tr>";
+	for(j=1;j<=7;j++)str+="<td id=d"+(i*7+j)+" onmouseover=\"over(this.id)\" onmouseout=\"out(this.id)\"></td>";
+	str+="</tr>";
+}
+document.write(str);
+//-->
+</script><tr><td id="d1" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d2" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d3" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d4" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d5" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d6" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d7" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr><td id="d8" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d9" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d10" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d11" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d12" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d13" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d14" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr><td id="d15" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d16" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d17" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d18" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d19" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d20" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d21" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr><td id="d22" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d23" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d24" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d25" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d26" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d27" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d28" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr><td id="d29" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d30" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d31" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d32" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d33" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d34" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d35" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr><td id="d36" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d37" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d38" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d39" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d40" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d41" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="d42" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr>
+	</tbody></table>
+<!-- end old table!! -->
+	</div>
+	<div class="subdate_list">
+	    <div class="list_head">
+			<h4 class="fcenter" id="yyyymmzzz"></h4>
+			<a href="javascript:drawCalendar(yy,mm+1);" class="fright"><img src="calendar_data/right.gif" id="fright"></a>
+		</div>
+
+<!-- new table!! -->
+      <table class="list_main" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <th class="color01">日</th>
+          <th>一</th>
+          <th>二</th>
+          <th>三</th>
+
+          <th>四</th>
+          <th>五</th>
+          <th class="color01">六</th>
+		  </tr>
+        <script type="text/javascript" language="javascript">
+        	str = "";
+					<!--//
+					for(i=0;i<6;i++)
+					{
+						str+="<tr height=18>";
+						for(j=1;j<=7;j++)str+="<td id=dzzz"+(i*7+j)+" onmouseover=\"over(this.id)\" onmouseout=\"out(this.id)\"></td>";
+						str+="</tr>";
+					}
+					document.write(str);
+					//-->
+				</script><tr height="18"><td id="dzzz1" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz2" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz3" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz4" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz5" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz6" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz7" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr height="18"><td id="dzzz8" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz9" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz10" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz11" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz12" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz13" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz14" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr height="18"><td id="dzzz15" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz16" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz17" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz18" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz19" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz20" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz21" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr height="18"><td id="dzzz22" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz23" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz24" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz25" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz26" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz27" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz28" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr height="18"><td id="dzzz29" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz30" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz31" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz32" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz33" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz34" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz35" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr><tr height="18"><td id="dzzz36" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz37" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz38" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz39" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz40" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz41" onmouseover="over(this.id)" onmouseout="out(this.id)"></td><td id="dzzz42" onmouseover="over(this.id)" onmouseout="out(this.id)"></td></tr>
+	  </tbody></table>
+<!-- end new table -->
+
+	</div>
+  <div style="clear:both;height:0;font-size: 1px;line-height: 0px;"></div>
+  </div>
+	<div id="divCBottomTel"><span id="znmonth" onclick="javascript:wp.hideCalendar();">2013-11-3之后的预订，请您致电400-626-5577预订！[关闭]</span></div>
+</div>
+<script type="text/javascript" language="javascript">
+<!--//
+var bCalLoaded=true;
+//-->
+</script>
+<script type="text/javascript" language="javascript">
+var d = new Date();
+var y = d.getFullYear();
+var m,enddate;
+if(((d.getMonth()+1)+2) > 12){
+	m = (d.getMonth()+1)+2-12;y += 1;
+}else{
+	m = (d.getMonth()+1)+2;
+}
+enddate = y+'-'+m+'-'+d.getDate();
+document.getElementById("znmonth").innerHTML=enddate+'之后的预订，请您致电400-626-5577预订！[关闭]';
+</script>
+
+
+</body></html>

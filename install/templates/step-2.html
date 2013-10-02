@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>程序安装-数据库信息设置与安装-<?php echo ZHUNA_SOFT_NAME.'-'.ZHUNA_SOFT_VERSION; ?></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="js/tools.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript" src="js/mac_dialog.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+//查现在数据库列表
+	_isok = 0;
+	function sdname()
+	{
+		if( $('dbhost').value == '' )
+		{
+		   alert("请填写数据库主机！");   
+		   $('dbhost').focus();
+		   return(false);
+		}
+		if( $('dbuser').value == '' )
+		{
+		   alert("请填写数据库用户名！");   
+		   $('dbuser').focus();
+		   return(false);
+		}
+		if( $('dbpwd').value == '' )
+		{
+		   alert("请填写数据库密码！");   
+		   $('dbpwd').focus();
+		   return(false);
+		}				
+		var dbhost = $('dbhost').value;
+		var dbuser = $('dbuser').value;
+		var dbpwd = $('dbpwd').value;				
+		var _url = 'index.php?action=sdname';	
+		var _para = {};
+		_para['dbhost'] = dbhost;	
+		_para['dbuser'] = dbuser;	
+		_para['dbpwd'] = dbpwd;	
+		
+		var Ajax = new classAjax();
+		Ajax.setRequest(_url, _para, function(data){
+			var returned = data;
+			if( returned == 'errorpwd' )
+			{
+				alert('连接数据库失败 请检查输入的数据库账号 密码是否正确!');
+				return false;
+			}
+			var obj = eval(returned);
+			dbary = obj;
+			//var person1 = obj[0];
+			document.getElementById("js-db-list").length=0;	
+			document.getElementById("js-db-list").remove(0);
+			var op_one = '共'+obj.length+'个';
+			document.getElementById("js-db-list").options.add(new Option(op_one,''));
+			for(var i=0;i<obj.length;i++)   
+			{   
+				var name = obj[i];
+				document.getElementById("js-db-list").options.add(new Option(name,name));
+			} 
+		});	
+	}
+	
+	//判断数据库是否存在
+	function chkdb(a)
+	{
+	if( $('dbhost').value == '' )
+		{
+		   alert("请填写数据库主机！");   
+		   $('dbhost').focus();
+		   return(false);
+		}
+		if( $('dbuser').value == '' )
+		{
+		   alert("请填写数据库用户名！");   
+		   $('dbuser').focus();
+		   return(false);
+		}
+		if( $('dbpwd').value == '' )
+		{
+		   alert("请填写数据库密码！");   
+		   $('dbpwd').focus();
+		   return(false);
+		}				
+		var dbhost = $('dbhost').value;
+		var dbuser = $('dbuser').value;
+		var dbpwd = $('dbpwd').value;				
+		var _url = 'index.php?action=sdname';	
+		var _para = {};
+		_para['dbhost'] = dbhost;	
+		_para['dbuser'] = dbuser;	
+		_para['dbpwd'] = dbpwd;	
+		var Ajax = new classAjax();
+		Ajax.setRequest(_url, _para, function(data){
+			var returned = data;
+			if( returned == 'errorpwd' )
+			{
+				alert('连接数据库失败 请检查输入的数据库账号 密码是否正确!');
+				return false;
+			}
+			var obj = eval(returned);
+			dbary = obj;
+			var sdbname = a.toLowerCase();
+			for(var i=0;i<dbary.length;i++)   
+			{   
+				if(sdbname == dbary[i])
+				{
+					alert('这是一个已经存在的数据库,确定要覆盖该数据库吗?');
+				}
+			} 			
+		});	
+
+	}
+	
+	function changedb(a)
+	{
+		$('dbname').value = a;
+		$('dbname').focus();
+	}
+	
+
+	function TestDbPwd()
+	{
+	  	var dbhost = $('dbhost').value;
+		var dbuser = $('dbuser').value;
+		var dbpwd = $('dbpwd').value;
+		var _url = 'index.php';	
+		var _para = {};
+		_para['action'] = 'chkdname';	
+		_para['dbhost'] = dbhost;	
+		_para['dbuser'] = dbuser;	
+		_para['dbpwd'] = dbpwd;	
+		var Ajax = new classAjax();
+		Ajax.setRequest(_url, _para, function(data){			
+				if(data == '1')
+				{
+					_isok = '1';
+					$('dbpwdsta').style.color = '#80AA2D';
+					$('dbpwdsta').innerHTML = '数据库账号密码信息正确';	
+				}
+				else
+				{
+					_isok = '0';		
+					$('dbpwdsta').innerHTML = '数据库账号密码信息错误!';	
+					$('dbpwdsta').style.color = '#ff0000';	
+				}
+		});			
+
+	}
+	
+-->
+</script>
+<script type="text/javascript" src="js/install.js"></script>
+</head>
+
+<body style="overflow-x:hidden">
+<div id="layout">
+<h5><?php echo ZHUNA_SOFT_ENAME.'&nbsp;&nbsp;Release&nbsp;'.ZHUNA_SOFT_VERSION;?> </h5>
+<div class="box">
+<div class="box"><form name="myform" id="myform" method="post" action="?action=two" onSubmit="return check();">
+<h2>第二步：数据库设定</h2><h4>此页内容必填，安装初始数据库信息,若长时间没有反应，请再耐心等待一会。</h4>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="twbox">
+			<tr>
+				<td class="onetd"><strong>数据库主机：</strong></td>
+				<td><input name="dbhost" id="dbhost" type="text" value="localhost" class="input-txt" />
+				<small>一般为localhost:后面是端口号</small></td>
+			</tr>
+			<tr>
+				<td class="onetd"><strong>数据库用户：</strong></td>
+				<td><input name="dbuser" id="dbuser" type="text" value="root" class="input-txt" /></td>
+			</tr>
+			<tr>
+				<td class="onetd"><strong>数据库密码：</strong></td>
+				<td>
+				  <div style='float:left;margin-right:3px;'><input name="dbpwd" id="dbpwd" type="text" class="input-txt" onblur="TestDbPwd()"/></div>
+				  <div style='float:left' id='dbpwdsta'></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="onetd"><strong>数据库名称：</strong></td>
+				<td>
+					<input name="dbname" id="dbname" type="text" value="x4" class="input-txt" onblur="chkdb(this.value)"/>
+                      <select name="js-db-list" id="js-db-list"  onChange="changedb(this.value)">
+            <option>已有数据库</option>
+        </select>
+        <input type="button" name="js-go" class="button" value="搜" onclick="sdname()" />
+				</td>
+			</tr> 
+            <tr>
+                <td class="onetd"><strong>数据表前缀：</strong></td>
+                <td><input name="dbprefix" id="dbprefix" type="text" value="<?php echo ZHUNA_SOFT_DBPREFIX; ?>" class="input-txt" />
+                        <small>如无特殊需要,请不要修改</small></td>
+            </tr>			           
+		</table>
+        
+    <div align="center"><input type="button" class="btn05" onMouseOver="this.className='btn06'" onMouseOut="this.className='btn05'" onClick="window.location.href='index.php?step=1';" value=" 上一步 " />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input name="button" class="btn05" onMouseOver="this.className='btn06'" onMouseOut="this.className='btn05'" type="button" value="开始安装"  onclick="DoInstall();"/></div>
+
+</div>
+  
+</div>
+
+</body>
+</html>

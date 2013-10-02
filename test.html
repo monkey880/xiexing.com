@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=85654a7702d8b2163b85f87e6585b4f5 "></script>
+<title>地址解析</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");
+map.centerAndZoom("上海市",12);
+var center = map.getCenter();
+var point = new BMap.Point(center.lng, center.lat);
+// 创建地址解析器实例
+var myGeo = new BMap.Geocoder();
+// 将地址解析结果显示在地图上,并调整地图视野
+myGeo.getPoint("上海市长宁区延安西路1155号", function(point){
+  if (point) {
+    map.centerAndZoom(point, 20);
+	var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+	marker.enableDragging();
+  }
+}, "上海市");
+
+map.enableScrollWheelZoom(true);
+map.addEventListener('click', showInfo);
+function showInfo(e){
+	alert(e.point.lng+e.point.lat);
+}
+</script>

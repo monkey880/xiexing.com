@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*pop_layer*/
+.pop_layer { border:1px solid #444; background:#fff; -moz-box-shadow:#444 0 0 6px; box-shadow:#444 0 0 6px;}
+.pop_layer .tit { height:46px; line-height:46px; text-indent:30px; background:url(../images/icon10.gif) repeat-x 0 0; font-size:16px; font-weight:bold;}
+.pop_layer .tit .close, .pop_layer2 .tit .close{ float:right; width:54px; height:46px; background:url(../images/icon10.gif) -55px -112px; overflow:hidden;}
+.pop_layer .tit .close:hover, .pop_layer2 .tit .close:hover{ background-position:0 -112px;}
+.layer { padding:30px; position:relative; margin:0 auto; zoom:1; display:none; background-color:#fff; -moz-box-shadow:#7a7a7a 0 1px 3px 2px; box-shadow:#7a7a7a 0 1px 3px 2px;}
+.pop_con { padding:25px 30px;}
+.pop_con h5 { margin-bottom:15px; font-weight:bold; color:#555; font-size:12px;}
+.pop_con h5 a { color:#195cb5; text-decoration:none; }
+.pop_con h5 a:hover { color:#f00; }
+/*loginPop*/
+.loginpop{ width:700px; margin:5px;}
+.other_login { margin-bottom:15px;}
+.other_login .sina { display:inline-block; width:192px; height:42px; margin:0; background:url(../images/icon10.gif) 0 -59px;}
+.other_login .tx { display:inline-block; width:192px; height:42px; margin-left:15px; background:url(../images/icon10.gif) -205px -59px; }
+.loginpop .form {}
+.loginpop .form ul { margin-bottom:5px; overflow:hidden; zoom:1;}
+.loginpop .form ul li { float:left; width:192px; margin-right:15px; overflow:hidden;}
+.loginpop .form ul li.li_btn { width:130px;}
+.loginpop .form dl { margin-bottom:15px;}
+.loginpop .form dl dt { float:left; width:90px; text-align:right; padding:0 18px 0 0; font-size:14px; font-weight:bold; line-height:36px; _line-height:42px; color:#F69;}
+.loginpop .form dl dd {}
+.loginpop .form dl dd .txt_input{ width:278px;}
+.loginpop .form dl dd span { display:inline-block; padding-left:5px; color:#999; _position:relative; _top:-12px;}
+.txt_input{width:180px;height:38px;padding:0 5px;font-size:14px;line-height:38px;border:1px solid #e7e7e7; background:url(../images/icon10.gif) no-repeat 0 -165px; color:#b5b5b5;}
+.btn_on,.btn_off { width:122px; height:40px; border:none; font-size:18px; font-weight:bold; color:#fff; line-height:40px; border-radius:4px; background:#63adef; cursor:pointer;}
+.btn_off { background:url(../images/icon10.gif) no-repeat -258px -112px; color:#b5b5b5; background:#efefef; cursor:default;}
+#err_email,#err_pw { width:192px; height:40px; margin-bottom:5px; background:#f99; color:#fff; font-size:12px; font-weight:bold; line-height:40px; text-align:center;}
+#auto,#treaty {vertical-align:middle;}
+.passwordbox{position:relative; display:inline; float:left;}
+.passwordbox label{position:absolute; top:0; left:0; width:178px; height:40px; padding:0 7px; color:#b5b5b5; font-size:14px; line-height:40px; z-index:3; cursor:text;}
+.focused{ color:#333333;}
+.loginpop .form dl dd .txt_input.err_tips,.loginpop .form dl dd .txt_input.login_tips{ border:1px solid #FF9999;}
+.loginpop .form dl dd span.err_tips,.loginpop .form dl dd span.login_tips{width:284px;height:36px;background:#f99;font-size:12px; font-weight:bold; line-height:36px; text-align:center; margin-top:5px; margin-left:108px; _margin-left:111px;color:#FFFFFF;}
+.loginpop .form dl dd#treatydd span.err_tips{ margin-left:0px;}
+header .hsl #mtip{z-index:300;}

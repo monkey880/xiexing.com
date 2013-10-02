@@ -1,0 +1,90 @@
+﻿.city_ca{
+margin:0;
+padding:0;
+font-size:12px;
+position:absolute;display:none;top:0;left:0;width:500px;height:100px;border:1px solid #519e1c;background:#ffffff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.city_ca *{
+margin:0;
+padding:0;
+font-size:12px;
+}
+.city_ca_tit{
+position:relative;
+z-index:1;
+background:#519e1c;
+color:#ffffff;
+text-align:left;
+padding-left:10px;
+height:20px;
+line-height:20px;
+}
+.city_ca_tit .city_ca_close{
+	position:absolute;
+	top:2px;
+	right:7px;
+	line-height:12px;
+	cursor:pointer;
+}
+.city_ca_sele_nav{
+position:absolute;display:none;left:0;top:21;height:20px;width:16px;border:1px solid #c0e3a7;background:#def0cd;
+}
+.city_ca_sele_content{
+	display:none;
+    position: absolute;
+	background:#DEF0CD;
+    border: 1px solid #C0E3A7;
+    height: 23px;
+    left: 0;
+    top: 28px;
+    width: 0;
+}
+.city_ca_c{
+	position:absolute;
+	background: url("bank.gif");
+    cursor: pointer;
+    display: block;
+	text-align:center;
+    height: 25px;
+    left: 0;
+    line-height: 25px;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 3;
+}
+.city_ca_nav{
+position:relative;
+text-align:left;
+padding:0px 5px;
+height:24px;
+line-height:22px;
+overflow:hidden;
+border-bottom:1px solid #519e0c;
+}
+.city_ca_nav .city_ca_btn{
+cursor:pointer;
+color:#519e0c;
+background:url("bank.gif");
+line-height:22px;
+padding:5px;
+}
+.city_ca_content{
+z-index:1;
+position:absolute;
+left:0;
+}
+.city_ca .city_ca_info{
+position:absolute;
+top:71%;
+line-height:15px;
+left:10px;
+color:red;
+}
+.city_ca_sele_content{
+z-index:1;
+}
+.city_ca_nav{
+z-index:2;
+}

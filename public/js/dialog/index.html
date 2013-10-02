@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>jquery弹出框</title>
+<script language="javascript" src="jquery.min.js"></script>
+<script language="javascript" src="drag.js"></script>
+<script language="javascript" src="dialog.js"></script>
+</head>
+
+<body>
+	<p><h1>Jquery 弹出框</h1></p>
+    
+    <div style="line-height:30px;">
+    	
+    </div>
+    <p><h2>简单使用说明</h2></p>
+	<div>
+    	页面头部包含下列JS：<br /><br />
+    	<span style=" color:#900">&lt;script language="javascript" src="jquery.min.js"&gt;&lt;/script&gt;</span><br />
+        <span style=" color:#900">&lt;script language="javascript" src="drag.js"&gt;&lt;/script&gt;</span><br />
+        <span style=" color:#900">&lt;script language="javascript" src="dialog.js"&gt;&lt;/script&gt;</span><br /><br />
+      路径和图片设置：（在dialog.js头部设置）<br /><br />
+        <span style=" color:#F60">
+        var DIALOGIMGPATH = '/dialog/' //dilog所在路径;<br />
+        var DIALOGBGIMG = '/dialog/tbtbg.gif'; //背景图片<br />
+        var WINDOWIMG = '/dialog/window.gif'; //小图标<br />
+        var BUTTONIMG = '/dialog/toolbutton.gif'; //关闭按钮<br />
+        var CONFIRMIMG = '/dialog/icon_query.gif'; //询问框小图标<br />
+        var ALERTIMG = '/dialog/icon_alert.gif'; //确认框小图标<br />
+        var CANCELBUTTONIMG = '/dialog/cancelbutton.gif'//取消图标<br />
+      var OKBUTTONIMG = '/dialog/okbutton.gif'//取消图标</span><br /><br />
+       
+      <div>
+        	<p>提示框</p>
+            <div>
+            	Dialog.alert(msg,func1,time,w,h)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.alert('对不起，你的小JJ被割掉了!',function(){alert('哈哈，快去泰国变个性吧')},0,300,120)">点击此处弹出提示框</span><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">msg</td>
+                    <td >提示框出现的信息内容</td>
+                </tr>
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">func1 = null</td>
+                    <td width="817">点击确定按钮后的回调方法，未设置则关闭提示框</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">time = 0</td>
+                    <td width="817">到少毫秒后自动调用回调方法，如果未设置回调方法，则关闭提示框</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">w = 300</td>
+                    <td width="817">提示框宽度(像素)</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">h = 120</td>
+                    <td width="817">提示框高度(像素)</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div style="margin-top:20px;">
+        	<p>询问框</p>
+            <div>
+            	Dialog.confirm(msg,func1,func2,w,h)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.confirm('你确定要把你的小JJ割掉吗？',function(){alert('嗯，马上给你割')},function(){alert('你不割也要割了')},300,120)">点击此处弹出询问框</span><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">msg</td>
+                    <td >弹出框出现的信息内容</td>
+                </tr>
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">func1 = null</td>
+                    <td width="817">点击确定按钮后的回调方法，未设置则关闭弹出框</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">func2 = null</td>
+                    <td width="817">点击取消按钮后的回调方法，未设置则关闭弹出框</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">w = 300</td>
+                    <td width="817">弹出框宽度(像素)</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">h = 120</td>
+                    <td width="817">弹出框高度(像素)</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        <div style="margin-top:20px;">
+        	<p>弹出框内嵌网页</p>
+            <div>
+            	Dialog.frame(id,url,title,w,h,m)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.frame('baidu','http://www.baidu.com','弹出框--百度',500,400)">点击此处弹出</span><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">id</td>
+                    <td >弹出框的ID号</td>
+                </tr>
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">url</td>
+                    <td width="817">网页地址</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">title</td>
+                    <td width="817">弹出框的标题</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">w </td>
+                    <td width="817">弹出框宽度(像素)</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">h </td>
+                    <td width="817">弹出框高度(像素)</td>
+                </tr>
+                 <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">m </td>
+                    <td width="817">模态</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div style="margin-top:20px;">
+        	<p>内嵌HTML内容</p>
+            <div>
+            	Dialog.html(id,html,title,w,h,m)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.html('htmlDialog','<h1>这个是html内容</h1><br><h3>再来一句HTML的</h3>','弹出框--HTML',500,200)">点击此处弹出</span><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">id</td>
+                    <td >弹出框的ID号</td>
+                </tr>
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">html</td>
+                    <td width="817">弹出框的HTML内容</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">title</td>
+                    <td width="817">弹出框的标题</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">w </td>
+                    <td width="817">弹出框宽度(像素)</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">h </td>
+                    <td width="817">弹出框高度(像素)</td>
+                </tr>
+                 <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">m </td>
+                    <td width="817">模态</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div style="margin-top:20px;">
+        	<p>内嵌DOM对象内容</p>
+            <div id="testDIV" style="color:#F00; border:1px dashed #999; padding:10px;">这个是DIV内容，只能使用一次</div>
+            <div>
+            	Dialog.element(id,elementID,title,w,h,m)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.element('htmlDialog','testDIV','弹出框--DOM对象',500,200)">点击此处弹出</span><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">id</td>
+                    <td >弹出框的ID号</td>
+                </tr>
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">elementID</td>
+                    <td width="817">Dom对象的ID号</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">title</td>
+                    <td width="817">弹出框的标题</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">w </td>
+                    <td width="817">弹出框宽度(像素)</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">h </td>
+                    <td width="817">弹出框高度(像素)</td>
+                </tr>
+                 <tr bgcolor="#FFFFFF">
+                    <td width="143" height="25" style="font-weight:600" align="center">m </td>
+                    <td width="817">模态</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div style="margin-top:20px;">
+        	<p>关闭弹出框</p>
+            <div>
+            	Dialog.close(id)&nbsp;&nbsp;<span style="color:#900; cursor:pointer" onclick="Dialog.html('closeDilog','<h1>这个是html内容</h1><br><h3>再来一句HTML的</h3>','弹出框--HTML',200,200)">点击此处弹出</span><input type="button" onclick="Dialog.close('closeDilog')" value="点击此按钮关闭弹出框"/><br />
+                <table cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCC; margin-top:20px;" width="100%">
+                <tr bgcolor="#eeeeee">
+                    <td width="143" height="25" style="font-weight:600" align="center">id</td>
+                    <td >要关闭的弹出框的ID号</td>
+                </tr>
+                
+                </table>
+            </div>
+        </div>
+	</div>
+    
+    
+</body>
+</html>

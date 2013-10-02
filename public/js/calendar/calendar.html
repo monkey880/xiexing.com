@@ -1,0 +1,298 @@
+
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+/* 新版: 头,尾背景色:#bcd0f5  老背景色: #7694BF */
+td				{FONT-SIZE: 12px; FONT-FAMILY: arial; TEXT-ALIGN: center}
+td.dt			{FONT-SIZE: 11px; FONT-FAMILY: arial; TEXT-ALIGN: center}
+A				{COLOR: blue}
+A:hover		{COLOR: red}
+A.bt			{COLOR: #888888}
+a.linkDayCss
+{
+	text-decoration:none;
+	color:#000000;
+	font-weight:bold;
+}
+a.linkDayCss:hover
+{
+	text-decoration:none;
+	color:#ff0000;
+	font-weight:bold;
+	/* parent.background-color:#ffdd99; */
+}
+-->
+</STYLE>
+
+<SCRIPT language=javascript>
+document.domain = 'xexing.com';
+<!--//
+var str='',i,j,yy,mm,openbound,callback;
+var fld1,fld2;
+var wp=window.parent;
+var cf=wp.document.getElementById("CalFrame");
+var fld,curday,today=new Date();
+var n_textdate,mmm,ddd;
+mmm="";
+today.setHours(0);today.setMinutes(0);today.setSeconds(0);today.setMilliseconds(0);
+function parseDate(s)//解析日期
+{
+	var reg=new RegExp("[^0-9-]","")
+	if(s.search(reg)>=0)return today;
+	var ss=s.split("-");
+	if(ss.length!=3)return today;
+	if(isNaN(ss[0])||isNaN(ss[1])||isNaN(ss[2]))return today;
+	return new Date(parseFloat(ss[0]),parseFloat(ss[1])-1,parseFloat(ss[2]));
+}
+function resizeCalendar(){cf.width=288;cf.height=175;}//设定日历宽高
+function initCalendar()//初始化
+{
+	curday=today;
+	if(fld1&&fld1.value.length>0){curday=parseDate(fld1.value);}
+	if(fld2&&fld2.value.length>0){curday=parseDate(fld2.value);}	
+	drawCalendar(curday.getFullYear(),curday.getMonth());
+}
+function drawCalendar(y,m)//画日历
+{
+	var yzzz = y;
+	var mzzz = m+1;
+	//old!!!
+	var x=new Date(y,m,1),mv=x.getDay(),d=x.getDate(),de;
+	yy=x.getFullYear();mm=x.getMonth();
+	document.getElementById("yyyymm").innerHTML=yy+"."+(mm+1>9?mm+1:"0"+(mm+1));
+	//清空日历
+	for(var i=1;i<=mv;i++)
+	{
+		de=document.getElementById("d"+i);
+		de.innerHTML="";
+		de.bgColor="";
+	}
+	//画日历
+	while(x.getMonth()==mm)
+	{
+		de=document.getElementById("d"+(d+mv));
+		if(x.getTime()==curday.getTime())
+			de.bgColor="#dddddd";
+		else
+			de.bgColor="#FFFFFF";
+		if(x.getTime()==today.getTime())
+		{
+			de.innerHTML="<a class='linkDayCss' href=javascript:setDate("+d+","+mm+","+yy+");><font color=red>"+d+"</font></a>";
+		}
+		else if(x.getTime()<today.getTime())
+		{
+			if(openbound){de.innerHTML="<a class='linkDayCss' href=javascript:setDate("+d+","+mm+","+yy+"); class=bt>"+d+"</a>";}else{de.innerHTML="<font color=#888888>"+d+"</font>";}
+		}	
+		else
+		{
+			de.innerHTML="<a  class='linkDayCss' href=javascript:setDate("+d+","+mm+","+yy+");>"+d+"</a>";				
+		}
+		x.setDate(++d,mm,yy);
+	}
+	while(d+mv<=42)
+	{
+		de=document.getElementById("d"+(d+mv));
+		de.innerHTML="";
+		de.bgColor="";
+		d++;
+	}
+	//old!!!
+	//new!!!
+	var xzzz=new Date(yzzz,mzzz,1),mvzzz=xzzz.getDay(),dzzz=xzzz.getDate(),dezzz;
+	yyzzz=xzzz.getFullYear();mmzzz=xzzz.getMonth();
+	document.getElementById("yyyymmzzz").innerHTML=yyzzz+"."+(mmzzz+1>9?mmzzz+1:"0"+(mmzzz+1));
+	//清空日历
+	for(var i=1;i<=mvzzz;i++)
+	{
+		dezzz=document.getElementById("dzzz"+i);
+		dezzz.innerHTML="";
+		dezzz.bgColor="";
+	}
+	//画日历
+	while(xzzz.getMonth()==mmzzz)
+	{
+		dezzz=document.getElementById("dzzz"+(dzzz+mvzzz));
+		if(xzzz.getTime()==curday.getTime())
+			dezzz.bgColor="#dddddd";
+		else
+			dezzz.bgColor="#FFFFFF";
+		if(xzzz.getTime()==today.getTime())
+		{
+				dezzz.innerHTML="<a class='linkDayCss'  href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+");><font color=red>"+dzzz+"</font></a>";
+		
+			
+		}
+		else if(xzzz.getTime()<today.getTime())
+		{
+				if(openbound){dezzz.innerHTML="<a  class='linkDayCss' href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+"); class=bt>"+dzzz+"</a>";}
+				else{dezzz.innerHTML="<font color=#888888>"+dzzz+"</font>";}
+				
+		}	
+		else
+		{
+			dezzz.innerHTML="<a  class='linkDayCss' href=javascript:setDate("+dzzz+","+mmzzz+","+yyzzz+");>"+dzzz+"</a>";
+		
+		}
+		xzzz.setDate(++dzzz,mmzzz,yyzzz);
+	}
+	while(dzzz+mvzzz<=42)
+	{
+		dezzz=document.getElementById("dzzz"+(dzzz+mvzzz));
+		dezzz.innerHTML="";
+		dezzz.bgColor="";
+		dzzz++;
+	}
+	//new!!
+}
+function setDate(d,mm,yy)//设置日期
+{
+	wp.hideCalendar();
+	mmm=mm+1;
+	var dstr=yy+"-"+(mmm)+"-"+d;
+	fld1.value=dstr;
+	if(!n_textdate){
+		if(callback&&callback.length>0){eval("wp."+callback+"(\""+dstr+"\")");}
+	}else{		
+		wp.showCalendar(n_textdate,'',callback,fld1.id);			
+	}	
+}
+//-->
+</script>
+<meta content="MSHTML 6.00.2800.1476" name="generator">
+</head>
+
+<body bgColor="white" leftMargin="0" topMargin="0" onLoad="resizeCalendar();" marginwidth="0" marginheight="0">
+<div style="width:288px;">
+	<div style="float:left;width:144px;over-flow:hidden;margin:0px;padding:0px;">
+<!-- old table! -->
+<table id="tbl0" cellSpacing="0" cellPadding="1" bgColor="#bcd0f5" border="0">
+  <tbody>
+  <tr>
+    <td>
+
+      <table cellSpacing="1" cellpadding="2" width="100%" bgcolor="white" border="0" ID="Table1">
+        <tbody>
+        <tr bgColor="#bcd0f5">
+          <td id="prev" width="16"><A 
+            href="javascript:drawCalendar(yy,mm-1);"><img height="16" src="./prev.gif" width="15" border="0"></A></TD>
+          <td id="yyyymm" style="FONT-SIZE: 12px; COLOR:#000000;font-weight:bold;" width="99%"></TD>
+			</tr>
+		</tbody>
+		</table>
+
+      <table cellSpacing="0" cellPadding="0" width="142" bgColor="#FFFFFF" border="0" ID="Table2">
+      
+        <tbody>
+        <tr height="18" bgColor="#ffffff">
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">日</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">一</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">二</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">三</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">四</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">五</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">六</td>
+		  </tr>
+        <tr height="1">
+          <td bgColor="#FFFFFF" colSpan="7"></td></tr>
+<script language=javascript>
+<!--//
+for(i=0;i<6;i++)
+{	
+	str+="<tr height=18>";
+	for(j=1;j<=7;j++)str+="<td id=d"+(i*7+j)+"  bgColor='#FFFFFF'></td>";
+	str+="</tr>";
+}
+document.write(str);
+//-->
+</script>
+		<!-- 日历内容下面的空行 开始-->
+		<tr height="3">
+		<td colspan="7" bgColor="#FFFFFF"></td>
+		</tr>
+		<!-- 日历内容下面的空行 结束-->
+		<tr bgcolor="#bcd0f5" height="20">
+		<td colspan="7" style="text-align:right;"><A href="javascript:wp.hideCalendar();" style="color:#1f7084;font-weight:bold;font-size:12px;text-decoration:none;">关闭</a></td>
+		</tr>
+		</tbody>
+	</table>
+  
+		</td>
+	</tr>
+	</tbody>
+</table>
+<!-- end old table!! -->
+	</div>
+	<div style="float:right;width:144px;over-flow:hidden;margin:0px;padding:0px;">
+<!-- new table!! -->
+<table id="tbl1" cellSpacing="0" cellPadding="1" bgColor="#bcd0f5" border="0" >
+  <tbody>
+  <tr>
+    <td>
+
+      <table cellSpacing="1" cellpadding="2" width="100%" bgcolor="white" border="0" ID="Table1zzz">
+        <tbody>
+        <tr bgColor="#bcd0f5">
+          <td id="yyyymmzzz" style="FONT-SIZE: 12px; COLOR: #000000;font-weight:bold;" width="99%"></TD>
+          <td id="next" width="16"><A 
+            href="javascript:drawCalendar(yy,mm+1);"><img height="16" src="./next.gif" width="15" border="0"></A></td>
+			</tr>
+		</tbody>
+		</table>
+
+      <table cellSpacing="0" cellPadding="0" width="142" bgColor="#FFFFFF" border="0" ID="Table2zzz">
+      
+        <tbody>
+        <tr height="18" bgColor="#ffffff">
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">日</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">一</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">二</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">三</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">四</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">五</td>
+          <td width="18" bgColor="#ffffff" style="color:#939393;font-weight:bold;">六</td>
+		  </tr>
+        <tr height="1">
+          <td bgColor="#FFFFFF" colSpan="7"></td></tr>
+        <script language=javascript>
+        	str = "";
+					<!--//
+					for(i=0;i<6;i++)
+					{
+						str+="<tr height=18>";
+						for(j=1;j<=7;j++)str+="<td id=dzzz"+(i*7+j)+"  bgColor='#FFFFFF'></td>";
+						str+="</tr>";
+					}
+					document.write(str);
+					//-->
+				</script>
+		<!-- 日历内容下面的空行 开始-->
+		<tr height="3">
+		<td colspan="7" bgColor="#FFFFFF"></td>
+		</tr>
+		<!-- 日历内容下面的空行 结束-->
+		<tr bgcolor="#bcd0f5" height="20">
+		<td colspan="7" style="text-align:left;"><A href="javascript:wp.hideCalendar();" style="color:#1f7084;font-size:12px;font-weight:bold;text-decoration:none;">窗口</a></td>
+		</tr>
+		</tbody>
+	</table>
+  
+		</td>
+	</tr>
+	</tbody>
+</table>
+<!-- end new table -->
+	</div>
+</div>
+
+
+
+<script language=javascript>
+<!--//
+var bCalLoaded=true;
+//-->
+</script>
+
+</body>
+</html>
