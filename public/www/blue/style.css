@@ -6,13 +6,14 @@ body{ _background-position:82% top;
  /*background-color: #F4F4F4;*/
 }
 
-.top{margin:0 auto; width:950px; height:92px; background:url(images/topbj.png)}
+.top{margin:0 auto; width:950px; height:92px; background:url(images/dianhua.gif)}
+.toptop{ height:92px;background:url(images/1_190.jpg); padding-top:10px;}
 
 .logo{float:left; width:174px; height:92px; margin-right:30px;}
 
 .nav{ height:42px;}
 
-.nav_main{width:950px; height:40px; margin:0 auto;}
+.nav_main{width:970px; height:40px; margin:0 auto;}
 
 .nav_main li{float:left; width:100px; height:40px; line-height:40px; text-align:center; font-size:14px; position:relative;}
 
@@ -126,7 +127,7 @@ body{ _background-position:82% top;
 
 .main_bottom{overflow:hidden;}
 
-.main{width:950px; margin:0 auto; overflow:hidden;}
+.main{margin-bottom:20px; background:#FFFFFF;width:960px; border:1px solid #D8D8D8; box-shadow: 0 0 3px #C6C6C6; padding-left:10px; margin-left:auto; margin-right:auto;overflow:hidden;}
 
 .in_search{width:950px; height:563px; margin-top:16px; margin-bottom:2px;}
 
@@ -178,7 +179,7 @@ body{ _background-position:82% top;
 
 .sicon{background:url(images/search_01.jpg) no-repeat; width:16px; height:13px; float:left;}
 
-input.input_city{color:#9c9c9c; width:180px; border:1px solid #e6e6e6; padding:4px; height:25px; line-height:15px;}
+input.input_city{color:#9c9c9c; width:140px; border:1px solid #e6e6e6; padding:4px; height:25px; line-height:15px;}
 
 .sicon_02{background:url(images/search_02.jpg) no-repeat; width:16px; height:13px; float:left;}
 
@@ -352,9 +353,9 @@ span.dp_nr span.xinxi{background:#F6FAFF; border:1px solid #e6e6e6; color:#86868
 
 .kscz{ width:220px; margin-top:10px; overflow:hidden;}
 
-.kscz_top{height:35px; line-height:35px; background:none repeat scroll 0 0 #BDD9F1; padding-left:20px; padding-right:5px; }
+.kscz_top{ background:url(images/left_class_bg.png);height:35px; line-height:35px; padding-left:35px; padding-right:5px; }
 
-.kscz_top .zt{color:#2B62A0; float:left; overflow:hidden;}
+.kscz_top .zt{color:#000000; float:left; overflow:hidden;}
 
 .kscz_top .xz_city{float:right; overflow:hidden; height:20px; line-height:20px; background:url(images/jdxz_bg.gif) no-repeat; background-position:right; margin-top:8px; zoom:1; padding-right:15px;}
 
@@ -366,7 +367,7 @@ span.dp_nr span.xinxi{background:#F6FAFF; border:1px solid #e6e6e6; color:#86868
 
 .kjc ul li{float:left; width:79px; margin:15px auto 0 18px; display:inline; text-align:center;}
 
-.kscz_bottom{border:1px solid #a7d1f4; overflow:hidden; border-top:none; padding-bottom:3px;}
+.kscz_bottom{border:1px solid #dddddd; overflow:hidden; border-top:none; padding-bottom:3px;}
 
 .k_b_t{background:#FFF; border:0px solid #bdd9f1; overflow:hidden; width:225px; margin:0 auto; padding-bottom:35px; padding-top:0px; overflow:hidden;}
 
@@ -646,7 +647,7 @@ span.dp_nr span.xinxi{background:#F6FAFF; border:1px solid #e6e6e6; color:#86868
 
 .bjdb{overflow:hidden; zoom:1;}
 
-.bjdb dl dt{float:left; width:188px; height:25px; line-height:25px; background:url(images/pu_bg.jpg) 0 0 repeat-x; color:#017bb4; padding-left:15px; padding-right:15px;}
+.bjdb dl dt{float:left; width:188px; height:25px; line-height:25px; background-color:#F6F4F4; color:#017bb4; padding-left:15px; padding-right:15px;}
 
 .bjdb dl dd{float:left; width:202px; padding:8px 0 8px 10px;}
 
@@ -890,7 +891,7 @@ span.dp_nr span.xinxi{background:#F6FAFF; border:1px solid #e6e6e6; color:#86868
 
 .hot_li_plate .hot_li_p_top span strong{margin-left:10px; margin-right:10px;}
 
-.hot_li_plate .hot_li_p_top{border-bottom:2px solid #5e5e5e; height:40px; line-height:40px; padding-right:22px;}
+.hot_li_plate .hot_li_p_top{border-bottom:2px solid #ff9900; height:40px; line-height:40px; padding-right:22px;}
 
 .hot_li_plate .hot_li_p_bottom{border:1px solid #dddddd; padding:15px 15px 10px 15px;}
 
@@ -1335,7 +1336,7 @@ input.xz_bg{background:url(images/xz_bg.jpg) no-repeat; width:74px; height:26px;
 
 
 
-input.city_name{ font-family:"微软雅黑";color:#ffffff;float:right; overflow:hidden; height:20px; line-height:20px; background:url(images/jdxz_bg.gif) no-repeat; background-position:right; margin-top:8px; zoom:1; padding-right:15px; border:none;}
+input.city_name{ font-family:"微软雅黑";color:#000000;float:right; overflow:hidden; height:26px; line-height:25px; background:url(images/jdxz_bg.jpg) no-repeat; background-position:right; margin-top:5px; zoom:1; padding-right:15px; border:none;}
 
 .hotinfo_top li.current a{color:#FFFFFF;}
 
@@ -1950,6 +1951,7 @@ ul.login li a img {
 .logon ol li.clx a.forget {
   background-position: -2px -1511px;
   padding-right: 3px;
+  float:left;
 }
 .hot_list dl dd p font, .list_l dl dd .list_place font, .list_r dl dd p font, .wonder_list dl dd ul li.won_note p span, .wonder_list dl dd ul li.won_list span, .ticket_note ol li a, .tikect_list ol li.t_price1 a, .hot_home dl dt font, .login li a img, .footuser dl dt ul li.comma, .help_list dl dt, .quick_menu li a.menu-hd, .odermenu ol li a, .quick_menu li.iphone a, .quick_menu li.iphone a, .quick_menu li.iphone a strong, .son_menu ul li p, .inputbox span, .son_tab ul li label.radiobox, .logon ol li.clx p.checkbox,  ul.login li a.login_a2 img, .odermenu ol li a:hover, #nav .house_ten ul li font {
   background: url("http://tp1.znimg.com/V5/new/images/ico.jpg") no-repeat scroll 0 0 transparent;
@@ -2633,7 +2635,6 @@ ul.login li a.cur {
 .fast_search_mod .cate-8:hover,.fast_search_mod .cate-8on{background-position:-148px -898px}
 	
 .middle .nav .nav_main .navcon {
-	width: 950px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -2757,19 +2758,11 @@ ul.login li a.cur {
     width: 10px;
 }
 .account .pt {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-color: -moz-use-text-color #C9C9C9 #C9C9C9;
-    border-image: none;
-    border-right: 1px solid #C9C9C9;
-    border-style: none solid solid;
-    border-width: 0 1px 1px;
-    left: 2px;
-    position: absolute;
-    top: 34px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	left: 2px;
+	position: absolute;
+	top: 34px;
+	border: 1px solid #CCC;
 }
 .account .pt a {
 	color: #3366CC;
@@ -2782,7 +2775,7 @@ ul.login li a.cur {
 }
 .account .links {
     padding: 5px 9px;
-    top: 24px;
+    top: 31px;
     width: 72px;
 }
 .account .links ul li {

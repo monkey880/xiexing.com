@@ -54,7 +54,7 @@ $(document).ready(function(){
  $('#TipArea').click(function(){
 	 if(i==0){
 	 $('.tuan-box-content').removeClass('hide-area');
-	 $(this).html('-收起');
+	 $(this).html('－收起');
 	 i=1;
 	 }
 	 else{
@@ -208,12 +208,7 @@ $(document).ready(function(){
                 <?php }?>
               </div>
             </div>
-            <div class="subfilter-div price-filter filter-row clearfix pb10">
-              <div class="subfilter-left float-left">其他：</div>
-              <div class="subfilter-right float-left  clearfix">
-                <p class="subfilter-p" id="other" mon="type=other" alog-alias="tuan-filter-other" alog-group="tuan-filter-other"> <a class="newOrder cp dealClick absorb-click" href="#" mon="#content=支持WIFI" style="color: #333">支持WIFI</a> <a class="newOrder cp dealClick ml20 absorb-click" href="#" mon="#content=支持宽带" style="color: #333">支持宽带</a> </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

@@ -120,19 +120,19 @@ else{
   <tr>
     <td style="padding:10px;"><table width="100%" cellspacing="0" cellpadding="0" border="0">
         <tbody><tr>
-          <td width="50"><img src="<?php echo base_url();?>public/images/t1.gif"></td>
+          <td width="50"><img src="<?php echo base_url();?>public/images/t1.gif" alt="订酒店，酒店预订，低价高返现"></td>
            <td><span class="col_org">低价高返现：</span>
             保证预订价格低于前台现付价，返现无需点评</td>
-          <td width="50"><img src="http://www.xexing.com/public/images/t2.gif"></td>
+          <td width="50"><img src="http://www.xexing.com/public/images/t2.gif" alt="订酒店，酒店预订，订七天送一天"></td>
           <td><span class="col_org">订七送一：</span>
             累计预订七间夜并已入住赠送一天，连续预订六天并已入住赠送一天</td>
-          <td width="50"><img src="http://www.xexing.com/public/images/t3.gif"></td>
+          <td width="50"><img src="http://www.xexing.com/public/images/t3.gif" alt="携行网订酒店，酒店预订，免费试住"></td>
           <td><span class="col_org">0元试住：</span>
             0元试住客房无门槛试住，真正免费住酒店，最多可提前十天申请预订</td>
-          <td width="50"><img src="http://www.xexing.com/public/images/t4.gif"></td>
+          <td width="50"><img src="http://www.xexing.com/public/images/t4.gif" alt="携行网酒店预订领免费礼品"></td>
           <td><span class="col_org">免费礼品：</span>
            凡预订者皆有礼品，不需要积分兑换</td>
-          <td width="50"><img src="http://www.xexing.com/public/images/t5.gif"></td>
+          <td width="50"><img src="http://www.xexing.com/public/images/t5.gif" alt="携行网酒店预订免费接送"></td>
           <td><span class="col_org">免费接送：</span>
             订酒店免费接送，限机场和火车站，待开通</td>
         </tr>

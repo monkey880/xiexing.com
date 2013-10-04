@@ -64,7 +64,7 @@ class Freeroom extends CI_Controller
         $this->load->model('model_city');
 
         $this->load->model('model_admin');
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 
     }
 

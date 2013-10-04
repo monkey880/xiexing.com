@@ -9,7 +9,64 @@ body{background:url(images/top_img.jpg) no-repeat 80% top; _background-position:
 .logo{float:left; width:174px; height:92px; margin-right:30px;}
 
 .nav{background:url(images/nav_bg.jpg) repeat-x; height:40px;}
+/*以下是灰色导航条样式*/
+#nav {
+  background: url("images/nav_bg.jpg") no-repeat scroll 0 0 transparent;
+  height: 58px;
+  line-height: 58px;
+  margin: 0 auto;
+  width: 960px;
+}
+.nav_l {
+  display: none;
+}
+.navigation {
+  padding-left: 16px;
+}
+ol, ul, li {
+  list-style-type: none;
+}
+.navigation li {
+  background: url("images/li_line.gif") no-repeat scroll right center transparent;
+  float: left;
+  padding-left: 2px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  z-index: 100;
+}
+.navigation li a, .navigation li a:visited {
+  color: #292929;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 
+#nav {
+  line-height: 58px;
+}
+A:link {
+  color: #444444;
+  text-decoration: none;
+}
+a {
+  outline: medium none;
+}
+
+.navigation li a:hover, .navigation li.hover a {
+  background: url("images/li_hover.jpg") repeat-x scroll center bottom transparent;
+  color: #292929;
+  text-decoration: none;
+}
+
+
+
+/*灰色导航条样式结束*/
 .nav_main{width:950px; height:40px; margin:0 auto;}
 
 .nav_main li{float:left; width:100px; height:40px; line-height:40px; text-align:center; font-size:14px;}

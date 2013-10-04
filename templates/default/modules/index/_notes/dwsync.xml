@@ -75,4 +75,10 @@
 <file name="top-order.php" server="w91.126t.net" local="130210940400000000" remote="130210940400000000" />
 <file name="top-rank.php" server="w91.126t.net" local="130210940400000000" remote="130210940400000000" />
 <file name="top-search.php" server="w91.126t.net" local="130216230600000000" remote="130216230600000000" />
+<file name="left-chain.php" server="w91.126t.net/public_html/" local="130253709699144435" remote="130253709600000000" />
+<file name="left-comment-ask.php" server="w91.126t.net/public_html/" local="130253715106501088" remote="130253715000000000" />
+<file name="left-hothotel.php" server="w91.126t.net/public_html/" local="130253717848188729" remote="130253717400000000" />
+<file name="left-news-rank.php" server="w91.126t.net/public_html/" local="130253718896074951" remote="130253718600000000" />
+<file name="left-quicksearch.php" server="w91.126t.net/public_html/" local="130253722777572916" remote="130253722200000000" />
+<file name="left-rank-news.php" server="w91.126t.net/public_html/" local="130253723505017810" remote="130253723400000000" />
 </dwsync>
