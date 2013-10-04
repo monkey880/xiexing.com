@@ -46,14 +46,14 @@ $cityJson = json_encode ( array ('id' => $cityid, 'cityname' => $cityname ) );
 
 			<div class="kjc">
 <ul class="fast_search_mod">
-<li class="cate-1"><a onclick="right_ajax_get_lable(170,1,this)" href="javascript:void(0)">地铁附近</a></li>
-<li  class="cate-2"><a onclick="right_ajax_get_lable(135,1,this)" href="javascript:void(0)">机场酒店</a></li>
-<li  class="cate-3"><a onclick="right_ajax_get_lable(166,0,this)" href="javascript:void(0)">火车站附近</a></li>
-<li  class="cate-4"><a onclick="right_ajax_get_lable(83,0,this)" href="javascript:void(0)">学校附近</a></li>
-<li class="cate-5"><a onclick="right_ajax_get_lable(70,0,this)" href="javascript:void(0)">展馆会场</a></li>
-<li  class="cate-6"><a onclick="right_ajax_get_lable(119,1,this)" href="javascript:void(0)">医院附近</a></li>
-<li  class="cate-7"><a onclick="right_ajax_get_lable(65,1,this)" href="javascript:void(0)">景点附近</a></li>
-<li  class="cate-8"><a onclick="right_ajax_get_lable(163,0,this)" href="javascript:void(0)">汽车站</a></li></ul>
+<li class="cate-1"><a title="地铁附近酒店预订" onclick="right_ajax_get_lable(170,1,this)" href="javascript:void(0)">地铁附近</a></li>
+<li  class="cate-2"><a title="机场酒店预订" onclick="right_ajax_get_lable(135,1,this)" href="javascript:void(0)">机场酒店</a></li>
+<li  class="cate-3"><a title="火车站附近酒店预订" onclick="right_ajax_get_lable(166,0,this)" href="javascript:void(0)">火车站附近</a></li>
+<li  class="cate-4"><a title="学校附近酒店预订" onclick="right_ajax_get_lable(83,0,this)" href="javascript:void(0)">学校附近</a></li>
+<li class="cate-5"><a title="展馆会场附近酒店预订" onclick="right_ajax_get_lable(70,0,this)" href="javascript:void(0)">展馆会场</a></li>
+<li  class="cate-6"><a title="医院附近酒店预订" onclick="right_ajax_get_lable(119,1,this)" href="javascript:void(0)">医院附近</a></li>
+<li  class="cate-7"><a title="景点附近酒店预订" onclick="right_ajax_get_lable(65,1,this)" href="javascript:void(0)">景点附近</a></li>
+<li  class="cate-8"><a title="汽车站附近酒店预订" onclick="right_ajax_get_lable(163,0,this)" href="javascript:void(0)">汽车站</a></li></ul>
 
 				<!--<ul>
 

@@ -42,7 +42,7 @@
 
       <div class="dp_b_left">
 
-           <span class="jddp"><a href="<?php  echo site_url("/comment") ?>">更多>></a><h2><font style="color:#f60;">酒店点评</font></h2></span>
+           <span class="jddp"><a title="携行网酒店预订点评" href="<?php  echo site_url("/comment") ?>">更多>></a><h2><font style="color:#f60;">酒店点评</font></h2></span>
 
            <?php 
 
@@ -64,7 +64,7 @@
 
 	              <dd>
 
-	               <span class="bt"><span class="right"><font class="f1_b1_f00" ><?php echo $val['date_show'] ?></font></span><a href="<?php  echo site_url("/hotelinfo/{$val['hotelid']}") ?>" title="<?php echo $val['hotelname'] ?>"><?php echo $val['hotelname'] ?></a>
+	               <span class="bt"><span class="right"><font class="f1_b1_f00" ><?php echo $val['date_show'] ?></font></span><a href="<?php  echo site_url("/hotelinfo/{$val['hotelid']}") ?>" title="<?php echo $val['hotelname'] ?>酒店预订点评"><?php echo $val['hotelname'] ?></a>
 
 	               </span>
 
@@ -96,7 +96,7 @@
 
       <div class="dp_b_right">
 
-          <span class="jddp"><a href="<?php  echo site_url("/ask") ?>">更多>></a><h2><font style="color:#f60;">酒店问答</font></h2></span>
+          <span class="jddp"><a title="酒店预订问答" href="<?php  echo site_url("/ask") ?>">更多>></a><h2><font style="color:#f60;">酒店问答</font></h2></span>
 
            <?php 
 
@@ -124,7 +124,7 @@
 
 	                       	<?php if(!empty($val['hotelname'])) { ?>
 
-	                       		<a href="<?php  echo site_url("/hotelinfo/{$val['hotelid']}") ?>" ><font style="color:#7b9cc4; font-size:14px;" title="<?php echo $val['hotelname'] ?>"><?php echo $val['hotelname'] ?></font></a>
+	                       		<a href="<?php  echo site_url("/hotelinfo/{$val['hotelid']}") ?>" ><font style="color:#7b9cc4; font-size:14px;" title="<?php echo $val['hotelname'] ?>酒店预订问答"><?php echo $val['hotelname'] ?></font></a>
 
 	                       	<?php } else { ?>
 

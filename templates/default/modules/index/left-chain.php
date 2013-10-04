@@ -2,11 +2,11 @@
 
   <ul class="pipa_jinji">
 
-    <li class="current" id="chain_tab_1"><a href="javascript:void(0)" >品牌连锁</a></li>
+    <li class="current" id="chain_tab_1"><a title="品牌连锁酒店预订" href="javascript:void(0)" >品牌连锁</a></li>
 
     <li class="lines"></li>
 
-    <li id="chain_tab_2"><a href="javascript:void(0)" >经济连锁</a></li>
+    <li id="chain_tab_2"><a title="经济连锁酒店预订" href="javascript:void(0)" >经济连锁</a></li>
 
   </ul>
 
@@ -38,7 +38,7 @@
 
     ?>
 
-    		<li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-chain_id-{$val['lsid']}") ?>" title="<?php echo $val['lsname'] ?>"><img src="<?php echo $val['tupian'] ?>" width="50" height="40" alt="<?php echo $val['lsname'] ?>" /><?php echo $val['lsname'] ?></a></li>
+    		<li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-chain_id-{$val['lsid']}") ?>" title="<?php echo $val['lsname'] ?>"><img src="<?php echo $val['tupian'] ?>" width="50" height="40" alt="<?php echo $val['lsname'] ?>酒店预订" /><?php echo $val['lsname'] ?></a></li>
 
     <?php 
 
@@ -68,7 +68,7 @@
 
     ?>
 
-    		<li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-chain_id-{$val['lsid']}") ?>" title="<?php echo $val['lsname'] ?>"><img src="<?php echo $val['tupian'] ?>" width="50" height="40" alt="<?php echo $val['lsname'] ?>" /><?php echo $val['lsname'] ?></a></li>
+    		<li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-chain_id-{$val['lsid']}") ?>" title="<?php echo $val['lsname'] ?>"><img src="<?php echo $val['tupian'] ?>" width="50" height="40" alt="<?php echo $val['lsname'] ?>酒店预订" /><?php echo $val['lsname'] ?></a></li>
 
     <?php 
 

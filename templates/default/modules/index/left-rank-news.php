@@ -14,7 +14,7 @@
 
     <div class="dp_botma9">
 
-        <div class="dp_b_right"> <span class="jddp"><a href="<?php  echo site_url("/hotellist") ?>">更多>></a>
+        <div class="dp_b_right"> <span class="jddp"><a title="酒店预订资讯" href="<?php  echo site_url("/hotellist") ?>">更多>></a>
 
             <h2><font style="color:#f60;">预订排行</font></h2>
 
@@ -44,7 +44,7 @@
 
         </div>
 
-        <div class="dp_b_left"> <span class="jddp"><a href="<?php  echo site_url("/news") ?>">更多>></a>
+        <div class="dp_b_left"> <span class="jddp"><a title="最新酒店资讯" href="<?php  echo site_url("/news") ?>">更多>></a>
 
             <h2><font style="color:#f60;">最新资讯</font></h2>
 

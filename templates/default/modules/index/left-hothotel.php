@@ -2,7 +2,7 @@
 
                        <div class="dianping">
 
-                         <span class="more"><a href="<?php  echo site_url("/allcity") ?>">更多</a></span>
+                         <span class="more"><a title="全国城市酒店预订" href="<?php  echo site_url("/allcity") ?>">更多</a></span>
 
                          <ul class="citybg">
 
@@ -68,7 +68,7 @@
 
                                 <div class="hot_bt">经济型酒店</div>
 
-                                <div class="more"><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-rank-2") ?>">更多>></a></div>
+                                <div class="more"><a title="经济酒店预订" href="<?php  echo site_url("/hotellist/cityid-{$cityid}-rank-2") ?>">更多>></a></div>
 
                              </div>
 
@@ -94,7 +94,7 @@
 
                                        <li><font class="f_b_f00" style="float:right;">¥<?php echo $val['min_jiage'] ?></font>
 
-                                           <span class="hotname"><a href="<?php  echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName'] ?>"><?php echo $val['HotelName'] ?></a></span>
+                                           <span class="hotname"><a href="<?php  echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName'] ?>预订"><?php echo $val['HotelName'] ?></a></span>
 
                                            <span class="weiz"><?php if(trim($val['esdname'],' ') != ''){ ?>位于：<a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-cbd_id-{$val['esdid']}") ?>" title="<?php echo  $val['esdname'] ?>附近酒店"><?php echo  $val['esdname'] ?></a><?php }else{ ?><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-cbd_id-{$val['esdid']}") ?>">未知</a><?php } ?></span>
 
@@ -116,7 +116,7 @@
 
                                 <div class="hot_bt">豪华型酒店</div>
 
-                                <div class="more"><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-rank-5") ?>">更多>></a></div>
+                                <div class="more"><a title="豪华型酒店预订" href="<?php  echo site_url("/hotellist/cityid-{$cityid}-rank-5") ?>">更多>></a></div>
 
                              </div>
 
