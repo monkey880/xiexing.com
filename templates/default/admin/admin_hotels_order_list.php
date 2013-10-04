@@ -110,7 +110,7 @@
 
                         <td class="left"><?php echo $hotel['orderNum'] ;?></td>
 
-                        <td class="f_f60"><a href="<?php echo site_url('/hotelinfo/'.$hotel['hid']) ;?>"><?php echo $hotel['hotel_name'];?></a></td>
+                        <td class="f_f60"><a target="_blank" href="<?php echo site_url('/hotelinfo/'.$hotel['hotel_id']) ;?>"><?php echo $hotel['hotel_name'];?></a></td>
 
                         <td><?php echo $hotel['Customername'];?></td>
 
