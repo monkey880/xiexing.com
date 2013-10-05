@@ -52,7 +52,7 @@ class Cron extends CI_Controller
 		$data2['available >']=0;
 		$data2["(nextrun - $time) <"]=5*60;
 		$cron = $this->db->where($data2)->get($this->cron_table)->row_array();
-		//print_r($cron);
+		print_r($cron);
 		if($cron) {
 
 			$cron['filename'] = str_replace(array('..', '/', '\\'), '', $cron['filename']);
@@ -60,13 +60,13 @@ class Cron extends CI_Controller
 
 			$cron['minute'] = explode("\t", $cron['minute']);
 			$this->setnextime($cron);
-			print_r($cronfile);
+			//print_r($cronfile);
 			@set_time_limit(1000);
 			@ignore_user_abort(TRUE);
 
-			if(!@include $cronfile) {
-				return false;
-			}
+			//if(!@include $cronfile) {
+//				return false;
+//			}
 		}
 
 		
@@ -107,7 +107,7 @@ class Cron extends CI_Controller
 				$cron['hour'] = $nexttime['hour'];
 				$cron['minute'] = $nexttime['minute'];
 			} else {
-				$cron['day'] = $firstday;
+				$cron['day'] = $secondday;
 				$cron['hour'] = $todaytime['hour'];
 				$cron['minute'] = $todaytime['minute'];
 			}
@@ -125,7 +125,7 @@ class Cron extends CI_Controller
 		}
 		
 		$quer=$this->db->where('cronid',$cron['cronid'])->update($this->cron_table, $data);
-		//print_r($data);
+		print_r($data);
 		return true;
 	}
 
