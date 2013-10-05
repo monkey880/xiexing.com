@@ -105,7 +105,7 @@ $data['url']="/test2/";
 	
 	public function lbs()
 	{
-		$cronfile="application/cron/get_didatuan.php";
+		$cronfile="application/cron/get_cobuy.php";
 		include $cronfile;
 		
 		}

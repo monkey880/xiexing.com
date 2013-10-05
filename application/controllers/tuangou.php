@@ -217,7 +217,8 @@ class Tuangou extends CI_Controller
         $sysconfig = $this->model_sysconfig->getSysconfig();
  
         $search = array('{doname}','{classname}');
-        $meta_replace = array($sysconfig['cfg_webname'],'资讯频道');
+		
+        $meta_replace = array($sysconfig['cfg_webname'],$cityinfo['cName'].'酒店团购');
         $meta_array = str_replace($search, $meta_replace, $meta);
 		
 		$hotelcity=$this->model_city->getHotCity(12);

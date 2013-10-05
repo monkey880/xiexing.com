@@ -50,7 +50,7 @@
 
                                              ?> 
 
-                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店"><?php echo $val['name'][0] ?></a></li>
+                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店预订"><?php echo $val['name'][0] ?></a></li>
 
                                             <?php 
 
@@ -90,7 +90,7 @@
 
                                              ?> 
 
-                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店"><?php echo $val['name'][0] ?></a></li>
+                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店预订"><?php echo $val['name'][0] ?></a></li>
 
                                             <?php 
 
@@ -130,7 +130,7 @@
 
                                              ?> 
 
-                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店"><?php echo $val['name'][0] ?></a></li>
+                                            <li><a href="<?php  echo site_url("/hotellist/cityid-{$cityid}-keyid-{$val['id']}-pinyin-{$val['pinyin']}") ?>" title="<?php echo $val['name'][0] ?>附近酒店预订"><?php echo $val['name'][0] ?></a></li>
 
                                             <?php 
 

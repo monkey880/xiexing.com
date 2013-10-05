@@ -19,9 +19,9 @@
        <?php $this->load->view('inc/nav');?>
 		<div class="main">
 		           <div class="xdh">
-		                <span class="bg"></span><span class="sy"><a href="<?php echo base_url();?>">首页</a></span>
-		                <span class="wzdt"></span><span class="sy"><a href="<?php echo site_url("/allcity") ?>">城市酒店</a></span>
-		                <span class="wzdt"></span><span class="sy"><a href="<?php echo site_url("/onecity/$cityid") ?>"><?php echo $cityname ?>酒店</a></span>
+		                <span class="bg"></span><span class="sy"><a title="携行网首页" href="<?php echo base_url();?>">首页</a></span>
+		                <span class="wzdt"></span><span class="sy"><a title="携行网所有城市酒店" href="<?php echo site_url("/allcity") ?>">城市酒店</a></span>
+		                <span class="wzdt"></span><span class="sy"><a title="<?php echo $cityname ?>酒店预订" href="<?php echo site_url("/onecity/$cityid") ?>"><?php echo $cityname ?>酒店</a></span>
 		                <span class="wzdt"></span><span class="sy">
 		                <?php  
 		                	$condition = $cityname;
@@ -70,13 +70,13 @@
 		                               <dd id="list_filter_wz" >
 		                                  <span <?php if($type == '' ){?> class="s_j_bx" <?php } ?>><a href="<?php echo site_url("{$list_url['area']}") ?>">不限</a></span>
 		                                  <ul> 
-                                           <li><span <?php if ($type == 100000) { echo "style='background-color:#F08200'"; } ?> ><a  href="javascript:void(0)" onclick="right_ajax_get_lable(100000,1,this)">行政区</a></span></li>
-                                           <li><span <?php if ($type == 135 || $type == 166) { echo "style='background-color:#F08200'"; } ?> ><a style="float:left" href="javascript:void(0)" onclick="right_ajax_get_lable(135,1,this)">机场</a><a style="float:left" href="javascript:void(0)" onclick="right_ajax_get_lable(166,1,this)">火车站</a></span></li>
+                                           <li><span <?php if ($type == 100000) { echo "style='background-color:#F08200'"; } ?> ><a title="以行政区查找酒店"  href="javascript:void(0)" onclick="right_ajax_get_lable(100000,1,this)">行政区</a></span></li>
+                                           <li><span <?php if ($type == 135 || $type == 166) { echo "style='background-color:#F08200'"; } ?> ><a title="<?php echo $cityname ?>机场附近酒店预订" style="float:left" href="javascript:void(0)" onclick="right_ajax_get_lable(135,1,this)">机场</a><a title="火车站附近酒店预订" style="float:left" href="javascript:void(0)" onclick="right_ajax_get_lable(166,1,this)">火车站</a></span></li>
                                          
-                                           <li><span <?php if ($type == 83) { echo "style='background-color:#F08200'"; } ?> ><a href="javascript:void(0)" onclick="right_ajax_get_lable(83,0,this)">学校周边</a></span></li>
-                                           <li><span <?php if ($type == 65) { echo "style='background-color:#F08200'"; } ?> ><a href="javascript:void(0)" onclick="right_ajax_get_lable(65,1,this)">景点周边</a></span></li>
-                                           <li><span <?php if ($type == 170) { echo "style='background-color:#F08200'"; } ?> ><a href="javascript:void(0)" onclick="right_ajax_get_lable(170,1,this)">地铁周边</a></span></li>   
-                                             <li><span <?php if ($type == 119) { echo "style='background-color:#F08200'"; } ?> ><a href="javascript:void(0)" onclick="right_ajax_get_lable(119,1,this)">医院附近</a></span></li>
+                                           <li><span <?php if ($type == 83) { echo "style='background-color:#F08200'"; } ?> ><a title="<?php echo $cityname ?>学校周边酒店预订" href="javascript:void(0)" onclick="right_ajax_get_lable(83,0,this)">学校周边</a></span></li>
+                                           <li><span <?php if ($type == 65) { echo "style='background-color:#F08200'"; } ?> ><a title="<?php echo $cityname ?>景点周边酒店预订" href="javascript:void(0)" onclick="right_ajax_get_lable(65,1,this)">景点周边</a></span></li>
+                                           <li><span <?php if ($type == 170) { echo "style='background-color:#F08200'"; } ?> ><a title="<?php echo $cityname ?>地铁周边酒店预订" href="javascript:void(0)" onclick="right_ajax_get_lable(170,1,this)">地铁周边</a></span></li>   
+                                             <li><span <?php if ($type == 119) { echo "style='background-color:#F08200'"; } ?> ><a title="<?php echo $cityname ?>医院附近酒店预订" href="javascript:void(0)" onclick="right_ajax_get_lable(119,1,this)">医院附近</a></span></li>
                                             
 		                                  </ul>
 		                               </dd>         
@@ -90,7 +90,7 @@
 		                                  <span <?php if($cbd_id == ''){?> class="s_j_bx" <?php } ?>><a href="<?php echo site_url("{$list_url['cbd']}") ?>">不限</a></span>
 		                                  <ul>    
                                              <?php foreach ($cbd_list as $key=>$val){ ?>  
-		                                     <li><span <?php if ($cbd_id == $val['cbd_id']) { echo "class='s_j_bx'"; } ?> ><a href="<?php echo site_url("{$list_url['cbd']}-cbd_id-{$val['cbd_id']}") ?>"><?php echo $val['CBD_Name'] ?></a></span></li>
+		                                     <li><span <?php if ($cbd_id == $val['cbd_id']) { echo "class='s_j_bx'"; } ?> ><a title="<?php echo $cityname ?><?php echo $val['CBD_Name'] ?>附近酒店预订" href="<?php echo site_url("{$list_url['cbd']}-cbd_id-{$val['cbd_id']}") ?>"><?php echo $val['CBD_Name'] ?></a></span></li>
                                              <?php } ?>
 		                                  </ul>
 		                               </dd>         
@@ -105,19 +105,19 @@
                                             <li><span 
                                             <?php if ($rank ==  2){ ?>
                                             class = "s_j_bx"
-                                            <?php } ?> ><a href="<?php echo site_url("{$list_url['rank']}-rank-2") ?>">二星级/经济型</a></span></li>
+                                            <?php } ?> ><a title="<?php echo $cityname ?>二星级/经济型酒店预订" href="<?php echo site_url("{$list_url['rank']}-rank-2") ?>">二星级/经济型</a></span></li>
                                             <li><span 
                                             <?php if ($rank ==  3){ ?>
                                             class = "s_j_bx"
-                                            <?php } ?> ><a href="<?php echo site_url("{$list_url['rank']}-rank-3") ?>">三星级/舒适型</a></span></li>
+                                            <?php } ?> ><a title="<?php echo $cityname ?>三星级/舒适型酒店预订" href="<?php echo site_url("{$list_url['rank']}-rank-3") ?>">三星级/舒适型</a></span></li>
                                             <li><span 
                                             <?php if ($rank ==  4){ ?>
                                             class = "s_j_bx"
-                                            <?php } ?> ><a href="<?php echo site_url("{$list_url['rank']}-rank-4") ?>">四星级/高档型</a></span></li>
+                                            <?php } ?> ><a title="<?php echo $cityname ?>四星级/高档型酒店预订" href="<?php echo site_url("{$list_url['rank']}-rank-4") ?>">四星级/高档型</a></span></li>
                                             <li><span
                                             <?php if ($rank ==  5){ ?>
                                             class = "s_j_bx"
-                                            <?php } ?> ><a href="<?php echo site_url("{$list_url['rank']}-rank-5") ?>">五星级/豪华型</a></span></li>
+                                            <?php } ?> ><a title="<?php echo $cityname ?>五星级/豪华型酒店预订" href="<?php echo site_url("{$list_url['rank']}-rank-5") ?>">五星级/豪华型</a></span></li>
 		                                  </ul>
 		                               </dd>
 		                           </dl>
@@ -133,7 +133,7 @@
                                              	foreach ($price_array as $key=>$val){ 
                                              		$i++;
                                              ?>   
-		                                     <li><span <?php $price_array = explode('-', $key); if($minprice==$price_array[0] && $maxprice==$price_array[1]){echo "class='s_j_bx'";} ?>><a href="<?php echo site_url("{$list_url['hotelprice']}-priceid-{$i}") ?>"><?php echo $val ?></a></span></li>
+		                                     <li><span <?php $price_array = explode('-', $key); if($minprice==$price_array[0] && $maxprice==$price_array[1]){echo "class='s_j_bx'";} ?>><a title="<?php echo $cityname ?><?php echo $val ?>酒店预订" href="<?php echo site_url("{$list_url['hotelprice']}-priceid-{$i}") ?>"><?php echo $val ?></a></span></li>
 		                                     <?php } ?>
 		                                  </ul>
 		                               </dd>
@@ -147,7 +147,7 @@
 		                                  <span <?php if($chain_id == ''){?> class="s_j_bx" <?php } ?>><a href="<?php echo site_url("{$list_url['chain']}") ?>">不限</a></span>
 		                                  <ul>
                                              <?php foreach ($chain_list as $key=>$val){ ?>   
-		                                     <li><span <?php if ($chain_id ==  $val['id']){echo "class='s_j_bx'"; } ?>><a href="<?php echo  site_url("{$list_url['chain']}-chain_id-{$val['id']}") ?>"><?php echo $val['lsname']; ?></a></span></li>
+		                                     <li><span <?php if ($chain_id ==  $val['id']){echo "class='s_j_bx'"; } ?>><a title="<?php echo $cityname ?><?php echo $val['lsname']; ?>预订" href="<?php echo  site_url("{$list_url['chain']}-chain_id-{$val['id']}") ?>"><?php echo $val['lsname']; ?></a></span></li>
 		                                     <?php } ?>
 		                                  </ul>
 		                               </dd>
@@ -193,14 +193,14 @@
 			                            	<div class="hot_li_p_top">
     		                                    <span class="right"><dfn>¥</dfn><em><?php echo $val['min_jiage']; ?><font class="yuan_f00">元</font></em>起</span>
     		                                    <span class="kuang"></span>
-    		                                    <span><strong><a href="<?php echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName']; ?>" target="_blank"><?php echo $val['HotelName']; ?></a></strong></span>
+    		                                    <span><strong><a href="<?php echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName']; ?>预订" target="_blank"><?php echo $val['HotelName']; ?></a></strong></span>
     		                                    <span><?php if ($val['xingji']>1) { ?><img width="86" height="16" src="<?php echo base_url();?>public/www/blue/images/xj<?php echo $val['xingji']; ?>.gif"><?php } ?></span>
     		                                </div>
     		                                <div class="hot_li_p_bottom">
     		                                    <div class="hot_li_top">
     		                                        <dl>
     		                                            <dt>
-    		                                            <span><a href="<?php echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName']; ?>" target="_blank"><img src="<?php echo $val['Picture']; ?>" width="134" height="100" alt="<?php echo $val['HotelName']; ?>" /></a></span><span class="yy"></span>
+    		                                            <span><a href="<?php echo site_url("/hotelinfo/{$val['ID']}") ?>" title="<?php echo $val['HotelName']; ?>预订" target="_blank"><img src="<?php echo $val['Picture']; ?>" width="134" height="100" alt="<?php echo $val['HotelName']; ?>预订" /></a></span><span class="yy"></span>
     		                                            </dt>
     		                                            <dd>
     		                                               <ul>
