@@ -360,6 +360,17 @@ class Model_tuangou extends CI_Model
     	return $count;
 		
     }
+	
+	function get_tuangou_count2($wheresql)
+    {
+
+    	$count = $this->db->query("select tid from $this->tuangou_table ".$wheresql)->num_rows();
+		
+		
+
+    	return $count;
+		
+    }
 
     public function addTuangou($mode = 'insert',$info,$where=array())
     {

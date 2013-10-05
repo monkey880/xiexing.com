@@ -43,6 +43,10 @@ class Tuangou extends CI_Controller
 		$getPara = $this->uri->rsegment(4);
 
         $getPara = iconv("GB2312","UTF-8",$getPara);
+		
+		$search=$this->input->get("wd");
+		
+		
 
         if ($getPara) {
 
@@ -74,6 +78,7 @@ class Tuangou extends CI_Controller
 		$star=$getPara['star'];
 		$fangxing=$getPara['fangxing'];
 		$price=$getPara['price'];
+		$wd=$getPara['wd'];
 		
 		
         $page = isset($getPara['page']) ? (int) $getPara['page'] : 0; ;
@@ -101,6 +106,19 @@ class Tuangou extends CI_Controller
 		$whereSql = array('status'=>1);
 		$whereSql['endTime >']=$now;
 		$whereSqlList = "where status=1 and endTime> $now";   
+		
+		if(!$wd){
+			
+			$wd=$this->input->get('wd');
+		}
+		
+		if($wd){
+			
+			$wd=urldecode($wd);
+		$whereSqlList .= " and title like '%$wd%' or  seller like '%$wd%' or  address like '%$wd%' or `range` like '%$wd%' ";  
+			
+		}
+		//print_r($whereSqlList);
 		 if($category){
 			 if($category=='jiudian'){
 				 $category2=1;
@@ -188,11 +206,17 @@ class Tuangou extends CI_Controller
 		$newscount=0;
         $newscount = $this->model_tuangou->get_tuangou_count($whereSql);
 		
+		if($search){
+			$newscount=$this->model_tuangou->get_tuangou_count2($whereSqlList);
+			
+			
+		}
+		
         $pageinfo = $this->tool->get_page_info($page,$newscount,$pagesize);
 
         $newslist = $this->model_tuangou->get_guantoulist($pageinfo['start'],$pagesize,$orderfiled,$whereSqlList);
        
-	    $list_url = $this->baseUrl ( $cityid, $page, $order, $area, $range, $star ,$fangxing ,$price,$category );
+	    $list_url = $this->baseUrl ( $cityid, $page, $order, $area, $range, $star ,$fangxing ,$price,$category,$search );
        
 
         //分页
@@ -263,11 +287,13 @@ class Tuangou extends CI_Controller
 		$this->load->view('tuangou',$data);
 	}
 	
-	private function baseUrl($cityid, $page, $order, $area, $range, $star ,$fangxing ,$price,$category) 
+	private function baseUrl($cityid, $page, $order, $area, $range, $star ,$fangxing ,$price,$category,$search) 
 
 	{
 
-		$aTag = array ("area", 'range', 'star', 'fangxing','price', 'order', 'page','category' );
+		$aTag = array ("area", 'range', 'star', 'fangxing','price', 'order', 'page','category','search' );
+		
+		
 
 		foreach ( $aTag as $val ) {
 
@@ -321,6 +347,12 @@ class Tuangou extends CI_Controller
 			if ($val != 'order') {
 
 				$list_url .= "-order-$order";
+
+			}
+			
+			if ($search != 'search') {
+
+				$list_url .= "-wd-$search";
 
 			}
 
