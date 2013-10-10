@@ -27,26 +27,22 @@ $this->load->model('model_city');
 //	$i=0;
 		foreach($areainfo->url as $key=>$url){
 			
-			if($url->data->display->subcategory=='酒店' ){
-				$loc=''.$url->loc;
-				$info=$this->model_tuangou->get_tuaninfo_byurl($loc);
-			
-			if(!$info){
+					if($this->model_tuangou->isxexingtuan($url->data->display->subcategory)){
 				
 				$data['dealsid']='';
 				$data['loc']= ''.$url->loc ;
 				
 				$data['waploc']= ''.$url->wapLoc ;
-				$data['website']= '百酷团' ;
+				$data['website']= ''.$url->website ;
 				$data['siteurl']= ''.$url->data->display->siteurl ;
 				$data['city']= ''.$url->data->display->city ;
-				$data['category']=1;
+				$data['category']=''.$url->data->display->category;
 				$data['subcategory']= ''.$url->data->display->subcategory ;
 				
-				$data['characteristic']='';
-				$data['destination']='';
 				
-				$data['thrcategory']='';
+				$data['destination']=''.$url->data->display->destination;
+				
+				$data['thrcategory']=''.$url->data->display->thrcategory;
 				$data['major']=''.$url->data->display->major;
 				$data['title']= ''.$url->data->display->title ;
 				$data['shortTitle']= ''.$url->data->display->shortTitle ;
@@ -61,9 +57,9 @@ $this->load->model('model_city');
 				$data['name']=''.$url->data->display->name;
 				
 				
-				$data['spendEndTime']=0;
-				$data['refund']='';
-				$data['reservation']='';
+				$data['spendEndTime']=''.$url->data->display->reservation;
+				$data['refund']=''.$url->data->display->refund;
+				$data['reservation']=''.$url->data->display->reservation;
 				
 				$data['tips']= ''.$url->data->display->tips;
 				
@@ -73,70 +69,18 @@ $this->load->model('model_city');
 				$data['phone']= ''.$url->data->display->phone ;
 				$data['address']= ''.$url->data->display->address ;
 				
+				//$zhuobiao=explode(',',$url->data->display->shops->shop->shopCoords);
+//				$data['longitude']=$zhuobiao[0] ;
+//				$data['latitude']= $zhuobiao[1] ;
 				
-				$data['longitude']=''. $url->data->shops->shop->longitude ;
-				$data['latitude']= ''.$url->data->shops->shop->latitude ;
+				$data['range']= ''.$url->data->display->range  ;
 				
-				$data['range']= ''.$url->data->shops->shop->area ;
-				if($url->data->shops->shop->area){
-				$areainfo= $this->model_city->get_resgoin_byname($url->data->shops->shop->area );
-			}
-				$data['locationName']=$areainfo['areaname'];
-				$data['dpshopid']=0;
+				$data['dpshopid']=''.$url->data->display->dpshopid;
 				$data['uptime']=time();
 				$data['hits']=0;
+				//添加团购信息
 				
-				$id=$this->model_tuangou->addTuangou('insert',$data);
-				
-				//商家信息存入百度LBS
-				if($url->data->shops->shop->name){
-					
-					$datashop['dealsid']=$id;
-					$datashop['title']=$url->data->shops->shop->shopSeller;
-					$zhuobiao=explode(',',$url->data->shops->shop->shopCoords);
-					$datashop['longitude']=$zhuobiao[0];
-					$datashop['latitude']=$zhuobiao[1];
-					$datashop['address']=$url->data->shops->shop->shopAddress;
-					$datashop['phone']=$url->data->shops->shop->shopPhone;
-					$datashop['coord_type']='3';
-					
-					$result = $this->model_hotel->post_baidu('',$datashop,'create',34835);
-					
-				}
-				else{
-					
-				foreach($url->data->shops as $shop){
-					
-					$datashop2['dealsid']=$id;
-					$datashop2['title']=$shop->name;
-					$zhuobiao=explode(',',$shop->shopCoords);
-					$datashop['longitude']=$zhuobiao[0];
-					$datashop['latitude']=$zhuobiao[1];
-					$datashop2['address']=$shop->addr;
-					$datashop2['phone']=$shop->tel;
-					$datashop2['coord_type']='3';
-					$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
-					$result = json_decode($result['response_body']);		
-					$baiduid=$result->id;
-					//print_r($result);
-					}
-				}
-				$i++;
-				
-				$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail/$baiduid?geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
-				$api_list=json_decode($api_list);
-				
-				$data['areaname']= $api_list->contents[0]->district ;
-				
-				$id=$this->model_tuangou->addTuangou('update',$data,array('tid'=>$id));
-			}
-				
-				else
-			{
-				$data['bought']= ''.$url->data->display->bought ;
-				$id=$this->model_tuangou->addTuangou('update',$data,array('tid'=>$info['tid']));
-				
-				}
+				$this->model_tuangou->uptuanby($data,$url->data->display->shops);
 				sleep(0.1);
 				
 				
