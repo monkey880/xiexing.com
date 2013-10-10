@@ -1,0 +1,252 @@
+SimpleXMLElement Object
+(
+    [url] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [loc] => http://www.260tuan.com/team.aspx?id=MzM0NDcxMzA3MjAxMw==
+                    [waploc] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [data] => SimpleXMLElement Object
+                        (
+                            [display] => SimpleXMLElement Object
+                                (
+                                    [website] => 260团
+                                    [siteurl] => http://www.260tuan.com/city.aspx?ename=qingdao
+                                    [city] => 青岛
+                                    [category] => 1
+                                    [subcategory] => 地方菜
+                                    [characteristic] => 多人套餐
+                                    [destination] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [thrcategory] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [major] => 1
+                                    [title] => 【市南区】仅138元！原价368元的大幸福水饺店4人套餐：大幸福红烧肉+油爆海螺片+崂山茶香虾+风味茄子+招牌熏鱼+鲅鱼水饺+虾仁水饺。特色美食，香气袭来，让你舌头体验独特的风味，尽享佳肴诱惑！
+                                    [shortTitle] => 【市南区】仅138元！原价368元的大幸福水饺店4人套餐：大
+                                    [image] => http://img.260tuan.com/upfile/synteamimg/130712/20130712154918_66749.jpg
+                                    [startTime] => 1373644800
+                                    [endTime] => 1381679999
+                                    [value] => 368.00
+                                    [price] => 138.00
+                                    [rebate] => 3.8
+                                    [bought] => 86
+                                    [name] => 大幸福水饺店138元4人套餐
+                                    [reservation] => 1
+                                    [spendEndTime] => 1381939199
+                                    [tips] => 有效期至：2013-10-16
+                                    [seller] => 大幸福水饺店
+                                    [address] => 明水路1号(老舍公园)
+                                    [phone] =>   13006529233
+                                    [range] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [coords] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [dpshopid] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [shops] => SimpleXMLElement Object
+                                        (
+                                            [shop] => SimpleXMLElement Object
+                                                (
+                                                    [shopSeller] => 大幸福水饺店
+                                                    [shopAddress] => 明水路1号(老舍公园)
+                                                    [shopPhone] => 13006529233
+                                                    [openTime] => 9：00-21：00
+                                                    [trafficInfo] => 2路电车; 5路电车; 26路; 202路环线; 217路; 220路空调; 223路; 225路环
+                                                    [shopRange] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                    [shopCoords] => 120.328907,36.072584
+                                                    [shopDpshopid] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [loc] => http://www.260tuan.com/team.aspx?id=MzYxNTAxMDA4MjAxMw==
+                    [waploc] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [data] => SimpleXMLElement Object
+                        (
+                            [display] => SimpleXMLElement Object
+                                (
+                                    [website] => 260团
+                                    [siteurl] => http://www.260tuan.com/city.aspx?ename=qingdao
+                                    [city] => 青岛
+                                    [category] => 1
+                                    [subcategory] => 地方菜
+                                    [characteristic] => 多人套餐
+                                    [destination] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [thrcategory] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [major] => 0
+                                    [title] => 【市北区】仅售79.9元，享原价137元七星椒川菜馆2-3人套餐。选你所爱，尝你所喜！精选食材新鲜丰富，缤纷佳肴岂容错过！潮人美餮，人气珍馐，难忘的味道!
+                                    [shortTitle] => 【市北区】仅售79.9元，享原价137元七星椒川菜馆2-3人
+                                    [image] => http://img.260tuan.com/upfile/synteamimg/130808/20130808150124_31062.jpg
+                                    [startTime] => 1376064000
+                                    [endTime] => 1385567999
+                                    [value] => 137.00
+                                    [price] => 79.90
+                                    [rebate] => 5.8
+                                    [bought] => 116
+                                    [name] => 七星椒79.9元2-3人套餐
+                                    [reservation] => 1
+                                    [spendEndTime] => 1385827199
+                                    [tips] => 结束日期	
+2013-11-30
+                                    [seller] => 七星椒川菜馆
+                                    [address] => 市北区郭口路11号30路104路(总站旁)
+                                    [phone] =>   13061371370
+                                    [range] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [coords] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [dpshopid] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [shops] => SimpleXMLElement Object
+                                        (
+                                            [shop] => SimpleXMLElement Object
+                                                (
+                                                    [shopSeller] => 七星椒川菜馆
+                                                    [shopAddress] => 市北区郭口路11号30路104路(总站旁)
+                                                    [shopPhone] => 13061371370
+                                                    [openTime] => 10:30-22:30
+                                                    [trafficInfo] => 2路, 232路环线, 301路, 320路在台东（邮电局）站下车
+                                                    [shopRange] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                    [shopCoords] => 120.360382,36.086532
+                                                    [shopDpshopid] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [loc] => http://www.260tuan.com/team.aspx?id=MzM1NjUxNjA3MjAxMw==
+                    [waploc] => SimpleXMLElement Object
+                        (
+                        )
+
+                    [data] => SimpleXMLElement Object
+                        (
+                            [display] => SimpleXMLElement Object
+                                (
+                                    [website] => 260团
+                                    [siteurl] => http://www.260tuan.com/city.aspx?ename=qingdao
+                                    [city] => 青岛
+                                    [category] => 1
+                                    [subcategory] => 烧烤
+                                    [characteristic] => 双人套餐
+                                    [destination] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [thrcategory] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [major] => 0
+                                    [title] => 【市南区】仅106元，享价值178元的滋滋享烤鱼双人套餐，滋滋享金牌龙虾+五花肉+里脊肉+鸡心+板筋+凉拌海带丝+红油金针菇+米饭。鲜香麻辣,肉嫩多汁!如此滋滋作响的美味,岂能错过!
+                                    [shortTitle] => 【市南区】仅106元，享价值178元的滋滋享烤鱼双人套餐，滋
+                                    [image] => http://img.260tuan.com/upfile/synteamimg/130715/20130715154836_64666.jpg
+                                    [startTime] => 1373904000
+                                    [endTime] => 1382889599
+                                    [value] => 178.00
+                                    [price] => 106.00
+                                    [rebate] => 6
+                                    [bought] => 56
+                                    [name] => 106元滋滋享烤鱼双人套餐
+                                    [reservation] => 1
+                                    [spendEndTime] => 1383148799
+                                    [tips] => 1.本优惠券截止时间：2013年10月30日
+2.请提前1天预约，预约电话：0532-83876210
+3.营业时间：10:00-23:00，周六周日照常营业
+                                    [seller] => 滋滋享烤鱼
+                                    [address] => 山东省青岛市市南区新湛路12号
+                                    [phone] =>   0532-83876210
+                                    [range] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [coords] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [dpshopid] => SimpleXMLElement Object
+                                        (
+                                        )
+
+                                    [shops] => SimpleXMLElement Object
+                                        (
+                                            [shop] => SimpleXMLElement Object
+                                                (
+                                                    [shopSeller] => 滋滋享烤鱼
+                                                    [shopAddress] => 山东省青岛市市南区新湛路12号
+                                                    [shopPhone] => 0532-83876210
+                                                    [openTime] => 10:00-23:00
+                                                    [trafficInfo] => 26路, 31路环线, 202路环线, 223路, 228路, 231路环线, 304路, 311专
+                                                    [shopRange] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                    [shopCoords] => 120.376253,36.067563
+                                                    [shopDpshopid] => SimpleXMLElement Object
+                                                        (
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
