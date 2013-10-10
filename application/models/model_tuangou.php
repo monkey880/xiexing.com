@@ -394,11 +394,123 @@ class Model_tuangou extends CI_Model
 		}
     	return $rs;
     }
+	
+	 public function uptuanby($data,$shop,$tuanname='')
+    {
+		
+		if($tuan=$this->get_tuaninfo_byurl($data['loc'])){
+    	$this->db->update($this->tuangou_table,$data,array('tid'=>$tuan['tid']));
+		$id=$tuan['tid'];
+		}else{
+    	
+			$this->db->insert($this->tuangou_table,$data);
+			$id=$this->db->insert_id();
+		
+		
+		//商家信息存入百度LBS
+		
+		if($tuanname=='55tuan'){
+			
+			//商家信息存入百度LBS
+				if($url->data->shops->shop->name){
+					
+					$datashop['dealsid']=$id;
+					$datashop['title']=$url->data->shops->shop->name;
+					$datashop['longitude']=$url->data->shops->shop->longitude;
+					$datashop['latitude']=$url->data->shops->shop->latitude;
+					$datashop['address']=$url->data->shops->shop->addr;
+					$datashop['phone']=$url->data->shops->shop->tel;
+					$datashop['coord_type']='3';
+					
+					$result = $this->model_hotel->post_baidu('',$datashop,'create',34835);
+					
+				}else{
+					
+				foreach($url->data->shops as $shop){
+					
+					$datashop2['dealsid']=$id;
+					$datashop2['title']=$shop->name;
+					$datashop2['longitude']=$shop->longitude;
+					$datashop2['latitude']=$shop->latitude;
+					$datashop2['address']=$shop->addr;
+					$datashop2['phone']=$shop->tel;
+					$datashop2['coord_type']='3';
+					$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
+					$result = json_decode($result['response_body']);		
+					
+					//print_r($result);
+				}
+			
+		}
+		}
+		else{
+			
+				if($shop->shop->name){
+					
+					$datashop['dealsid']=$id;
+					$datashop['title']=$url->data->display->shops->shop->shopSeller;
+					$zhuobiao=explode(',',$url->data->display->shops->shop->shopCoords);
+					$datashop['longitude']=$zhuobiao[0];
+					$datashop['latitude']=$zhuobiao[1];
+					$datashop['address']=$url->data->display->shops->shop->shopAddress;
+					$datashop['phone']=$url->data->display->shops->shop->shopPhone;
+					$datashop['coord_type']='3';
+					
+					$result = $this->model_hotel->post_baidu('',$datashop,'create',34835);
+				
+				}
+				else{
+					
+					foreach($shop->shop as $shop){
+						
+						$datashop2['dealsid']=$id;
+						$datashop2['title']=$shop->shopSeller;
+						$zhuobiao=explode(',',$shop->shopCoords);
+						$datashop2['longitude']=$zhuobiao[0];
+						$datashop2['latitude']=$zhuobiao[1];
+						$datashop2['address']=$shop->shopAddress;
+						$datashop2['phone']=$shop->shopPhone;
+						$datashop2['coord_type']='3';
+						$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
+						
+						}
+				}
+			}
+			
+				//更新行政区信息
+				$result = json_decode($result['response_body']);		
+				$baiduid=$result->id;
+				
+				$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail?id=$baiduid&geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
+				$api_list=json_decode($api_list);
+				
+				$data2['areaname']= $api_list->contents[0]->district ;
+				
+				$this->model_tuangou->addTuangou('update',$data2,array('tid'=>$id));
+			}	
+		
+		
+		
+    }
+	
     public function geosearchnearby($location,$filter,$databoxid=34599){
 		
 		$api_list=file_get_contents($this->nearbyurl."$databoxid&sortby=distance:1&scope=2&location=".$location."&filter=".$filter);
 			$api_list=	json_decode($api_list,true);
         return $api_list;
+		
+	}
+	
+	public function isxexingtuan($tuaninfo){
+		
+		$class_arr=array('酒店','景点','旅游','门票','公园');
+		foreach($class_arr as $class){
+			if(substr_count(''.$tuaninfo,$class)){
+				$res= 1;
+			}
+		}
+		
+		return $res;
 		
 	}
 
