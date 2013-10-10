@@ -109,11 +109,18 @@ $areainfo= $this->model_tuangou->didatuan_get_deals($key);
 					$datashop2['phone']=$shop->tel;
 					$datashop2['coord_type']='3';
 					$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
+					$result = json_decode($result['response_body']);		
+					$baiduid=$result->id;
 					//print_r($result);
 			}
 				}
 				$i++;
-				echo ''.$url->data->display->title."<br>";
+				$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail/$baiduid?geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
+				$api_list=json_decode($api_list);
+				
+				$data['areaname']= $api_list->contents[0]->district ;
+				
+				$id=$this->model_tuangou->addTuangou('update',$data,array('tid'=>$id));
 				}
 				else
 			{

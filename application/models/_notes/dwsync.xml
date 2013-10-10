@@ -36,4 +36,6 @@
 <file name="model_lbs_basicsearch.php" server="w91.126t.net" local="130239140988713449" remote="130239141000000000" />
 <file name="model_website.php" server="w91.126t.net" local="130245108243889249" remote="130245108000000000" />
 <file name="model_tags.php" server="w91.126t.net" local="130245112509968550" remote="130245136800000000" />
+<file name="model_tuangou.php" server="w91.126t.net/public_html/" local="130254712981604741" remote="130254717000000000" />
+<file name="model_hotel.php" server="w91.126t.net/public_html/" local="130255536243953959" remote="130255536000000000" />
 </dwsync>

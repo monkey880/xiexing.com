@@ -140,8 +140,8 @@ class Tuangou extends CI_Controller
 	   if($area){
 		   $areainfo=$this->model_city->get_areaname_byid($area,$cityinfo['cid']);
 		   if(!$range){
-		 $whereSql['locationName like']='%'.$areainfo['areaname'].'%';
-		$whereSqlList .= " and  locationName like '%$areainfo[areaname]%'";  
+		 $whereSql['areaname like']='%'.$areainfo['areaname'].'%';
+		$whereSqlList .= " and  areaname like '%$areainfo[areaname]%'";  
 		   }
 		$range_list=$this->model_city->get_resgoin_list($areainfo['areaname'],$cityinfo['cName']);
 		

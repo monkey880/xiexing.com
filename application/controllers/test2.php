@@ -45,6 +45,8 @@ class Test2 extends CI_Controller
 		
 		$this->load->model('model_tuangou');
 		
+		$this->load->model('model_hotel');
+		
 		$this->load->library('email');
 
         
@@ -97,6 +99,25 @@ $data['url']="/test2/";
 		//print_r($api_list);
 	}
 	
+	public function testlbs(){
+		$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail/21680608?geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
+		$api_list=json_decode($api_list);
+		print_r($api_list->contents[0]->district );
+		//$datashop2['dealsid']='242342';
+//		$datashop2['title']='234324324';
+//		
+//		$datashop2['longitude']='121.4139';
+//		$datashop2['latitude']='31.13475';
+//		
+//		$datashop2['coord_type']='3';
+//		$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
+					$result = json_decode($result['response_body']);		
+					$baiduid=$result->id;
+//		$result = json_decode($result['response_body']);		
+//					
+//		print_r($result->id);
+	}
+	
 	public function getcity()
 	{
 		$city=$this->model_city->getCity();
@@ -105,7 +126,7 @@ $data['url']="/test2/";
 	
 	public function lbs()
 	{
-		$cronfile="application/cron/get_cobuy.php";
+		$cronfile="application/cron/get_260tuan.php";
 		include $cronfile;
 		
 		}

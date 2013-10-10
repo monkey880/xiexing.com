@@ -19,10 +19,11 @@ $this->load->model('model_city');
 //include 'data/city/nuomi.php';
 //foreach($city as $key=>$ci){
 $areainfo= $this->model_tuangou->tuan260_get_deals();
-//print_r($areainfo);
-//break;
-//	$i=0;
+print_r($areainfo);
+break;
+	$i=0;
 		foreach($areainfo->url as $key=>$url){
+			//if($i>10) break;
 			
 			if($url->data->display->subcategory=='酒店'){
 				$loc=''.$url->loc;
@@ -86,51 +87,63 @@ $areainfo= $this->model_tuangou->tuan260_get_deals();
 				
 					
 				$id=$this->model_tuangou->addTuangou('insert',$data);
-				
+				$result='';
 				//商家信息存入百度LBS
-				if($url->data->shops->shop->name){
+				if($url->data->display->shops->shop->name){
 					
 					$datashop['dealsid']=$id;
-					$datashop['title']=$url->data->shops->shop->shopSeller;
-					$zhuobiao=explode(',',$url->data->shops->shop->shopCoords);
+					$datashop['title']=$url->data->display->shops->shop->shopSeller;
+					$zhuobiao=explode(',',$url->data->display->shops->shop->shopCoords);
 					$datashop['longitude']=$zhuobiao[0];
 					$datashop['latitude']=$zhuobiao[1];
-					$datashop['address']=$url->data->shops->shop->shopAddress;
-					$datashop['phone']=$url->data->shops->shop->shopPhone;
+					$datashop['address']=$url->data->display->shops->shop->shopAddress;
+					$datashop['phone']=$url->data->display->shops->shop->shopPhone;
 					$datashop['coord_type']='3';
 					
 					$result = $this->model_hotel->post_baidu('',$datashop,'create',34835);
-					
+				
 				}
 				else{
 					
-				foreach($url->data->shops as $shop){
+				foreach($url->data->display->shops->shop as $shop){
 					
 					$datashop2['dealsid']=$id;
 					$datashop2['title']=$shop->name;
 					$zhuobiao=explode(',',$shop->shopCoords);
-					$datashop['longitude']=$zhuobiao[0];
-					$datashop['latitude']=$zhuobiao[1];
+					$datashop2['longitude']=$zhuobiao[0];
+					$datashop2['latitude']=$zhuobiao[1];
 					$datashop2['address']=$shop->addr;
 					$datashop2['phone']=$shop->tel;
 					$datashop2['coord_type']='3';
 					$result = $this->model_hotel->post_baidu('',$datashop2,'create',34835);
-					//print_r($result);
+					
 					}
 				}
+				
+				$result = json_decode($result['response_body']);		
+				$baiduid=$result->id;
+				
+				//print_r($result);
+				
+				$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail?id=$baiduid&geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
+				$api_list=json_decode($api_list);
+				
+				$data2['areaname']= $api_list->contents[0]->district ;
+				
+				$id=$this->model_tuangou->addTuangou('update',$data2,array('tid'=>$id));
 				$i++;
 				
 				
 			}
 			else
 			{
-				$data['bought']= ''.$url->data->display->bought ;
 				
-				$id=$this->model_tuangou->addTuangou('update',$data,array('tid'=>$info['tid']));
+				$data3['bought']= ''.$url->data->display->bought ;
+				$id=$this->model_tuangou->addTuangou('update',$data3,array('tid'=>$info['tid']));
 				
-				}
+			}
 				
-				print_r(''.$url->loc);
+				//print_r(''.$url->loc);
 				sleep(0.1);
 				
 				

@@ -19,7 +19,7 @@ $this->load->model('model_city');
 //include 'data/city/nuomi.php';
 //foreach($city as $key=>$ci){
 	
-	$apiUrl = "http://www.kudou365.com/api/baidu.php";
+	$apiUrl = "http://www.92youle.com/api.aspx?key=baidu";
 	$areainfo=simplexml_load_file($apiUrl,'SimpleXMLElement', LIBXML_NOCDATA);
 
 //print_r($areainfo);
@@ -37,7 +37,7 @@ $this->load->model('model_city');
 				$data['loc']= ''.$url->loc ;
 				
 				$data['waploc']= ''.$url->wapLoc ;
-				$data['website']= '酷兜365' ;
+				$data['website']= '优乐网' ;
 				$data['siteurl']= ''.$url->data->display->siteurl ;
 				$data['city']= ''.$url->data->display->city ;
 				$data['category']=1;
@@ -122,13 +122,13 @@ $this->load->model('model_city');
 					}
 				}
 				$i++;
+				
 				$api_list=file_get_contents("http://api.map.baidu.com/geosearch/v2/detail/$baiduid?geotable_id=34835&ak=85654a7702d8b2163b85f87e6585b4f5");
 				$api_list=json_decode($api_list);
 				
 				$data['areaname']= $api_list->contents[0]->district ;
 				
 				$id=$this->model_tuangou->addTuangou('update',$data,array('tid'=>$id));
-				
 			}
 				
 				else

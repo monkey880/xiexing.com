@@ -1085,7 +1085,7 @@ class Model_hotel extends CI_Model
 		$this->baidu_lbs->set_useragent("Baidu_LbsYun_Sdk");
 		$this->baidu_lbs->set_body($content);
 		
-		$res=$this->baidu_lbs->send_request();
+		$res=$this->baidu_lbs->send_request(1);
 		return $res;
 	}
 
